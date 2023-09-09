@@ -1,0 +1,4 @@
+export const ADD_JWT_TOKEN = 'AUTH/ADD_JWT_TOKEN';
+export const REMOVE_JWT_TOKEN = 'AUTH/REMOVE_JWT_TOKEN';
+export const USER_LOGOUT = 'AUTH/USER_LOGOUT';
+export const UNAUTH_ERROR = 'AUTH/UNAUTH_ERROR';
