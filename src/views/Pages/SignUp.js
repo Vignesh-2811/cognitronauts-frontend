@@ -1,37 +1,18 @@
-/*!
-
-=========================================================
-* Vision UI Free Chakra - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-chakra/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-import React from "react";
 
 // Chakra imports
 import {
   Box,
-  Flex,
   Button,
+  DarkMode,
+  Flex,
   FormControl,
   FormLabel,
   HStack,
+  Icon,
   Input,
   Link,
   Switch,
   Text,
-  Icon,
-  DarkMode,
 } from "@chakra-ui/react";
 
 // Icons
@@ -41,7 +22,7 @@ import AuthFooter from "components/Footer/AuthFooter";
 import GradientBorder from "components/GradientBorder/GradientBorder";
 
 // Assets
-import signUpImage from "assets/img/signUpImage.png";
+import signUpImage from "assets/img/signup.png";
 
 function SignUp() {
   const titleColor = "white";
@@ -81,15 +62,7 @@ function SignUp() {
               fontWeight='bold'>
               Welcome!
             </Text>
-            <Text
-              fontSize='md'
-              color='white'
-              fontWeight='normal'
-              mt='10px'
-              w={{ base: "100%", md: "90%", lg: "90%", xl: "80%" }}>
-              Use these awesome forms to login or create new account in your
-              project for free.
-            </Text>
+          
           </Flex>
           <GradientBorder p='2px' me={{ base: "none", lg: "30px", xl: "none" }}>
             <Flex
@@ -103,6 +76,7 @@ function SignUp() {
               bg={{
                 base: "rgb(19,21,56)",
               }}>
+                
               <Text
                 fontSize='xl'
                 color={textColor}
@@ -193,7 +167,7 @@ function SignUp() {
                   ms='4px'
                   fontSize='sm'
                   fontWeight='normal'>
-                  Name
+                  First Name
                 </FormLabel>
 
                 <GradientBorder
@@ -214,7 +188,36 @@ function SignUp() {
                     maxW='100%'
                     h='46px'
                     type='text'
-                    placeholder='Your name'
+                    placeholder='Your first name'
+                  />
+                </GradientBorder>
+                <FormLabel
+                  color={titleColor}
+                  ms='4px'
+                  fontSize='sm'
+                  fontWeight='normal'>
+                  Last Name
+                </FormLabel>
+
+                <GradientBorder
+                  mb='24px'
+                  h='50px'
+                  w={{ base: "100%", lg: "fit-content" }}
+                  borderRadius='20px'>
+                  <Input
+                    color={titleColor}
+                    bg={{
+                      base: "rgb(19,21,54)",
+                    }}
+                    border='transparent'
+                    borderRadius='20px'
+                    fontSize='sm'
+                    size='lg'
+                    w={{ base: "100%", md: "346px" }}
+                    maxW='100%'
+                    h='46px'
+                    type='text'
+                    placeholder='Your last name'
                   />
                 </GradientBorder>
                 <FormLabel
@@ -273,6 +276,62 @@ function SignUp() {
                     placeholder='Your password'
                   />
                 </GradientBorder>
+                <FormLabel
+                  color={titleColor}
+                  ms='4px'
+                  fontSize='sm'
+                  fontWeight='normal'>
+                  Confirm Password
+                </FormLabel>
+                <GradientBorder
+                  mb='24px'
+                  h='50px'
+                  w={{ base: "100%", lg: "fit-content" }}
+                  borderRadius='20px'>
+                  <Input
+                    color={titleColor}
+                    bg={{
+                      base: "rgb(19,21,54)",
+                    }}
+                    border='transparent'
+                    borderRadius='20px'
+                    fontSize='sm'
+                    size='lg'
+                    w={{ base: "100%", md: "346px" }}
+                    maxW='100%'
+                    h='46px'
+                    type='password'
+                    placeholder='Confirm your password'
+                  />
+                </GradientBorder>
+                <FormLabel
+                  color={titleColor}
+                  ms='4px'
+                  fontSize='sm'
+                  fontWeight='normal'>
+                  Phone Number
+                </FormLabel>
+                <GradientBorder
+                  mb='24px'
+                  h='50px'
+                  w={{ base: "100%", lg: "fit-content" }}
+                  borderRadius='20px'>
+                  <Input
+                    color={titleColor}
+                    bg={{
+                      base: "rgb(19,21,54)",
+                    }}
+                    border='transparent'
+                    borderRadius='20px'
+                    fontSize='sm'
+                    size='lg'
+                    w={{ base: "100%", md: "346px" }}
+                    maxW='100%'
+                    h='46px'
+                    type='text'
+                    placeholder='Your phone number'
+                  />
+                </GradientBorder>
                 <FormControl display='flex' alignItems='center' mb='24px'>
                   <DarkMode>
                     <Switch id='remember-login' colorScheme='brand' me='10px' />
@@ -298,24 +357,7 @@ function SignUp() {
                   SIGN UP
                 </Button>
               </FormControl>
-              <Flex
-                flexDirection='column'
-                justifyContent='center'
-                alignItems='center'
-                maxW='100%'
-                mt='0px'>
-                <Text color={textColor} fontWeight='medium'>
-                  Already have an account?
-                  <Link
-                    color={titleColor}
-                    as='span'
-                    ms='5px'
-                    href='#'
-                    fontWeight='bold'>
-                    Sign In
-                  </Link>
-                </Text>
-              </Flex>
+             
             </Flex>
           </GradientBorder>
         </Flex>
@@ -327,44 +369,56 @@ function SignUp() {
           <AuthFooter />
         </Box>
         <Box
-          display={{ base: "none", lg: "block" }}
-          overflowX='hidden'
-          h='1300px'
-          maxW={{ md: "50vw", lg: "48vw" }}
-          w='960px'
-          position='absolute'
-          left='0px'>
-          <Box
-            bgImage={signUpImage}
-            w='100%'
-            h='1300px'
-            bgSize='cover'
-            bgPosition='50%'
-            position='absolute'
-            display='flex'
-            flexDirection='column'
-            justifyContent='center'
-            alignItems='center'
-            position='absolute'>
+  display={{ base: "none", lg: "block" }}
+  overflowX='hidden'
+  h='100%'
+  maxW={{ md: "50vw", lg: "50vw" }}
+  minH='100vh'
+  w='960px'
+  position='absolute' 
+  left='0px'
+>
+  <Box
+    bgImage={signUpImage}
+    w='100%'
+    h='100%'
+    bgSize='cover'
+    bgPosition='50%'
+    position='absolute' 
+    display='flex'
+    flexDirection='column'
+    justifyContent='center'
+    alignItems='center'
+    
+  >
+          
+    <Box
+      bg="rgba(255, 255, 255, 0.7)" 
+      p={8}
+      borderRadius="md"
+      backdropFilter="blur(0.25px)" 
+      textAlign='center'
+    >
             <Text
               textAlign='center'
-              color='white'
+              color='black'
               letterSpacing='8px'
               fontSize='20px'
               fontWeight='500'>
-              INSPIRED BY THE FUTURE:
+              MIND METAMORPHOSIS:
             </Text>
             <Text
               textAlign='center'
-              color='transparent'
+              color='black'
               letterSpacing='8px'
               fontSize='36px'
               fontWeight='bold'
               bgClip='text !important'
               bg='linear-gradient(94.56deg, #FFFFFF 79.99%, #21242F 102.65%)'>
-              THE VISION UI DASHBOARD
+              REFORGE, RENEW, REDESIGN!
             </Text>
           </Box>
+        </Box>
         </Box>
       </Flex>
     </Flex>
