@@ -9,60 +9,62 @@ import {
   Heading,
   Input,
   Switch,
-  Text
-} from "@chakra-ui/react";
+  Text,
+} from '@chakra-ui/react';
 
 // Assets
-import signInImage from "assets/img/signin.jpg";
+import signInImage from 'assets/img/signin.jpg';
 
 // Custom Components
-import AuthFooter from "components/Footer/AuthFooter";
-import GradientBorder from "components/GradientBorder/GradientBorder";
+import AuthFooter from 'components/Footer/AuthFooter';
+import GradientBorder from 'components/GradientBorder/GradientBorder';
 
 function SignIn() {
-  const titleColor = "white";
-  const textColor = "gray.400";
+  const titleColor = 'white';
+  const textColor = 'gray.400';
 
   return (
     <Flex position='relative'>
       <Flex
         minH='100vh'
-        h={{ base: "120vh", lg: "fit-content" }}
+        h={{ base: '120vh', lg: 'fit-content' }}
         w='100%'
         maxW='1044px'
         mx='auto'
-        pt={{ sm: "100px", md: "0px" }}
+        pt={{ sm: '100px', md: '0px' }}
         flexDirection='column'
-        me={{ base: "auto", lg: "50px", xl: "auto" }}>
+        me={{ base: 'auto', lg: '50px', xl: 'auto' }}
+      >
         <Flex
           alignItems='center'
           justifyContent='start'
-          style={{ userSelect: "none" }}
-          mx={{ base: "auto", lg: "unset" }}
-          ms={{ base: "auto", lg: "auto" }}
-          w={{ base: "100%", md: "50%", lg: "450px" }}
-          px='50px'>
+          style={{ userSelect: 'none' }}
+          mx={{ base: 'auto', lg: 'unset' }}
+          ms={{ base: 'auto', lg: 'auto' }}
+          w={{ base: '100%', md: '50%', lg: '450px' }}
+          px='50px'
+        >
           <Flex
             direction='column'
             w='100%'
             background='transparent'
-            mt={{ base: "50px", md: "150px", lg: "160px", xl: "245px" }}
-            mb={{ base: "60px", lg: "95px" }}>
+            mt={{ base: '50px', md: '150px', lg: '160px', xl: '245px' }}
+            mb={{ base: '60px', lg: '95px' }}
+          >
             <Heading color={titleColor} fontSize='32px' mb='10px'>
-              Good day!                  
+              Good day!
             </Heading>
             <Heading color={titleColor} fontSize='32px' mb='10px'>
-              Nice to see you:)                 
+              Nice to see you :)
             </Heading>
 
-            
-            
             <Text
               mb='36px'
               ms='4px'
               color={textColor}
               fontWeight='bold'
-              fontSize='14px'>
+              fontSize='14px'
+            >
               Enter your email and password to sign in
             </Text>
             <FormControl>
@@ -70,13 +72,15 @@ function SignIn() {
                 ms='4px'
                 fontSize='sm'
                 fontWeight='normal'
-                color='white'>
+                color='white'
+              >
                 Email
               </FormLabel>
               <GradientBorder
                 mb='24px'
-                w={{ base: "100%", lg: "fit-content" }}
-                borderRadius='20px'>
+                w={{ base: '100%', lg: 'fit-content' }}
+                borderRadius='20px'
+              >
                 <Input
                   color='white'
                   bg='rgb(19,21,54)'
@@ -84,10 +88,10 @@ function SignIn() {
                   borderRadius='20px'
                   fontSize='sm'
                   size='lg'
-                  w={{ base: "100%", md: "346px" }}
+                  w={{ base: '100%', md: '346px' }}
                   maxW='100%'
                   h='46px'
-                  placeholder='Your email adress'
+                  placeholder='Your email address'
                 />
               </GradientBorder>
             </FormControl>
@@ -96,13 +100,15 @@ function SignIn() {
                 ms='4px'
                 fontSize='sm'
                 fontWeight='normal'
-                color='white'>
+                color='white'
+              >
                 Password
               </FormLabel>
               <GradientBorder
                 mb='24px'
-                w={{ base: "100%", lg: "fit-content" }}
-                borderRadius='20px'>
+                w={{ base: '100%', lg: 'fit-content' }}
+                borderRadius='20px'
+              >
                 <Input
                   color='white'
                   bg='rgb(19,21,54)'
@@ -110,7 +116,7 @@ function SignIn() {
                   borderRadius='20px'
                   fontSize='sm'
                   size='lg'
-                  w={{ base: "100%", md: "346px" }}
+                  w={{ base: '100%', md: '346px' }}
                   maxW='100%'
                   type='password'
                   placeholder='Your password'
@@ -126,7 +132,8 @@ function SignIn() {
                 mb='0'
                 ms='1'
                 fontWeight='normal'
-                color='white'>
+                color='white'
+              >
                 Remember me
               </FormLabel>
             </FormControl>
@@ -138,7 +145,8 @@ function SignIn() {
               maxW='350px'
               h='45'
               mb='20px'
-              mt='20px'>
+              mt='20px'
+            >
               SIGN IN
             </Button>
 
@@ -147,71 +155,68 @@ function SignIn() {
               justifyContent='center'
               alignItems='center'
               maxW='100%'
-              mt='0px'>
-             
-            </Flex>
+              mt='0px'
+            ></Flex>
           </Flex>
         </Flex>
         <Box
-          w={{ base: "335px", md: "450px" }}
-          mx={{ base: "auto", lg: "unset" }}
-          ms={{ base: "auto", lg: "auto" }}
-          mb='80px'>
+          w={{ base: '335px', md: '450px' }}
+          mx={{ base: 'auto', lg: 'unset' }}
+          ms={{ base: 'auto', lg: 'auto' }}
+          mb='80px'
+        >
           <AuthFooter />
         </Box>
         <Box
-  display={{ base: "none", lg: "block" }}
-  overflowX='hidden'
-  h='100%'
-  maxW={{ md: "50vw", lg: "50vw" }}
-  minH='100vh'
-  w='960px'
-  position='absolute' 
-  left='0px'
->
-  <Box
-    bgImage={signInImage}
-    w='100%'
-    h='100%'
-    bgSize='cover'
-    bgPosition='50%'
-    position='absolute' 
-    display='flex'
-    flexDirection='column'
-    justifyContent='center'
-    alignItems='center'
-    
-  >
-          
-    <Box
-      bg="rgba(255, 255, 255, 0.7)" 
-      p={6}
-      borderRadius="md"
-      backdropFilter="blur(0.25px)" 
-      textAlign='center'
-    >
-      <Text
-        color='black'
-        letterSpacing='8px'
-        fontSize='20px'
-        fontWeight='500'
-      >
-        UNLOCK YOUR BRAIN'S POTENTIAL:
-      </Text>
-      <Text
-        color='black'
-        letterSpacing='8px'
-        fontSize='36px'
-        fontWeight='bold'
-        bgClip='text !important'
-        bg='linear-gradient(94.56deg, #FFFFFF 79.99%, #21242F 102.65%)'
-      >
-        REWIRE, REIMAGINE, REDISCOVER!
-      </Text>
-    </Box>
-  </Box>
-</Box>
-
+          display={{ base: 'none', lg: 'block' }}
+          overflowX='hidden'
+          h='100%'
+          maxW={{ md: '50vw', lg: '50vw' }}
+          minH='100vh'
+          w='960px'
+          position='absolute'
+          left='0px'
+        >
+          <Box
+            bgImage={signInImage}
+            w='100%'
+            h='100%'
+            bgSize='cover'
+            bgPosition='50%'
+            position='absolute'
+            display='flex'
+            flexDirection='column'
+            justifyContent='center'
+            alignItems='center'
+          >
+            <Box
+              bg='rgba(255, 255, 255, 0.7)'
+              p={6}
+              borderRadius='md'
+              backdropFilter='blur(0.25px)'
+              textAlign='center'
+            >
+              <Text
+                color='black'
+                letterSpacing='8px'
+                fontSize='20px'
+                fontWeight='500'
+              >
+                UNLOCK YOUR BRAIN'S POTENTIAL:
+              </Text>
+              <Text
+                color='black'
+                letterSpacing='8px'
+                fontSize='36px'
+                fontWeight='bold'
+                bgClip='text !important'
+                bg='linear-gradient(94.56deg, #FFFFFF 79.99%, #21242F 102.65%)'
+              >
+                REWIRE, REIMAGINE, REDISCOVER!
+              </Text>
+            </Box>
+          </Box>
+        </Box>
       </Flex>
     </Flex>
   );
