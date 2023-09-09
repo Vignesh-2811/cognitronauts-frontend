@@ -8,14 +8,14 @@ import { Provider } from 'react-redux';
 import store from 'redux/store';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <HashRouter>
-      <Switch>
-        <Route path={`/auth`} component={AuthLayout} />
-        <Route path={`/admin`} component={AdminLayout} />
-        <Redirect from={`/`} to='/admin/dashboard' />
-      </Switch>
-    </HashRouter>
-  </Provider>,
+  // <Provider store={store}>
+  <HashRouter>
+    <Switch>
+      <Route path={`/auth`} component={AuthLayout} />
+      <Route path={`/admin`} component={AdminLayout} />
+      <Redirect from={`/`} to='/admin/dashboard' />
+    </Switch>
+  </HashRouter>,
+  // </Provider>,
   document.getElementById('root')
 );

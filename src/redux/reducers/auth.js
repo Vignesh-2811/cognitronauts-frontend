@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import {
   ADD_JWT_TOKEN,
   REMOVE_JWT_TOKEN,
