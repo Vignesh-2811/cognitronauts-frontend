@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
+import { register } from 'redux/actions/auth';
 import 'react-datepicker/dist/react-datepicker.css';
 // Icons
 import { FaApple, FaFacebook, FaGoogle } from 'react-icons/fa';
@@ -26,7 +27,7 @@ import GradientBorder from 'components/GradientBorder/GradientBorder';
 // Assets
 import signUpImage from 'assets/img/signup.png';
 
-function SignUp() {
+function SignUp({ register }) {
   const titleColor = 'white';
   const textColor = 'gray.400';
 
@@ -42,6 +43,10 @@ function SignUp() {
       console.log('Date cleared.');
     }
   };
+
+  const onSubmit = async(data) => {
+    console.log(object)
+  }
 
   return (
     <Flex position='relative' overflow={{ lg: 'hidden' }}>
@@ -444,6 +449,7 @@ function SignUp() {
                   h='45'
                   mb='20px'
                   mt='20px'
+                  onClick={handleSubmit(onSubmit)}
                 >
                   SIGN UP
                 </Button>
