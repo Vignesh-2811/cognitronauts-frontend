@@ -44,9 +44,9 @@ function SignUp({ register }) {
     }
   };
 
-  const onSubmit = async(data) => {
-    console.log(object)
-  }
+  const onSubmit = async (data) => {
+    console.log(object);
+  };
 
   return (
     <Flex position='relative' overflow={{ lg: 'hidden' }}>
@@ -449,7 +449,7 @@ function SignUp({ register }) {
                   h='45'
                   mb='20px'
                   mt='20px'
-                  onClick={handleSubmit(onSubmit)}
+                  // onClick={handleSubmit(onSubmit)}
                 >
                   SIGN UP
                 </Button>
