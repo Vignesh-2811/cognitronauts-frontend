@@ -123,7 +123,7 @@ function SignIn() {
                 />
               </GradientBorder>
             </FormControl>
-            <FormControl display='flex' alignItems='center'>
+            {/* <FormControl display='flex' alignItems='center'>
               <DarkMode>
                 <Switch id='remember-login' colorScheme='brand' me='10px' />
               </DarkMode>
@@ -136,7 +136,7 @@ function SignIn() {
               >
                 Remember me
               </FormLabel>
-            </FormControl>
+            </FormControl> */}
             <Button
               variant='brand'
               fontSize='10px'
