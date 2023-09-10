@@ -11,10 +11,13 @@ import {
   Icon,
   Input,
   Link,
+  Select,
   Switch,
   Text,
 } from "@chakra-ui/react";
-
+import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 // Icons
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 // Custom Components
@@ -24,9 +27,27 @@ import GradientBorder from "components/GradientBorder/GradientBorder";
 // Assets
 import signUpImage from "assets/img/signup.png";
 
+
+ 
+
+  
 function SignUp() {
   const titleColor = "white";
   const textColor = "gray.400";
+  
+  const [selectedDate, setSelectedDate] = useState(null);
+  
+  // Handle date change
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+    if (date) {
+      // Handle the selected date in real-time
+      console.log("Selected Date:", date);
+    } else {
+      console.log("Date cleared.");
+    }
+  };
+
 
   return (
     <Flex position='relative' overflow={{ lg: "hidden" }}>
@@ -162,6 +183,32 @@ function SignUp() {
                 or
               </Text>
               <FormControl>
+
+              <FormLabel
+    color={titleColor}
+    ms='4px'
+    fontSize='sm'
+    fontWeight='normal'>
+    Role
+  </FormLabel>
+
+  <Select
+    color={titleColor}
+    bg={{
+      base: "rgb(19,21,54)",
+    }}
+    border='transparent'
+    borderRadius='20px'
+    fontSize='sm'
+    size='lg'
+    w={{ base: "100%", md: "346px" }}
+    maxW='100%'
+    h='46px'
+    defaultValue='' 
+  >
+      <option value="Doctor" style={{ color: 'black' }}>Doctor</option>
+    <option value="Patient" style={{ color: 'black' }}>Patient</option>
+  </Select>
                 <FormLabel
                   color={titleColor}
                   ms='4px'
@@ -220,6 +267,25 @@ function SignUp() {
                     placeholder='Your last name'
                   />
                 </GradientBorder>
+                <FormLabel
+                  color={titleColor}
+                  ms='4px'
+                  fontSize='sm'
+                  fontWeight='normal'>
+                  Date Of Birth
+                </FormLabel>
+>      <GradientBorder
+                  mb='24px'
+                  h='25px'
+                  w={{ base: "50%", lg: "fit-content" }}
+                  borderRadius='20px'>
+      <DatePicker
+        selected={selectedDate}
+        onChange={handleDateChange}
+        dateFormat="dd/MM/yyyy"
+        style={{ marginTop: "2px" }}
+      /></GradientBorder>
+ 
                 <FormLabel
                   color={titleColor}
                   ms='4px'
