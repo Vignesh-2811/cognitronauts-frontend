@@ -14,6 +14,7 @@ import {
 
 // Assets
 import signInImage from 'assets/img/signin.jpg';
+import AuthBanner from 'components/Auth/AuthBanner';
 
 // Custom Components
 import AuthFooter from 'components/Footer/AuthFooter';
@@ -167,56 +168,12 @@ function SignIn() {
         >
           <AuthFooter />
         </Box>
-        <Box
-          display={{ base: 'none', lg: 'block' }}
-          overflowX='hidden'
-          h='100%'
-          maxW={{ md: '50vw', lg: '50vw' }}
-          minH='100vh'
-          w='960px'
-          position='absolute'
-          left='0px'
-        >
-          <Box
-            bgImage={signInImage}
-            w='100%'
-            h='100%'
-            bgSize='cover'
-            bgPosition='50%'
-            position='absolute'
-            display='flex'
-            flexDirection='column'
-            justifyContent='center'
-            alignItems='center'
-          >
-            <Box
-              bg='rgba(255, 255, 255, 0.7)'
-              p={6}
-              borderRadius='md'
-              backdropFilter='blur(0.25px)'
-              textAlign='center'
-            >
-              <Text
-                color='black'
-                letterSpacing='8px'
-                fontSize='20px'
-                fontWeight='500'
-              >
-                UNLOCK YOUR BRAIN'S POTENTIAL:
-              </Text>
-              <Text
-                color='black'
-                letterSpacing='8px'
-                fontSize='36px'
-                fontWeight='bold'
-                bgClip='text !important'
-                bg='linear-gradient(94.56deg, #FFFFFF 79.99%, #21242F 102.65%)'
-              >
-                REWIRE, REIMAGINE, REDISCOVER!
-              </Text>
-            </Box>
-          </Box>
-        </Box>
+
+        <AuthBanner
+          img={signInImage}
+          text="UNLOCK YOUR BRAIN 'S POTENTIAL:"
+          slogan='REWIRE, REIMAGINE, REDISCOVER!'
+        />
       </Flex>
     </Flex>
   );

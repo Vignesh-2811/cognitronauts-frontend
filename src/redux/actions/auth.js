@@ -1,6 +1,6 @@
 import axios from '../../axios-api';
 
-export const register = (data) => async (dispatch) => {
+export const submitRegisterEvent = (data) => async (dispatch) => {
   try {
     const config = {
       headers: {
@@ -8,7 +8,7 @@ export const register = (data) => async (dispatch) => {
       },
     };
     const res = await axios.post('/api/users/signup', data, config);
-    return res.status;
+    return res;
   } catch (error) {
     console.log(error);
   }
