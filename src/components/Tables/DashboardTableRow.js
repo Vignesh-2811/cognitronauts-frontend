@@ -30,7 +30,7 @@ import {
 import React from "react";
 
 function DashboardTableRow(props) {
-  const { logo, name, members, budget, progression, lastItem } = props;
+  const { logo, name, members, contact,budget, progression, lastItem } = props;
   const textColor = useColorModeValue("gray.700", "white");
   return (
     <Tr>
@@ -42,26 +42,12 @@ function DashboardTableRow(props) {
         <Flex align='center' py='.8rem' minWidth='100%' flexWrap='nowrap'>
           <Icon as={logo} h={"24px"} w={"24px"} me='18px' />
           <Text fontSize='sm' color='#fff' fontWeight='normal' minWidth='100%'>
-            {name}
+            {contact}
           </Text>
         </Flex>
       </Td>
 
-      <Td borderBottomColor='#56577A' border={lastItem ? "none" : null}>
-        <AvatarGroup size='xs' showBorder={false}>
-          {members.map((member) => {
-            return (
-              <Avatar
-                name='Ryan Florence'
-                src={member}
-                showBorder={false}
-                border='none'
-                _hover={{ zIndex: "3", cursor: "pointer" }}
-              />
-            );
-          })}
-        </AvatarGroup>
-      </Td>
+     
       <Td borderBottomColor='#56577A' border={lastItem ? "none" : null}>
         <Text fontSize='sm' color='#fff' fontWeight='bold' pb='.5rem'>
           {budget}
