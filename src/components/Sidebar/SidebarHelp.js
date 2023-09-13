@@ -1,26 +1,8 @@
-/*!
-
-=========================================================
-* Vision UI Free Chakra - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-chakra/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-import { QuestionIcon } from "@chakra-ui/icons";
-import { Button, Flex, Link, Text } from "@chakra-ui/react";
-import SidebarHelpImage from "assets/img/SidebarHelpImage.png";
-import IconBox from "components/Icons/IconBox";
-import React from "react";
+import { QuestionIcon } from '@chakra-ui/icons';
+import { Button, Flex, Link, Text } from '@chakra-ui/react';
+import SidebarHelpImage from 'assets/img/SidebarHelpImage.png';
+import IconBox from 'components/Icons/IconBox';
+import React from 'react';
 
 export function SidebarHelp(props) {
   // Pass the computed styles into the `__css` prop
@@ -36,7 +18,8 @@ export function SidebarHelp(props) {
       alignItems='start'
       p='16px'
       minH='170px'
-      minW='218px'>
+      minW='218px'
+    >
       <IconBox width='35px' h='35px' bg='white' mb='auto'>
         <QuestionIcon color='brand.200' h='18px' w='18px' />
       </IconBox>
@@ -48,7 +31,8 @@ export function SidebarHelp(props) {
       </Text>
       <Link
         w='100%'
-        href='https://demos.creative-tim.com/docs-vision-ui-dashboard-chakra/'>
+        href='https://demos.creative-tim.com/docs-vision-ui-dashboard-chakra/'
+      >
         <Button
           fontSize='10px'
           fontWeight='bold'
@@ -56,15 +40,16 @@ export function SidebarHelp(props) {
           bg='linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%)'
           _hover='none'
           _active={{
-            bg: "white",
-            transform: "none",
-            borderColor: "transparent",
+            bg: 'white',
+            transform: 'none',
+            borderColor: 'transparent',
           }}
-          _active='none'
+          // _active='none'
           _focus={{
-            boxShadow: "none",
+            boxShadow: 'none',
           }}
-          color='white'>
+          color='white'
+        >
           DOCUMENTATION
         </Button>
       </Link>
