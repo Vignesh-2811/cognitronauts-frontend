@@ -1,5 +1,5 @@
 // Chakra Icons
-import { BellIcon, SearchIcon } from "@chakra-ui/icons";
+import { BellIcon, SearchIcon } from '@chakra-ui/icons';
 // Chakra Imports
 import {
   Button,
@@ -13,51 +13,53 @@ import {
   MenuItem,
   MenuList,
   Text,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 // Assets
-import avatar1 from "assets/img/avatars/avatar1.png";
-import avatar2 from "assets/img/avatars/avatar2.png";
-import avatar3 from "assets/img/avatars/avatar3.png";
+import avatar1 from 'assets/img/avatars/avatar1.png';
+import avatar2 from 'assets/img/avatars/avatar2.png';
+import avatar3 from 'assets/img/avatars/avatar3.png';
 // Custom Icons
-import { ProfileIcon, SettingsIcon } from "components/Icons/Icons";
+import { ProfileIcon, SettingsIcon } from 'components/Icons/Icons';
 // Custom Components
-import { ItemContent } from "components/Menu/ItemContent";
-import { SidebarResponsive } from "components/Sidebar/Sidebar";
-import PropTypes from "prop-types";
-import React from "react";
-import { NavLink } from "react-router-dom";
-import routes from "routes.js";
+import { ItemContent } from 'components/Menu/ItemContent';
+import { SidebarResponsive } from 'components/Sidebar/Sidebar';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import routes from 'routes.js';
 
 export default function HeaderLinks(props) {
   const { variant, children, fixed, secondary, onOpen, ...rest } = props;
 
   // Chakra Color Mode
-  let inputBg = "#0F1535";
-  let mainText = "gray.400";
-  let navbarIcon = "white";
-  let searchIcon = "white";
+  let inputBg = '#0F1535';
+  let mainText = 'gray.400';
+  let navbarIcon = 'white';
+  let searchIcon = 'white';
 
   if (secondary) {
-    navbarIcon = "white";
-    mainText = "white";
+    navbarIcon = 'white';
+    mainText = 'white';
   }
   const settingsRef = React.useRef();
   return (
     <Flex
-      pe={{ sm: "0px", md: "16px" }}
-      w={{ sm: "100%", md: "auto" }}
+      pe={{ sm: '0px', md: '16px' }}
+      w={{ sm: '100%', md: 'auto' }}
       alignItems='center'
-      flexDirection='row'>
+      flexDirection='row'
+    >
       <InputGroup
         cursor='pointer'
         bg={inputBg}
         borderRadius='15px'
         borderColor='rgba(226, 232, 240, 0.3)'
         w={{
-          sm: "128px",
-          md: "200px",
+          sm: '128px',
+          md: '200px',
         }}
-        me={{ sm: "auto", md: "20px" }}>
+        me={{ sm: 'auto', md: '20px' }}
+      >
         <InputLeftElement
           children={
             <IconButton
@@ -65,16 +67,15 @@ export default function HeaderLinks(props) {
               borderRadius='inherit'
               _hover='none'
               _active={{
-                bg: "inherit",
-                transform: "none",
-                borderColor: "transparent",
+                bg: 'inherit',
+                transform: 'none',
+                borderColor: 'transparent',
               }}
               _focus={{
-                boxShadow: "none",
+                boxShadow: 'none',
               }}
-              icon={
-                <SearchIcon color={searchIcon} w='15px' h='15px' />
-              }></IconButton>
+              icon={<SearchIcon color={searchIcon} w='15px' h='15px' />}
+            ></IconButton>
           }
         />
         <Input
@@ -89,12 +90,12 @@ export default function HeaderLinks(props) {
         <Button
           ms='0px'
           px='0px'
-          me={{ sm: "2px", md: "16px" }}
+          me={{ sm: '2px', md: '16px' }}
           color={navbarIcon}
           variant='transparent-with-icon'
           rightIcon={
             document.documentElement.dir ? (
-              ""
+              ''
             ) : (
               <ProfileIcon color={navbarIcon} w='22px' h='22px' me='0px' />
             )
@@ -103,10 +104,11 @@ export default function HeaderLinks(props) {
             document.documentElement.dir ? (
               <ProfileIcon color={navbarIcon} w='22px' h='22px' me='0px' />
             ) : (
-              ""
+              ''
             )
-          }>
-          <Text display={{ sm: "none", md: "flex" }}>Sign In</Text>
+          }
+        >
+          <Text display={{ sm: 'none', md: 'flex' }}>Sign In</Text>
         </Button>
       </NavLink>
       <SidebarResponsive
@@ -119,7 +121,7 @@ export default function HeaderLinks(props) {
       />
       <SettingsIcon
         cursor='pointer'
-        ms={{ base: "16px", xl: "0px" }}
+        ms={{ base: '16px', xl: '0px' }}
         me='16px'
         ref={settingsRef}
         onClick={props.onOpen}
@@ -136,20 +138,22 @@ export default function HeaderLinks(props) {
           border='transparent'
           backdropFilter='blur(63px)'
           bg='linear-gradient(127.09deg, rgba(6, 11, 40, 0.94) 19.41%, rgba(10, 14, 35, 0.69) 76.65%)'
-          borderRadius='20px'>
+          borderRadius='20px'
+        >
           <Flex flexDirection='column'>
             <MenuItem
               borderRadius='8px'
               _hover={{
-                bg: "transparent",
+                bg: 'transparent',
               }}
               _active={{
-                bg: "transparent",
+                bg: 'transparent',
               }}
               _focus={{
-                bg: "transparent",
+                bg: 'transparent',
               }}
-              mb='10px'>
+              mb='10px'
+            >
               <ItemContent
                 time='13 minutes ago'
                 info='from Alicia'
@@ -161,16 +165,17 @@ export default function HeaderLinks(props) {
             <MenuItem
               borderRadius='8px'
               _hover={{
-                bg: "transparent",
+                bg: 'transparent',
               }}
               _active={{
-                bg: "transparent",
+                bg: 'transparent',
               }}
               _focus={{
-                bg: "transparent",
+                bg: 'transparent',
               }}
-              _hover={{ bg: "transparent" }}
-              mb='10px'>
+              // _hover={{ bg: "transparent" }}
+              mb='10px'
+            >
               <ItemContent
                 time='2 days ago'
                 info='by Josh Henry'
@@ -182,14 +187,15 @@ export default function HeaderLinks(props) {
             <MenuItem
               borderRadius='8px'
               _hover={{
-                bg: "transparent",
+                bg: 'transparent',
               }}
               _active={{
-                bg: "transparent",
+                bg: 'transparent',
               }}
               _focus={{
-                bg: "transparent",
-              }}>
+                bg: 'transparent',
+              }}
+            >
               <ItemContent
                 time='3 days ago'
                 info='Payment succesfully completed!'
