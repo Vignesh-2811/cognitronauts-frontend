@@ -1,9 +1,8 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-import AuthLayout from 'layouts/Auth.js';
 import AdminLayout from 'layouts/Admin.js';
+import AuthLayout from 'layouts/Auth.js';
 import { Provider } from 'react-redux';
 import store from 'redux/store';
 
