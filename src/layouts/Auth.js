@@ -94,10 +94,7 @@ export default function Pages(props) {
         </Portal>
         <Box w='100%'>
           <Box ref={wrapper} w='100%'>
-            <Switch>
-              {getRoutes(routes)}
-              <Redirect from='/auth' to='/auth/login-page' />
-            </Switch>
+            <Switch>{getRoutes(routes)}</Switch>
           </Box>
         </Box>
       </Box>
