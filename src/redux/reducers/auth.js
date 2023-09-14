@@ -27,6 +27,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         jwtToken: payload,
+        isAuthenticated: false,
       };
 
     case USER_LOGOUT:

@@ -32,6 +32,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import AuthBanner from 'components/Auth/AuthBanner';
 import UserInput from 'components/Auth/UserInput';
 import { connect } from 'react-redux';
+import useNotify from '../../utils/notify.js';
 
 function SignUp({ submitRegisterEvent }) {
   const methods = useForm();
@@ -45,6 +46,7 @@ function SignUp({ submitRegisterEvent }) {
   const textColor = 'gray.400';
   const toast = useToast();
   const [selectedDate, setSelectedDate] = useState(null);
+  const notify = useNotify();
 
   // Handle date change
   const handleDateChange = (date) => {
@@ -64,22 +66,16 @@ function SignUp({ submitRegisterEvent }) {
       !data.password ||
       !data.confirmPassword
     ) {
-      toast({
-        title: 'Error',
-        description: 'Please provide all necessary fields.',
+      notify({
         status: 'error',
-        duration: 5000,
-        isClosable: true,
+        description: 'Please provide all the fields',
       });
       return;
     }
     if (data.password !== data.confirmPassword) {
-      toast({
-        title: 'Error',
-        description: 'Password and confirm password do not match.',
+      notify({
         status: 'error',
-        duration: 5000,
-        isClosable: true,
+        description: 'Password and confirm password do not match',
       });
       return;
     }
@@ -90,25 +86,20 @@ function SignUp({ submitRegisterEvent }) {
 
     try {
       const res = await submitRegisterEvent(payload);
-      if (res.status === 201) {
-        toast({
-          title: 'Success',
-          description: 'User created successfully, login .',
+      console.log(res);
+      if (res === 201) {
+        notify({
           status: 'success',
-          duration: 5000,
-          isClosable: true,
+          description: 'User created successfully, Login',
         });
       } else {
-        toast({
-          title: 'Error',
-          description: res.message || 'An unexpected error occurred.',
+        notify({
           status: 'error',
-          duration: 5000,
-          isClosable: true,
+          description: res.data.error,
         });
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

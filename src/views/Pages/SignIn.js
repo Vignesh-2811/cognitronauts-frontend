@@ -10,19 +10,64 @@ import {
   Input,
   Switch,
   Text,
+  useToast,
 } from '@chakra-ui/react';
 
 // Assets
 import signInImage from 'assets/img/signin.jpg';
 import AuthBanner from 'components/Auth/AuthBanner';
+import UserInput from 'components/Auth/UserInput';
+import { loginEvent } from 'redux/actions/auth';
 
 // Custom Components
 import AuthFooter from 'components/Footer/AuthFooter';
 import GradientBorder from 'components/GradientBorder/GradientBorder';
+import { useForm, FormProvider } from 'react-hook-form';
+import useNotify from 'utils/notify';
+import { connect, useDispatch } from 'react-redux';
+import { ADD_JWT_TOKEN } from 'redux/reducers/auth.js';
 
-function SignIn() {
+function SignIn({ loginEvent }) {
   const titleColor = 'white';
   const textColor = 'gray.400';
+  const methods = useForm();
+  const notify = useNotify();
+  const dispatch = useDispatch();
+
+  const {
+    handleSubmit,
+    register,
+    setValue,
+    formState: { errors },
+  } = methods;
+
+  const onSubmit = async (data) => {
+    // console.log(data);
+    if (!data.email || !data.password) {
+      notify({
+        status: 'error',
+        description: 'Please provide all the fields',
+      });
+      return;
+    }
+
+    try {
+      const res = await loginEvent(data);
+      if (res.status === 200) {
+        notify({
+          status: 'success',
+          description: 'Login successfull',
+        });
+      } else {
+        notify({
+          status: 'error',
+          description: res.data,
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <Flex position='relative'>
@@ -58,7 +103,6 @@ function SignIn() {
             <Heading color={titleColor} fontSize='32px' mb='10px'>
               Nice to see you :)
             </Heading>
-
             <Text
               mb='36px'
               ms='4px'
@@ -68,89 +112,35 @@ function SignIn() {
             >
               Enter your email and password to sign in
             </Text>
-            <FormControl>
-              <FormLabel
-                ms='4px'
-                fontSize='sm'
-                fontWeight='normal'
-                color='white'
-              >
-                Email
-              </FormLabel>
-              <GradientBorder
-                mb='24px'
-                w={{ base: '100%', lg: 'fit-content' }}
-                borderRadius='20px'
-              >
-                <Input
-                  color='white'
-                  bg='rgb(19,21,54)'
-                  border='transparent'
-                  borderRadius='20px'
-                  fontSize='sm'
-                  size='lg'
-                  w={{ base: '100%', md: '346px' }}
-                  maxW='100%'
-                  h='46px'
-                  placeholder='Your email address'
+            <FormProvider {...methods}>
+              <FormControl>
+                <UserInput
+                  name='email'
+                  label='Email'
+                  placeholder='Enter your email'
+                  type='text'
                 />
-              </GradientBorder>
-            </FormControl>
-            <FormControl>
-              <FormLabel
-                ms='4px'
-                fontSize='sm'
-                fontWeight='normal'
-                color='white'
-              >
-                Password
-              </FormLabel>
-              <GradientBorder
-                mb='24px'
-                w={{ base: '100%', lg: 'fit-content' }}
-                borderRadius='20px'
-              >
-                <Input
-                  color='white'
-                  bg='rgb(19,21,54)'
-                  border='transparent'
-                  borderRadius='20px'
-                  fontSize='sm'
-                  size='lg'
-                  w={{ base: '100%', md: '346px' }}
-                  maxW='100%'
+                <UserInput
+                  name='password'
+                  label='Password'
+                  placeholder='Enter your password'
                   type='password'
-                  placeholder='Your password'
                 />
-              </GradientBorder>
-            </FormControl>
-            {/* <FormControl display='flex' alignItems='center'>
-              <DarkMode>
-                <Switch id='remember-login' colorScheme='brand' me='10px' />
-              </DarkMode>
-              <FormLabel
-                htmlFor='remember-login'
-                mb='0'
-                ms='1'
-                fontWeight='normal'
-                color='white'
-              >
-                Remember me
-              </FormLabel>
-            </FormControl> */}
-            <Button
-              variant='brand'
-              fontSize='10px'
-              type='submit'
-              w='100%'
-              maxW='350px'
-              h='45'
-              mb='20px'
-              mt='20px'
-            >
-              SIGN IN
-            </Button>
-
+                <Button
+                  variant='brand'
+                  fontSize='10px'
+                  type='submit'
+                  w='100%'
+                  maxW='350px'
+                  h='45'
+                  mb='20px'
+                  mt='20px'
+                  onClick={handleSubmit(onSubmit)}
+                >
+                  SIGN IN
+                </Button>
+              </FormControl>
+            </FormProvider>
             <Flex
               flexDirection='column'
               justifyContent='center'
@@ -179,4 +169,6 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+const mapStateToProps = (state) => ({});
+
+export default connect(mapStateToProps, { loginEvent })(SignIn);

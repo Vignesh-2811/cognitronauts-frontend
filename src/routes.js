@@ -25,6 +25,13 @@ var dashRoutes = [
     layout: '/admin',
   },
   {
+    path: '/patientdashboard',
+    name: 'Patient Dashboard',
+    icon: <HomeIcon color='inherit' />,
+    component: Dashboard,
+    layout: '/admin',
+  },
+  {
     path: '/tables',
     name: 'Tables',
     icon: <StatsIcon color='inherit' />,
