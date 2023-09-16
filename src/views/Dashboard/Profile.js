@@ -110,7 +110,7 @@ function Profile() {
                   fontWeight='bold'
                   ms={{ sm: '8px', md: '0px' }}
                 >
-                  Mark Johnson
+                  ohnson
                 </Text>
                 <Text fontSize={{ sm: 'sm', md: 'md' }} color='gray.400'>
                   mark@simmmple.com

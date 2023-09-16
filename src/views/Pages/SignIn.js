@@ -157,6 +157,15 @@ function SignIn({ loginEvent }) {
             ></Flex>
           </Flex>
         </Flex>
+        <Text
+          mb='36px'
+          ms='4px'
+          color={textColor}
+          fontWeight='bold'
+          fontSize='14px'
+        >
+          Al
+        </Text>
         <Box
           w={{ base: '335px', md: '450px' }}
           mx={{ base: 'auto', lg: 'unset' }}

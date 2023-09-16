@@ -34,7 +34,7 @@ const PrivateRoute = ({
 const mapStateToProps = (state) => {
   return {
     isAuthenticated: state.auth.isAuthenticated,
-    role: state.user.role,
+    role: state.user.userData.role,
   };
 };
 
