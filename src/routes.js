@@ -16,7 +16,7 @@ import {
   SupportIcon,
 } from 'components/Icons/Icons';
 
-var dashRoutes = [
+export var routes = [
   {
     path: '/dashboard',
     name: 'Dashboard',
@@ -24,13 +24,7 @@ var dashRoutes = [
     component: Dashboard,
     layout: '/admin',
   },
-  {
-    path: '/patientdashboard',
-    name: 'Patient Dashboard',
-    icon: <HomeIcon color='inherit' />,
-    component: Dashboard,
-    layout: '/admin',
-  },
+
   {
     path: '/tables',
     name: 'Tables',
@@ -59,22 +53,85 @@ var dashRoutes = [
         component: Profile,
         layout: '/admin',
       },
-      {
-        path: '/signin',
-        name: 'Sign In',
-        icon: <DocumentIcon color='inherit' />,
-        component: SignIn,
-        layout: '/auth',
-      },
-      {
-        path: '/signup',
-        name: 'Sign Up',
-        icon: <RocketIcon color='inherit' />,
-        secondaryNavbar: true,
-        component: SignUp,
-        layout: '/auth',
-      },
+      // {
+      //   path: '/signin',
+      //   name: 'Sign In',
+      //   icon: <DocumentIcon color='inherit' />,
+      //   component: SignIn,
+      //   layout: '/auth',
+      // },
+      // {
+      //   path: '/signup',
+      //   name: 'Sign Up',
+      //   icon: <RocketIcon color='inherit' />,
+      //   secondaryNavbar: true,
+      //   component: SignUp,
+      //   layout: '/auth',
+      // },
     ],
   },
 ];
-export default dashRoutes;
+// export default dashRoutes;
+
+export var ClientRoutes = [
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    icon: <HomeIcon color='inherit' />,
+    component: Dashboard,
+    layout: '/client',
+  },
+
+  {
+    path: '/tables',
+    name: 'Tables',
+    icon: <StatsIcon color='inherit' />,
+    component: Tables,
+    layout: '/client',
+  },
+  {
+    path: '/billing',
+    name: 'Billing',
+    icon: <CreditIcon color='inherit' />,
+    component: Billing,
+    layout: '/client',
+  },
+
+  {
+    name: 'ACCOUNT PAGES',
+    category: 'account',
+    state: 'pageCollapse',
+    views: [
+      {
+        path: '/profile',
+        name: 'Profile',
+        icon: <PersonIcon color='inherit' />,
+        secondaryNavbar: true,
+        component: Profile,
+        layout: '/client',
+      },
+      // {
+      //   path: '/signin',
+      //   name: 'Sign In',
+      //   icon: <DocumentIcon color='inherit' />,
+      //   component: SignIn,
+      //   layout: '/auth',
+      // },
+      // {
+      //   path: '/signup',
+      //   name: 'Sign Up',
+      //   icon: <RocketIcon color='inherit' />,
+      //   secondaryNavbar: true,
+      //   component: SignUp,
+      //   layout: '/auth',
+      // },
+    ],
+  },
+  {
+    path: '/logout',
+    name: 'Logout',
+    icon: <CreditIcon color='inherit' />,
+    component: Billing,
+    layout: '/logout',
+  },
+];

@@ -7,7 +7,7 @@ import AdminNavbar from 'components/Navbars/AdminNavbar.js';
 import Sidebar from 'components/Sidebar/Sidebar.js';
 import React, { useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { routes } from 'routes.js';
+
 // Custom Chakra theme
 import theme from 'theme/themeAdmin.js';
 import FixedPlugin from '../components/FixedPlugin/FixedPlugin';
@@ -15,7 +15,8 @@ import FixedPlugin from '../components/FixedPlugin/FixedPlugin';
 import MainPanel from '../components/Layout/MainPanel';
 import PanelContainer from '../components/Layout/PanelContainer';
 import PanelContent from '../components/Layout/PanelContent';
-export default function Dashboard(props) {
+import { ClientRoutes as routes } from 'routes';
+export default function ClientDashboard(props) {
   const { ...rest } = props;
   // states and functions
   const [sidebarVariant, setSidebarVariant] = useState('transparent');
@@ -78,7 +79,7 @@ export default function Dashboard(props) {
       if (prop.category === 'account') {
         return getRoutes(prop.views);
       }
-      if (prop.layout === '/admin') {
+      if (prop.layout === '/client') {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -125,7 +126,7 @@ export default function Dashboard(props) {
             <PanelContainer>
               <Switch>
                 {getRoutes(routes)}
-                <Redirect from='/admin' to='/admin/dashboard' />
+                <Redirect from='/client' to='/client/dashboard' />
               </Switch>
             </PanelContainer>
           </PanelContent>
