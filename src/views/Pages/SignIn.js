@@ -26,6 +26,7 @@ import { useForm, FormProvider } from 'react-hook-form';
 import useNotify from 'utils/notify';
 import { connect, useDispatch } from 'react-redux';
 import { ADD_JWT_TOKEN } from 'redux/reducers/auth.js';
+import { useHistory } from 'react-router-dom';
 
 function SignIn({ loginEvent }) {
   const titleColor = 'white';
@@ -33,6 +34,7 @@ function SignIn({ loginEvent }) {
   const methods = useForm();
   const notify = useNotify();
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const {
     handleSubmit,
@@ -58,6 +60,11 @@ function SignIn({ loginEvent }) {
           status: 'success',
           description: 'Login successfull',
         });
+        if (res.data.role === 'Doctor') {
+          history.push('/admin/dashboard');
+        } else {
+          history.push('/client/dashboard');
+        }
       } else {
         notify({
           status: 'error',

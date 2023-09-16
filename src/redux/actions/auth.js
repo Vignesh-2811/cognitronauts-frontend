@@ -1,5 +1,5 @@
 import axios from '../../axios-api';
-import { ADD_JWT_TOKEN } from './types';
+import { ADD_JWT_TOKEN, ADD_USER_STATE } from './types';
 
 export const submitRegisterEvent = (data) => async (dispatch) => {
   try {
@@ -26,6 +26,10 @@ export const loginEvent = (data) => async (dispatch) => {
     dispatch({
       type: ADD_JWT_TOKEN,
       payload: res.data.accessToken,
+    });
+    dispatch({
+      type: ADD_USER_STATE,
+      payload: res.data,
     });
     return res;
   } catch (error) {
