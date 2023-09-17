@@ -21,7 +21,7 @@ const PrivateRoute = ({
             return role === 'Doctor' ? (
               <Redirect to='/admin/dashboard' />
             ) : (
-              <Redirect to='/client/dashboard' />
+              <Redirect to='/client/home' />
             );
           }
         }

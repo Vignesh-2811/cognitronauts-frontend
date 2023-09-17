@@ -1,4 +1,4 @@
-import Dashboard from 'views/Dashboard/Dashboard.js';
+import Home from './Views/Home.js';
 import Tables from 'views/Dashboard/Tables.js';
 import Billing from 'views/Dashboard/Billing.js';
 import RTLPage from 'views/RTL/RTLPage.js';
@@ -16,13 +16,13 @@ import {
   SupportIcon,
 } from 'components/Icons/Icons';
 
-export var routes = [
+export var ClientRoutes = [
   {
-    path: '/dashboard',
-    name: 'Dashboard',
+    path: '/home',
+    name: 'Home',
     icon: <HomeIcon color='inherit' />,
-    component: Dashboard,
-    layout: '/admin',
+    component: Home,
+    layout: '/client',
   },
 
   {
@@ -30,14 +30,14 @@ export var routes = [
     name: 'Tables',
     icon: <StatsIcon color='inherit' />,
     component: Tables,
-    layout: '/admin',
+    layout: '/client',
   },
   {
     path: '/billing',
     name: 'Billing',
     icon: <CreditIcon color='inherit' />,
     component: Billing,
-    layout: '/admin',
+    layout: '/client',
   },
 
   {
@@ -51,24 +51,15 @@ export var routes = [
         icon: <PersonIcon color='inherit' />,
         secondaryNavbar: true,
         component: Profile,
-        layout: '/admin',
+        layout: '/client',
       },
-      // {
-      //   path: '/signin',
-      //   name: 'Sign In',
-      //   icon: <DocumentIcon color='inherit' />,
-      //   component: SignIn,
-      //   layout: '/auth',
-      // },
-      // {
-      //   path: '/signup',
-      //   name: 'Sign Up',
-      //   icon: <RocketIcon color='inherit' />,
-      //   secondaryNavbar: true,
-      //   component: SignUp,
-      //   layout: '/auth',
-      // },
     ],
   },
+  {
+    path: '/logout',
+    name: 'Logout',
+    icon: <CreditIcon color='inherit' />,
+    component: Billing,
+    layout: '/logout',
+  },
 ];
-// export default dashRoutes;

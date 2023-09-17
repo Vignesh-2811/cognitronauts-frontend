@@ -10,7 +10,7 @@ import AdminLayout from 'layouts/Admin.js';
 import AuthLayout from 'layouts/Auth.js';
 import { Provider } from 'react-redux';
 import store from 'redux/store';
-import ClientDashboard from 'layouts/Client';
+import ClientDashboard from './Screens/Client/Client.js';
 import SignIn from 'views/Pages/SignIn.js';
 import themeAuth from 'theme/themeAuth.js';
 import { ChakraProvider } from '@chakra-ui/react';
