@@ -308,7 +308,7 @@ function CognitiveTrainingReport() {
           <Flex direction='column'>
             <CardHeader py='12px'>
               <Text color='#fff' fontSize='lg' fontWeight='bold'>
-                Billing Information
+                Cognitive Session report
               </Text>
             </CardHeader>
             <CardBody>

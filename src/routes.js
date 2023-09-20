@@ -28,7 +28,7 @@ export var routes = [
   },
   {
     path: '/billing',
-    name: 'Billing',
+    name: 'Cognitive Session Report',
     icon: <CreditIcon color='inherit' />,
     component: Billing,
     layout: '/admin',

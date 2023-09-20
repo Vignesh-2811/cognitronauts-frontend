@@ -5,11 +5,10 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Flex,
-  Link,
-  useColorModeValue,
+  Link
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NavbarLinks from './NavbarLinks.js';
 
 export default function Navbar(props) {
