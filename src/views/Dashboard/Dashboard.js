@@ -1,27 +1,12 @@
 import {
-  Box,
-  Input,
-  Textarea,
-  Button,
-  CircularProgress,
-  CircularProgressLabel,
-  Flex,
-  Grid,
-  Icon,
-  Progress,
-  SimpleGrid,
-  Spacer,
-  Stack,
-  Stat,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
-  Table,
-  Tbody,
-  Text,
-  Th,
-  Thead,
-  Tr,
+	Box,
+	CircularProgress,
+	CircularProgressLabel,
+	Flex,
+	Grid,
+	Icon,
+	Stack,
+	Text
 } from '@chakra-ui/react';
 // Styles for the circular progressbar
 //import medusa from 'assets/img/cardimgfree.png';
@@ -29,39 +14,16 @@ import {
 import Card from 'components/Card/Card.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
-import BarChart from 'components/Charts/BarChart';
-import LineChart from 'components/Charts/LineChart';
 import WelcomeCard from 'components/Dashboard/WelcomeCard';
 import IconBox from 'components/Icons/IconBox';
+import { Link } from 'react-router-dom';
 
 // Icons
-import {
-  CartIcon,
-  DocumentIcon,
-  GlobeIcon,
-  RocketIcon,
-  StatsIcon,
-  WalletIcon,
-} from 'components/Icons/Icons.js';
-import DashboardTableRow from 'components/Tables/DashboardTableRow';
 import TimelineRow from 'components/Tables/TimelineRow';
-import { AiFillCheckCircle } from 'react-icons/ai';
 import { BiHappy } from 'react-icons/bi';
-import { BsArrowRight } from 'react-icons/bs';
-import {
-  IoCheckmarkDoneCircleSharp,
-  IoEllipsisHorizontal,
-} from 'react-icons/io5';
 import { connect } from 'react-redux';
-import user from 'redux/reducers/user';
 
-import {
-  barChartDataDashboard,
-  barChartOptionsDashboard,
-  lineChartDataDashboard,
-  lineChartOptionsDashboard,
-} from 'variables/charts';
-import { dashboardTableData, timelineData } from 'variables/general';
+import { timelineData } from 'variables/general';
 
 function Dashboard({ userdata }) {
   return (
@@ -190,9 +152,13 @@ function Dashboard({ userdata }) {
                 mb='36px'
                 alignSelf='flex-start'
               >
-                <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-                  Cognitive Training Report
-                </Text>
+               <Link to="/admin/billing" rel="noopener noreferrer">
+  <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
+    Cognitive Training Report
+  </Text>
+</Link>
+
+
                 <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
               </Flex>
             </Flex>

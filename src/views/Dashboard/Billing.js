@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Chakra imports
 import { Box, Button, Flex, Grid, Icon, Spacer, Text } from '@chakra-ui/react';
@@ -17,15 +16,15 @@ import InvoicesRow from 'components/Tables/InvoicesRow';
 import TransactionRow from 'components/Tables/TransactionRow';
 
 // Icons
-import { FaPencilAlt, FaRegCalendarAlt } from 'react-icons/fa';
-import { IoEllipsisHorizontalSharp } from 'react-icons/io5';
-import { RiMastercardFill } from 'react-icons/ri';
 import {
   BillIcon,
   GraphIcon,
   MastercardIcon,
   VisaIcon,
 } from 'components/Icons/Icons';
+import { FaPencilAlt, FaRegCalendarAlt } from 'react-icons/fa';
+import { IoEllipsisHorizontalSharp } from 'react-icons/io5';
+import { RiMastercardFill } from 'react-icons/ri';
 
 // Data
 import {
@@ -35,7 +34,7 @@ import {
   olderTransactions,
 } from 'variables/general';
 
-function Billing() {
+function CognitiveTrainingReport() {
   return (
     <Flex direction='column' pt={{ base: '120px', md: '75px' }} mx='auto'>
       <Grid templateColumns={{ sm: '1fr', lg: '60% 38%' }}>
@@ -398,4 +397,4 @@ function Billing() {
   );
 }
 
-export default Billing;
+export default CognitiveTrainingReport;
