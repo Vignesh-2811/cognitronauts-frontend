@@ -2,35 +2,25 @@
 import {
   Box,
   Button,
-  DarkMode,
   Flex,
   FormControl,
   FormLabel,
-  HStack,
-  Icon,
-  Input,
-  Link,
   Select,
-  Switch,
   Text,
-  toast,
-  useToast,
+  useToast
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import { submitRegisterEvent } from 'redux/actions/auth';
 import 'react-datepicker/dist/react-datepicker.css';
+import { submitRegisterEvent } from 'redux/actions/auth';
 // Icons
-import { FaApple, FaFacebook, FaGoogle } from 'react-icons/fa';
 // Custom Components
 import AuthFooter from 'components/Footer/AuthFooter';
 import GradientBorder from 'components/GradientBorder/GradientBorder';
-
 // Assets
 import signUpImage from 'assets/img/signup.png';
-import { FormProvider, useForm } from 'react-hook-form';
 import AuthBanner from 'components/Auth/AuthBanner';
 import UserInput from 'components/Auth/UserInput';
+import { FormProvider, useForm } from 'react-hook-form';
 import { connect } from 'react-redux';
 import useNotify from '../../utils/notify.js';
 
@@ -213,21 +203,14 @@ function SignUp({ submitRegisterEvent }) {
                     placeholder='Your email address'
                     type='email'
                   />
-
-                  <FormLabel
-                    color={titleColor}
-                    ms='4px'
-                    fontSize='sm'
-                    fontWeight='normal'
-                  >
-                    Date Of Birth
-                  </FormLabel>
-
-                  <DatePicker
-                    selected={selectedDate}
-                    onChange={handleDateChange}
-                    dateFormat='dd/MM/yyyy'
+                    <UserInput
+                    name='dob'
+                    label='DOB'
+                    placeholder='Your Date of Birth'
+                    type='date'
                   />
+
+
                   <UserInput
                     name='number'
                     label='Number'
