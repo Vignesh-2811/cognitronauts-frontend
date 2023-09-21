@@ -34,7 +34,7 @@ export var ClientRoutes = [
   },
   {
     path: '/billing',
-    name: 'Billing',
+    name: 'Cognitive Session Report',
     icon: <CreditIcon color='inherit' />,
     component: Billing,
     layout: '/client',

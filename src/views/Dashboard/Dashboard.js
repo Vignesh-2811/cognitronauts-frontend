@@ -16,7 +16,7 @@ import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
 import WelcomeCard from 'components/Dashboard/WelcomeCard';
 import IconBox from 'components/Icons/IconBox';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 // Icons
 import TimelineRow from 'components/Tables/TimelineRow';
@@ -26,6 +26,13 @@ import { connect } from 'react-redux';
 import { timelineData } from 'variables/general';
 
 function Dashboard({ userdata }) {
+  const history = useHistory();
+
+  const handleLinkClick = () => {
+    // Use history.push() to navigate to the "/admin/billing" route
+    history.push('/admin/billing');
+    console.log('in redirection');
+  };
   return (
     <Flex flexDirection='column' pt={{ base: '120px', md: '75px' }}>
       <Grid
@@ -132,15 +139,26 @@ function Dashboard({ userdata }) {
         mb='24px'
       >
         {/* EEG Reports */}
-        <Card p='28px 0px 0px 0px'>
-          <CardHeader mb='20px' ps='22px'>
-            <Flex direction='column' alignSelf='flex-start'>
-              <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-                EEG Report
-              </Text>
-              <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
+        <Card p='16px'>
+          <CardBody>
+            <Flex direction='column' w='100%'>
+              <Flex
+                direction='column'
+                mt='24px'
+                mb='36px'
+                alignSelf='flex-start'
+              >
+               <Link to="/admin/EEG" rel="noopener noreferrer">
+  <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
+    EEG Report
+  </Text>
+</Link>
+
+
+                <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
+              </Flex>
             </Flex>
-          </CardHeader>
+          </CardBody>
         </Card>
         {/* Cognitive Training Reports */}
         <Card p='16px'>
@@ -152,12 +170,16 @@ function Dashboard({ userdata }) {
                 mb='36px'
                 alignSelf='flex-start'
               >
-               <Link to="/admin/billing" rel="noopener noreferrer">
-  <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-    Cognitive Training Report
-  </Text>
-</Link>
-
+            <Text
+        fontSize='lg'
+        color='#fff'
+        fontWeight='bold'
+        mb='6px'
+        onClick={handleLinkClick}
+        style={{ cursor: 'pointer' }}
+      >
+        Cognitive Training Report
+      </Text>
 
                 <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
               </Flex>
@@ -199,22 +221,38 @@ function Dashboard({ userdata }) {
         </Card>
         {/* Contact Form */}
         <Card p='16px'>
-          <CardBody>
-            <Flex direction='column' w='100%'>
-              <Flex
-                direction='column'
-                mt='24px'
-                mb='36px'
-                alignSelf='flex-start'
-              >
-                <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-                  Mail Us
-                </Text>
-                <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
-              </Flex>
-            </Flex>
-          </CardBody>
-        </Card>
+  <CardBody style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+    <Flex direction='column' w='100%'>
+      <Flex
+        direction='column'
+        mt='24px'
+        mb='36px'
+        alignSelf='flex-start'
+      >
+        <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
+          Mail Us
+        </Text>
+        {/* Corrected the email link */}
+        <a
+          href='mailto:2021ad0414@svce.ac.in'
+          style={{ textDecoration: 'none', color: 'white' }}
+        >
+          <Text
+            fontSize='18'
+            fontWeight='normal'
+            mb='auto'
+            style={{ fontStyle: 'italic' }}
+          >
+            For any queries, contact:
+            <br />
+           
+          </Text>
+        </a>
+      </Flex>
+    </Flex>
+  </CardBody>
+</Card>
+
       </Grid>
     </Flex>
   );

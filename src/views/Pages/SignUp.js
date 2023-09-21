@@ -7,7 +7,7 @@ import {
   FormLabel,
   Select,
   Text,
-  useToast
+  useToast,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -203,13 +203,12 @@ function SignUp({ submitRegisterEvent }) {
                     placeholder='Your email address'
                     type='email'
                   />
-                    <UserInput
+                  <UserInput
                     name='dateOfBirth'
                     label='DOB'
                     placeholder='Your Date of Birth'
                     type='date'
                   />
-
 
                   <UserInput
                     name='number'
