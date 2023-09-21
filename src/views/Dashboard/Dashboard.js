@@ -32,7 +32,23 @@ function Dashboard({ userdata }) {
     // Use history.push() to navigate to the "/admin/billing" route
     history.push('/admin/billing');
     console.log('in redirection');
-  };
+ };
+ const handleEEGReportsClick = () => {
+  // Use history.push() to navigate to the "/admin/eeg-reports" route
+  history.push('/admin/eeg');
+};
+
+const handleTaskClick = () => {
+  // Use history.push() to navigate to the "/admin/eeg-reports" route
+  history.push('/admin/task');
+};
+
+const handleAssignClick = () => {
+  // Use history.push() to navigate to the "/admin/eeg-reports" route
+  history.push('/admin/assign');
+};
+ 
+
   return (
     <Flex flexDirection='column' pt={{ base: '120px', md: '75px' }}>
       <Grid
@@ -49,9 +65,16 @@ function Dashboard({ userdata }) {
         <Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }}>
           <CardHeader mb='24px'>
             <Flex direction='column'>
-              <Text color='#fff' fontSize='lg' fontWeight='bold' mb='4px'>
-                Task Details
-              </Text>
+            <Text
+        fontSize='lg'
+        color='#fff'
+        fontWeight='bold'
+        mb='6px'
+        onClick={handleTaskClick}
+        style={{ cursor: 'pointer' }}
+      >
+        Task Details
+      </Text>
               <Text color='gray.400' fontSize='sm'>
                 From all sessions
               </Text>
@@ -114,9 +137,16 @@ function Dashboard({ userdata }) {
         <Card gridArea={{ md: '2 / 2 / 3 / 3', '2xl': 'auto' }}>
           <Flex direction='column'>
             <Flex justify='space-between' align='center' mb='40px'>
-              <Text color='#fff' fontSize='lg' fontWeight='bold'>
-                Future Assignments
-              </Text>
+            <Text
+        fontSize='lg'
+        color='#fff'
+        fontWeight='bold'
+        mb='6px'
+        onClick={handleTaskClick}
+        style={{ cursor: 'pointer' }}
+      >
+        Future Assignment
+      </Text>
             </Flex>
             <Flex direction={{ sm: 'column', md: 'row' }}>
               <Flex
@@ -140,26 +170,33 @@ function Dashboard({ userdata }) {
       >
         {/* EEG Reports */}
         <Card p='16px'>
-          <CardBody>
-            <Flex direction='column' w='100%'>
-              <Flex
-                direction='column'
-                mt='24px'
-                mb='36px'
-                alignSelf='flex-start'
-              >
-               <Link to="/admin/EEG" rel="noopener noreferrer">
-  <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-    EEG Report
-  </Text>
-</Link>
+        <CardBody>
+          <Flex direction='column' w='100%'>
+            <Flex
+              direction='column'
+              mt='24px'
+              mb='36px'
+              alignSelf='flex-start'
+            >
+              {/* Use Link component to navigate */}
+              
+              <Text
+        fontSize='lg'
+        color='#fff'
+        fontWeight='bold'
+        mb='6px'
+        onClick={handleEEGReportsClick}
+        style={{ cursor: 'pointer' }}
+      >
+        EEG Report
+      </Text>
+             
 
-
-                <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
-              </Flex>
+              <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
             </Flex>
-          </CardBody>
-        </Card>
+          </Flex>
+        </CardBody>
+      </Card>
         {/* Cognitive Training Reports */}
         <Card p='16px'>
           <CardBody>
