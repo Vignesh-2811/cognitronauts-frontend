@@ -12,10 +12,10 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import theme from 'theme/themeAdmin.js';
 import FixedPlugin from '../components/FixedPlugin/FixedPlugin';
 // Custom components
+import { ClientRoutes as routes } from 'routes';
 import MainPanel from '../components/Layout/MainPanel';
 import PanelContainer from '../components/Layout/PanelContainer';
 import PanelContent from '../components/Layout/PanelContent';
-import { ClientRoutes as routes } from 'routes';
 export default function ClientDashboard(props) {
   const { ...rest } = props;
   // states and functions
