@@ -132,15 +132,26 @@ function Dashboard({ userdata }) {
         mb='24px'
       >
         {/* EEG Reports */}
-        <Card p='28px 0px 0px 0px'>
-          <CardHeader mb='20px' ps='22px'>
-            <Flex direction='column' alignSelf='flex-start'>
-              <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-                EEG Report
-              </Text>
-              <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
+        <Card p='16px'>
+          <CardBody>
+            <Flex direction='column' w='100%'>
+              <Flex
+                direction='column'
+                mt='24px'
+                mb='36px'
+                alignSelf='flex-start'
+              >
+               <Link to="/admin/EEG" rel="noopener noreferrer">
+  <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
+    Cognitive Training Report
+  </Text>
+</Link>
+
+
+                <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
+              </Flex>
             </Flex>
-          </CardHeader>
+          </CardBody>
         </Card>
         {/* Cognitive Training Reports */}
         <Card p='16px'>

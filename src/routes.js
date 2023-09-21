@@ -9,6 +9,7 @@ import {
   PersonIcon,
   StatsIcon
 } from 'components/Icons/Icons';
+import { BsEyeglasses } from 'react-icons/bs';
 
 export var routes = [
   {
@@ -33,7 +34,13 @@ export var routes = [
     component: Billing,
     layout: '/admin',
   },
-
+  {
+    path: '/EEG',
+    name: 'EEG Report',
+    icon: <CreditIcon color='inherit' />,
+    //component: EEGReport,
+    layout: '/admin',
+  },
   {
     name: 'ACCOUNT PAGES',
     category: 'account',
