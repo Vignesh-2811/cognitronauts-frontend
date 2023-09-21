@@ -42,7 +42,7 @@ function CognitiveTrainingReport() {
           fontSize={{ sm: 'lg', md: 'xl', lg: 'lg' }}
           fontWeight='bold'
         >
-          Your Transactions
+          Your progress is a testament to your dedication, keep going!
         </Text></div>
         <Flex align='center'>
           <Icon
