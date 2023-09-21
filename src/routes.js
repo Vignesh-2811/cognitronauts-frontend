@@ -1,20 +1,15 @@
-import Dashboard from 'views/Dashboard/Dashboard.js';
-import Tables from 'views/Dashboard/Tables.js';
 import Billing from 'views/Dashboard/Billing.js';
-import RTLPage from 'views/RTL/RTLPage.js';
+import Dashboard from 'views/Dashboard/Dashboard.js';
 import Profile from 'views/Dashboard/Profile.js';
-import SignIn from 'views/Pages/SignIn.js';
-import SignUp from 'views/Pages/SignUp.js';
+import Tables from 'views/Dashboard/Tables.js';
 
 import {
-  HomeIcon,
-  StatsIcon,
   CreditIcon,
+  HomeIcon,
   PersonIcon,
-  DocumentIcon,
-  RocketIcon,
-  SupportIcon,
+  StatsIcon
 } from 'components/Icons/Icons';
+import { BsEyeglasses } from 'react-icons/bs';
 
 export var routes = [
   {
@@ -32,14 +27,20 @@ export var routes = [
     component: Tables,
     layout: '/admin',
   },
-  {
-    path: '/billing',
-    name: 'Billing',
-    icon: <CreditIcon color='inherit' />,
-    component: Billing,
-    layout: '/admin',
-  },
-
+  // {
+  //   path: '/billing',
+  //   name: 'Cognitive Session Report',
+  //   icon: <CreditIcon color='inherit' />,
+  //   component: Billing,
+  //   layout: '/admin',
+  // },
+  // {
+  //   path: '/EEG',
+  //   name: 'EEG Report',
+  //   icon: <CreditIcon color='inherit' />,
+  //   //component: EEGReport,
+  //   layout: '/admin',
+  // },
   {
     name: 'ACCOUNT PAGES',
     category: 'account',

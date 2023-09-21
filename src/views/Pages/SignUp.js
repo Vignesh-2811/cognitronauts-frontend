@@ -204,7 +204,7 @@ function SignUp({ submitRegisterEvent }) {
                     type='email'
                   />
                   <UserInput
-                    name='dob'
+                    name='dateOfBirth'
                     label='DOB'
                     placeholder='Your Date of Birth'
                     type='date'
