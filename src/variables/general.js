@@ -312,42 +312,42 @@ export const billingData = [
 
 export const newestTransactions = [
   {
-    name: "Netflix",
+    name: "CogniRecall Quest",
     date: "27 March 2021, at 12:30 PM",
-    price: "- $2,500",
+    price: "- pending",
     logo: FaArrowDown,
   },
   {
-    name: "Apple",
+    name: "CogniRecall Quest",
     date: "27 March 2021, at 12:30 PM",
-    price: "+ $2,500",
+    price: "+ 40 min",
     logo: FaArrowUp,
   },
 ];
 
 export const olderTransactions = [
   {
-    name: "Stripe",
+    name: "Mnemonic Mind Maze",
     date: "26 March 2021, at 13:45 PM",
-    price: "+ $800",
+    price: "35 min",
     logo: FaArrowUp,
   },
   {
-    name: "HubSpot",
+    name: "Mnemonic Mind Maze",
     date: "26 March 2021, at 12:30 PM",
-    price: "+ $1,700",
+    price: "20 min",
     logo: FaArrowUp,
   },
   {
-    name: "Webflow",
+    name: "Mnemonic Mind Maze",
     date: "26 March 2021, at 05:00 PM",
-    price: "Pending",
-    logo: AiOutlineExclamation,
+    price: "5 min",
+    logo: FaArrowUp,
   },
   {
-    name: "Microsoft",
+    name: "Mnemonic Mind Maze",
     date: "25 March 2021, at 16:30 PM",
-    price: "- $987",
+    price: "1 min 30 seconds",
     logo: FaArrowDown,
   },
 ];
