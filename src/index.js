@@ -15,6 +15,8 @@ import themeAuth from 'theme/themeAuth.js';
 import SignIn from 'views/Pages/SignIn.js';
 import SignUp from 'views/Pages/SignUp';
 import ClientDashboard from './Screens/Client/Client.js';
+import Billing from 'views/Dashboard/Billing.js';
+
 
 ReactDOM.render(
   <ChakraProvider theme={themeAuth} resetCss={false} w='100%'>
@@ -26,6 +28,7 @@ ReactDOM.render(
           <Route path={`/auth`} component={AuthLayout} /> 
           <Route path={`/admin`} component={AdminLayout} />
           <Route path={`/client`} component={ClientDashboard} />
+          <Route path={`/admin/billing`} component={SignIn} />
            
 
           {/* <PrivateRoute
