@@ -17,6 +17,15 @@ import CardHeader from 'components/Card/CardHeader.js';
 import WelcomeCard from 'components/Dashboard/WelcomeCard';
 import IconBox from 'components/Icons/IconBox';
 import { Link, useHistory } from 'react-router-dom';
+import eeg from 'assets/img/eeg.jpg';
+import AuthBanner from 'components/Auth/AuthBanner';
+import { Image } from '@chakra-ui/react';
+import cogni from 'assets/img/cogni.jpg';
+import assign from 'assets/img/assign.jpg';
+import task from 'assets/img/task.jpg';
+import mail from 'assets/img/mail.jpg';
+import patient from 'assets/img/patient.jpg';
+
 
 // Icons
 import TimelineRow from 'components/Tables/TimelineRow';
@@ -75,92 +84,46 @@ const handleAssignClick = () => {
       >
         Task Details
       </Text>
-              <Text color='gray.400' fontSize='sm'>
-                From all sessions
-              </Text>
             </Flex>
+            
           </CardHeader>
-          <Flex direction='column' justify='center' align='center'>
-            <Box zIndex='-1'>
-              <CircularProgress
-                size={200}
-                value={80}
-                thickness={6}
-                color='#582CFF'
-                variant='vision'
-                rounded
-              >
-                <CircularProgressLabel>
-                  <IconBox
-                    mb='20px'
-                    mx='auto'
-                    bg='brand.200'
-                    borderRadius='50%'
-                    w='48px'
-                    h='48px'
-                  >
-                    <Icon as={BiHappy} color='#fff' w='30px' h='30px' />
-                  </IconBox>
-                </CircularProgressLabel>
-              </CircularProgress>
-            </Box>
-            <Stack
-              direction='row'
-              spacing={{ sm: '42px', md: '68px' }}
-              justify='center'
-              maxW={{ sm: '270px', md: '300px', lg: '100%' }}
-              mx={{ sm: 'auto', md: '0px' }}
-              p='18px 22px'
-              bg='linear-gradient(126.97deg, rgb(6, 11, 40) 28.26%, rgba(10, 14, 35) 91.2%)'
-              borderRadius='20px'
-              position='absolute'
-              bottom='5%'
-            >
-              <Text fontSize='xs' color='gray.400'>
-                0%
-              </Text>
-              <Flex direction='column' align='center' minW='80px'>
-                <Text color='#fff' fontSize='28px' fontWeight='bold'>
-                  95%
-                </Text>
-                <Text fontSize='xs' color='gray.400'>
-                  Based on likes
-                </Text>
-              </Flex>
-              <Text fontSize='xs' color='gray.400'>
-                100%
-              </Text>
-            </Stack>
-          </Flex>
-        </Card>
+          <Image src={task} alt='Task Details' maxW='70%' mb='24px' style={{ borderRadius: '35px', marginLeft: '35px' }}  />
+
+                  </Card>
         {/* Future Assignments */}
         <Card gridArea={{ md: '2 / 2 / 3 / 3', '2xl': 'auto' }}>
-          <Flex direction='column'>
-            <Flex justify='space-between' align='center' mb='40px'>
-            <Text
-        fontSize='lg'
-        color='#fff'
-        fontWeight='bold'
-        mb='6px'
-        onClick={handleAssignClick}
-        style={{ cursor: 'pointer' }}
+  <Flex direction='column'>
+    <Text
+      fontSize='lg'
+      color='#fff'
+      fontWeight='bold'
+      mb='6px'
+      onClick={handleAssignClick}
+      style={{ cursor: 'pointer', alignSelf: 'flex-start' }} // Align text to the top left
+    >
+      Future Assignment
+    </Text>
+    <Flex justify='center' align='center' mb='40px'> {/* Center-align the content */}
+      <Image
+        src={assign}
+        alt='Future Assignment'
+        maxW='70%'
+        mb='24px'
+        style={{ borderRadius: '35px' }}
+      />
+    </Flex>
+    <Flex direction={{ sm: 'column', md: 'row' }}>
+      <Flex
+        direction='column'
+        me={{ md: '6px', lg: '52px' }}
+        mb={{ sm: '16px', md: '0px' }}
       >
-        Future Assignment
-      </Text>
-            </Flex>
-            <Flex direction={{ sm: 'column', md: 'row' }}>
-              <Flex
-                direction='column'
-                me={{ md: '6px', lg: '52px' }}
-                mb={{ sm: '16px', md: '0px' }}
-              >
-                <Text color='#fff' fontSize='lg' fontWeight='bold'>
-                  Google Calendars
-                </Text>
-              </Flex>
-            </Flex>
-          </Flex>
-        </Card>
+        {/* Your content here */}
+      </Flex>
+    </Flex>
+  </Flex>
+</Card>
+
       </Grid>
       <Grid
         templateColumns={{ sm: '1fr', lg: '1.7fr 1.3fr' }}
@@ -170,17 +133,15 @@ const handleAssignClick = () => {
       >
         {/* EEG Reports */}
         <Card p='16px'>
-        <CardBody>
-          <Flex direction='column' w='100%'>
-            <Flex
-              direction='column'
-              mt='24px'
-              mb='36px'
-              alignSelf='flex-start'
-            >
-              {/* Use Link component to navigate */}
-              
-              <Text
+          <CardBody>
+            <Flex direction='column' w='100%'>
+              <Flex
+                direction='column'
+                mt='24px'
+                mb='36px'
+                alignSelf='flex-start'
+              >
+            <Text
         fontSize='lg'
         color='#fff'
         fontWeight='bold'
@@ -188,15 +149,16 @@ const handleAssignClick = () => {
         onClick={handleEEGReportsClick}
         style={{ cursor: 'pointer' }}
       >
-        EEG Report
+       EEG Report
       </Text>
-             
+      <Image src={eeg} alt='EEG Report' maxW='100%' mb='24px' style={{ borderRadius: '35px' }} />
 
-              <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
+                <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
+              </Flex>
             </Flex>
-          </Flex>
-        </CardBody>
-      </Card>
+          </CardBody>
+        </Card>
+
         {/* Cognitive Training Reports */}
         <Card p='16px'>
           <CardBody>
@@ -217,6 +179,7 @@ const handleAssignClick = () => {
       >
         Cognitive Training Report
       </Text>
+      <Image src={cogni} alt='Cognitive Training' maxW='100%' mb='24px' style={{ borderRadius: '35px' }} />
 
                 <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
               </Flex>
@@ -230,32 +193,35 @@ const handleAssignClick = () => {
       >
         {/*Patient Details */}
         <Card>
-          <CardHeader mb='32px'>
-            <Flex direction='column'>
-              <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-                Patient Details
-              </Text>
-              <Flex align='center'>
-                <Text fontSize='sm' color='gray.400' fontWeight='normal'></Text>
-              </Flex>
-            </Flex>
-          </CardHeader>
-          <CardBody>
-            <Flex direction='column' lineHeight='21px'>
-              {timelineData.map((row, index, arr) => {
-                return (
-                  <TimelineRow
-                    title={row.title}
-                    date={row.date}
-                    color={row.color}
-                    index={index}
-                    arrLength={arr.length}
-                  />
-                );
-              })}
-            </Flex>
-          </CardBody>
-        </Card>
+  <CardHeader mb='32px'>
+    <Flex direction='row' alignItems='center'>
+      <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
+        Patient Details
+      </Text>
+      <Image src={patient} alt='Patient Details' maxW='100px' ml='55px' style={{ borderRadius: '35px' }} />
+    </Flex>
+  </CardHeader>
+  <CardBody>
+    <Flex direction='column' lineHeight='21px'>
+      {timelineData.map((row, index, arr) => {
+        return (
+          <Flex direction='row' alignItems='center' key={index}>
+            <TimelineRow
+              title={row.title}
+              date={row.date}
+              color={row.color}
+              index={index}
+              arrLength={arr.length}
+            />
+            {/* Additional content for each timeline row can be added here */}
+          </Flex>
+        );
+      })}
+    </Flex>
+  </CardBody>
+</Card>
+
+
         {/* Contact Form */}
         <Card p='16px'>
   <CardBody style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
@@ -269,6 +235,8 @@ const handleAssignClick = () => {
         <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
           Mail Us
         </Text>
+        <Image src={mail} alt='Mail Us' maxW='100%' mb='24px' style={{ borderRadius: '35px' }} />
+
         {/* Corrected the email link */}
         <a
           href='mailto:2021ad0414@svce.ac.in'
@@ -280,8 +248,9 @@ const handleAssignClick = () => {
             mb='auto'
             style={{ fontStyle: 'italic' }}
           >
-            For any queries, contact:
-            <br />
+            For any queries, contact: 
+            2021ad0414@svce.ac.in
+           
            
           </Text>
         </a>

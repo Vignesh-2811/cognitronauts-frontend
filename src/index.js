@@ -35,7 +35,10 @@ ReactDOM.render(
           <Route path={'/auth/signup'} component={SignUp} />
           <Route path={`/auth`} component={AuthLayout} />
           <Route path={`/admin`} component={AdminLayout} />
+          
           <Route path={`/client`} component={ClientDashboard} />
+          
+
           
           
           {/* <PrivateRoute
