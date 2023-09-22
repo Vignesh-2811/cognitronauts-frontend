@@ -142,7 +142,7 @@ const handleAssignClick = () => {
         color='#fff'
         fontWeight='bold'
         mb='6px'
-        onClick={handleTaskClick}
+        onClick={handleAssignClick}
         style={{ cursor: 'pointer' }}
       >
         Future Assignment

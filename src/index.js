@@ -27,8 +27,9 @@ ReactDOM.render(
         <Switch>
           
           <Route path={`/admin/billing`} component={Billing} />
-          <Route path={`/admin/task`} component={Task} />
           <Route path={`/admin/assign`} component={Assign} />
+          <Route path={`/admin/task`} component={Task} />
+         
           <Route path={`/admin/eeg`} component={EEGReports} />
           <Route path={'/auth/signin'} component={SignIn} />
           <Route path={'/auth/signup'} component={SignUp} />
