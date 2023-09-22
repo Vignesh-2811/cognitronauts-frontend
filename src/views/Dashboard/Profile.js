@@ -17,6 +17,8 @@ import {
   Text,
 } from '@chakra-ui/react';
 import avatar11 from 'assets/img/avatars/avatar11.png';
+import avatar12 from 'assets/img/avatars/avatar12.jpeg';
+
 // Images
 import avatar2 from 'assets/img/avatars/avatar2.png';
 import avatar3 from 'assets/img/avatars/avatar3.png';
@@ -26,6 +28,8 @@ import bgProfile from 'assets/img/bgProfile.png';
 import ProjectImage1 from 'assets/img/ProjectImage1.png';
 import ProjectImage2 from 'assets/img/ProjectImage2.png';
 import ProjectImage3 from 'assets/img/ProjectImage3.png';
+import avatar13 from 'assets/img/avatar13.jpeg'
+import game2 from 'assets/img/game2.jpeg'
 // Custom components
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';
@@ -35,6 +39,7 @@ import IconBox from 'components/Icons/IconBox';
 import { CarIcon, FulgerWhiteIcon } from 'components/Icons/Icons';
 import { Separator } from 'components/Separator/Separator';
 import { BsArrowRight } from 'react-icons/bs';
+import progress from 'assets/img/progress.jpeg'
 import {
   FaCube,
   FaFacebook,
@@ -87,21 +92,12 @@ function Profile() {
             >
               <Avatar
                 me={{ md: '22px' }}
-                src={avatar11}
-                w='80px'
-                h='80px'
+                src={avatar12}
+                w='100px'
+                h='100px'
                 borderRadius='15px'
               >
-                <AvatarBadge
-                  cursor='pointer'
-                  borderRadius='8px'
-                  border='transparent'
-                  bg='linear-gradient(138.78deg, rgba(6, 11, 40, 0.94) 17.44%, rgba(10, 14, 35, 0.49) 93.55%, rgba(10, 14, 35, 0.69) 93.55%)'
-                  boxSize='26px'
-                  backdropFilter='blur(120px)'
-                >
-                  <Icon h='12px' w='12px' color='#fff' as={FaPencilAlt} />
-                </AvatarBadge>
+                
               </Avatar>
               <Flex direction='column' maxWidth='100%' my={{ sm: '14px' }}>
                 <Text
@@ -110,10 +106,10 @@ function Profile() {
                   fontWeight='bold'
                   ms={{ sm: '8px', md: '0px' }}
                 >
-                  ohnson
+                  Cognitronauts
                 </Text>
                 <Text fontSize={{ sm: 'sm', md: 'md' }} color='gray.400'>
-                  mark@simmmple.com
+                
                 </Text>
               </Flex>
             </Flex>
@@ -133,37 +129,8 @@ function Profile() {
                   OVERVIEW
                 </Text>
               </Button>
-              <Button
-                borderRadius='12px'
-                bg='transparent'
-                _hover={{
-                  bg: 'brand.200',
-                }}
-                _active={{
-                  bg: 'brand.200',
-                }}
-                me={{ base: 'none', lg: '20px' }}
-                leftIcon={<Icon color='white' as={IoDocumentsSharp} me='6px' />}
-              >
-                <Text fontSize='xs' color='#fff' fontWeight='bold'>
-                  TEAMS
-                </Text>
-              </Button>
-              <Button
-                borderRadius='12px'
-                bg='transparent'
-                _hover={{
-                  bg: 'brand.200',
-                }}
-                _active={{
-                  bg: 'brand.200',
-                }}
-                leftIcon={<Icon color='white' as={FaPenFancy} me='6px' />}
-              >
-                <Text fontSize='xs' color='#fff' fontWeight='bold'>
-                  PROJECTS
-                </Text>
-              </Button>
+              
+              
             </Flex>
           </Flex>
         </Card>
@@ -187,36 +154,23 @@ function Profile() {
         >
           <Flex direction='column' h='100%'>
             <Text color='#fff' fontSize='30px' fontWeight='bold' mb='3px'>
-              Welcome back!
+            "Chart Your Journey!"
             </Text>
             <Text color='#fff' fontSize='sm' mb='auto'>
-              Nice to see you, Mark Johnson!
+            "Unlocking Brighter Minds: Empowering Children with Disabilities through Home-Based Cognitive Retraining."
+
             </Text>
+            <Box mb='20px' position='relative' borderRadius='20px' w='300px' h='290px'>
+                  <Image src={progress} borderRadius='20px' w='100%' h='100%' objectFit='cover' />
+            </Box>
             <Button
               alignSelf='flex-start'
               variant='no-hover'
               bg='transparent'
               p='0px'
             >
-              <Text
-                fontSize='xs'
-                color='#fff'
-                me='5px'
-                cursor='pointer'
-                transition='all .3s ease'
-                _hover={{ me: '6px' }}
-              >
-                Tab to record
-              </Text>
-              <Icon
-                as={BsArrowRight}
-                w='13px'
-                h='13px'
-                color='#fff'
-                transition='all .3s ease'
-                cursor='pointer'
-                _hover={{ transform: 'translateX(20%)' }}
-              />
+              
+              
             </Button>
           </Flex>
         </Card>
@@ -230,10 +184,10 @@ function Profile() {
           <CardHeader p='12px 5px' mb='12px'>
             <Flex direction='column'>
               <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-                Car Informations
+              Guidance Handbook
               </Text>
               <Text fontSize='sm' color='gray.400'>
-                Hello, Mark Johnson! Your Car is ready.
+              "Hey there, young adventurers! Follow these simple steps to embark on an exciting journey through our platform. Explore fun games, boost your memory, and watch yourself grow into an even more amazing version of YOU!"
               </Text>
             </Flex>
           </CardHeader>
@@ -260,21 +214,17 @@ function Profile() {
                         fontWeight='bold'
                         mb='6px'
                       >
-                        68%
+                        YOUR
                       </Text>
-                      <Text color='gray.400' fontSize='sm'>
-                        Current load
+                      <Text color='gray.400' fontSize='xl'>
+                        Progress!
                       </Text>
                     </Flex>
                   </CircularProgressLabel>
                 </CircularProgress>
                 <Flex direction='column' mt='18px' align='center'>
-                  <Text color='#fff' fontSize='lg' fontWeight='bold' mb='2px'>
-                    0h 58 min
-                  </Text>
-                  <Text color='gray.500' fontSize='sm'>
-                    Time to full charge
-                  </Text>
+                  
+                  
                 </Flex>
               </Flex>
               <Grid
@@ -291,21 +241,22 @@ function Profile() {
                   borderRadius='20px'
                 >
                   <Flex direction='column' me='auto'>
-                    <Text fontSize='xs' color='gray.400' mb='3px'>
-                      Battery Health
+                    <Text fontSize='xl' color='gray.400' mb='3px'>
+                    *🩺 For Doctors*
                     </Text>
-                    <Text color='#fff' fontSize='22px' fontWeight='bold'>
-                      76%
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    ◽Create patient profiles and assign tasks.
+                    </Text>
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+
+                    ◽Prescribe personalized cognitive games.
+                    </Text>
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+
+                    ◽Monitor and adjust therapy plans.
                     </Text>
                   </Flex>
-                  <IconBox bg='brand.200' w='56px' h='56px' direction='column'>
-                    <CarIcon w='28px' h='28px' />
-                    <FulgerWhiteIcon
-                      w='8px'
-                      h='11px'
-                      transform='rotate(90deg)'
-                    />
-                  </IconBox>
+                  
                 </Flex>
                 <Flex
                   align='center'
@@ -316,62 +267,26 @@ function Profile() {
                   borderRadius='20px'
                 >
                   <Flex direction='column' me='auto'>
-                    <Text fontSize='xs' color='gray.400' mb='3px'>
-                      Efficiency
+                    <Text fontSize='xl' color='gray.400' mb='3px'>
+                      *🧠For Patients*
                     </Text>
-                    <Text color='#fff' fontSize='22px' fontWeight='bold'>
-                      +20%
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    ◽Access your profile and play prescribed games.
                     </Text>
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    ◽Complete assigned tasks.
+                    </Text>
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    ◽Communicate progress with your doctor.
+                    </Text>
+
                   </Flex>
-                  <Box maxH='75px'>
-                    <LineChart
-                      lineChartData={lineChartDataProfile1}
-                      lineChartOptions={lineChartOptionsProfile1}
-                    />
-                  </Box>
+                  
                 </Flex>
-                <Flex
-                  align='center'
-                  p='18px'
-                  justify='space-between'
-                  bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
-                  borderRadius='20px'
-                >
-                  <Flex direction='column' me='auto'>
-                    <Text fontSize='xs' color='gray.400' mb='3px'>
-                      Consumption
-                    </Text>
-                    <Text color='#fff' fontSize='22px' fontWeight='bold'>
-                      163W/km
-                    </Text>
-                  </Flex>
-                  <IconBox bg='brand.200' w='56px' h='56px'>
-                    <FulgerWhiteIcon w='24px' h='24px' color='#fff' />
-                  </IconBox>
-                </Flex>
-                <Flex
-                  align='center'
-                  p='18px'
-                  pe='0px'
-                  justify='space-between'
-                  bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
-                  borderRadius='20px'
-                >
-                  <Flex direction='column' me='auto'>
-                    <Text fontSize='xs' color='gray.400' mb='3px'>
-                      This Week
-                    </Text>
-                    <Text color='#fff' fontSize='22px' fontWeight='bold'>
-                      1.342km
-                    </Text>
-                  </Flex>
-                  <Box maxH='75px'>
-                    <LineChart
-                      lineChartData={lineChartDataProfile2}
-                      lineChartOptions={lineChartOptionsProfile2}
-                    />
-                  </Box>
-                </Flex>
+                
+                
+                  
+                
               </Grid>
             </Flex>
           </CardBody>
@@ -385,84 +300,32 @@ function Profile() {
         >
           <CardHeader p='12px 5px' mb='12px'>
             <Text fontSize='lg' color='#fff' fontWeight='bold'>
-              Profile Information
+              ABOUT
             </Text>
           </CardHeader>
           <CardBody px='5px'>
             <Flex direction='column'>
               <Text fontSize='sm' color={'gray.400'} fontWeight='400' mb='15px'>
-                Hi, I’m Mark Johnson, Decisions: If you can’t decide, the answer
-                is no. If two equally difficult paths, choose the one more
-                painful in the short term (pain avoidance is creating an
-                illusion of equality).
+              Our goal is to create a cutting-edge software solution that combines EEG Neuro-feedback with home-based cognitive retraining, revolutionizing therapy for children with developmental disabilities.
+
+                We aim to modernize therapeutic strategies, enhancing cognitive skills like attention, memory, reasoning, and problem-solving in these children.
+
+                We're all about making therapy engaging! We plan to incorporate gamified elements to keep young patients motivated and committed.
+                </Text>
+              <Text fontSize='m' color={'gray.400'} fontWeight='400' mb='22px'>
+
+                Clinicians, get ready! Our platform will offer real-time monitoring, allowing you to track a patient's progress during home-based training and observe changes in their EEG profiles.
+
+                We're in it for the long run! We'll measure and report on the long-term outcomes of this innovative therapy, ensuring ongoing improvement and high-quality care."
               </Text>
-              <Separator mb='30px' />
-              <Flex align='center' mb='18px'>
-                <Text fontSize='sm' color={'gray.400'} me='10px'>
-                  Full Name:{' '}
-                </Text>
-                <Text fontSize='sm' color='#fff' fontWeight='400'>
-                  Mark Johnson
-                </Text>
-              </Flex>
-              <Flex align='center' mb='18px'>
-                <Text fontSize='sm' color={'gray.400'} me='10px'>
-                  Mobile:{' '}
-                </Text>
-                <Text fontSize='sm' color='#fff' fontWeight='400'>
-                  (44) 123 1234 123
-                </Text>
-              </Flex>
-              <Flex align='center' mb='18px'>
-                <Text fontSize='sm' color={'gray.400'} me='10px'>
-                  Email:{' '}
-                </Text>
-                <Text fontSize='sm' color='#fff' fontWeight='400'>
-                  mark@simmmple.com
-                </Text>
-              </Flex>
-              <Flex align='center' mb='18px'>
-                <Text fontSize='sm' color={'gray.400'} me='10px'>
-                  Location:{' '}
-                </Text>
-                <Text fontSize='sm' color='#fff' fontWeight='400'>
-                  United States
-                </Text>
-              </Flex>
-              <Flex align='center' mb='18px'>
-                <Text fontSize='sm' color={'gray.400'} me='10px'>
-                  Social Media:{' '}
-                </Text>
-                <Flex>
-                  <Link
-                    href='#'
-                    color='teal.300'
-                    fontSize='lg'
-                    me='10px'
-                    _hover={{ color: 'teal.300' }}
-                  >
-                    <Icon color='white' as={FaFacebook} w='12px' h='12px' />
-                  </Link>
-                  <Link
-                    href='#'
-                    color='teal.300'
-                    fontSize='lg'
-                    me='10px'
-                    _hover={{ color: 'teal.300' }}
-                  >
-                    <Icon color='white' as={FaInstagram} w='12px' h='12px' />
-                  </Link>
-                  <Link
-                    href='#'
-                    color='teal.300'
-                    fontSize='lg'
-                    me='10px'
-                    _hover={{ color: 'teal.300' }}
-                  >
-                    <Icon color='white' as={FaTwitter} w='12px' h='12px' />
-                  </Link>
-                </Flex>
-              </Flex>
+              
+              
+              
+              
+                  
+                  
+                              
+            
             </Flex>
           </CardBody>
         </Card>
@@ -472,101 +335,22 @@ function Profile() {
           {/* Platform Settings */}
           <Card p='16px' gridArea={{ xl: '1 / 1 / 2 / 2' }}>
             <CardHeader p='12px 5px' mb='12px'>
-              <Text fontSize='lg' color='#fff' fontWeight='bold'>
-                Platform Settings
+              <Text 
+              fontSize='2xl' 
+              color='white' 
+              fontWeight='bold'
+              fontFamily='Bangers, sans-serif'
+              fontStyle='italic'
+              bgGradient='linear(to-l, #FFC0CB, #FFFFFF)'
+              bgClip='text'
+              textShadow='2px 2px 4px rgba(0, 0, 0, 0.5)'
+>
+              
+              "Curious about how these games can help you conquer developmental challenges?
+               Explore them and enjoy the journey to improvement!"
               </Text>
             </CardHeader>
-            <CardBody px='5px'>
-              <Flex direction='column'>
-                <Text fontSize='10px' color={'gray.400'} mb='20px'>
-                  ACCOUNT
-                </Text>
-                <Flex align='center' mb='20px'>
-                  <Switch
-                    variant='brand'
-                    colorScheme='brand'
-                    me='10px'
-                    defaultChecked
-                  />
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={'gray.400'}
-                    fontWeight='400'
-                  >
-                    Email me when someone follows me
-                  </Text>
-                </Flex>
-                <Flex align='center' mb='20px'>
-                  <Switch colorScheme='brand' me='10px' />
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={'gray.400'}
-                    fontWeight='400'
-                  >
-                    Email me when someone answers on my post
-                  </Text>
-                </Flex>
-                <Flex align='center' mb='20px'>
-                  <Switch colorScheme='brand' me='10px' defaultChecked />
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={'gray.400'}
-                    fontWeight='400'
-                  >
-                    Email me when someone mentions me
-                  </Text>
-                </Flex>
-                <Text fontSize='10px' color={'gray.400'} m='6px 0px 20px 0px'>
-                  APPLICATION
-                </Text>
-                <Flex align='center' mb='20px'>
-                  <Switch colorScheme='brand' me='10px' />
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={'gray.400'}
-                    fontWeight='400'
-                  >
-                    New launches and projects
-                  </Text>
-                </Flex>
-                <Flex align='center' mb='20px'>
-                  <Switch colorScheme='brand' me='10px' defaultChecked />
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={'gray.400'}
-                    fontWeight='400'
-                  >
-                    Monthly product changes
-                  </Text>
-                </Flex>
-                <Flex align='center' mb='20px'>
-                  <Switch colorScheme='brand' me='10px' />
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={'gray.400'}
-                    fontWeight='400'
-                  >
-                    Subscribe to newsletter
-                  </Text>
-                </Flex>
-                <Flex align='center' mb='20px'>
-                  <Switch colorScheme='brand' me='10px' defaultChecked />
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={'gray.400'}
-                    fontWeight='400'
-                  >
-                    Receive mails weekly
-                  </Text>
-                </Flex>
-              </Flex>
+            <CardBody px='5px'>             
             </CardBody>
           </Card>
         </DarkMode>
@@ -574,11 +358,22 @@ function Profile() {
         <Card gridArea={{ xl: '1 /2 /2/ 5' }} p='16px'>
           <CardHeader p='12px 5px' mb='12px'>
             <Flex direction='column'>
-              <Text fontSize='lg' color='#fff' fontWeight='bold'>
-                Projects
-              </Text>
+            <Text
+             fontSize='lg'
+             fontWeight='bold'
+             fontFamily='Comic Sans MS, sans-serif'
+             color='white'
+             bgGradient='linear(to-l, #7928CA, #FF0080)'
+             bgClip='text'
+             textShadow='2px 2px 4px rgba(0, 0, 0, 0.5)'
+             fontStyle='italic'
+             transform='skewX(-10deg)'
+            >               
+            Intellect Island: Play and Progress!
+            </Text>
+
               <Text fontSize='sm' color={'gray.400'} fontWeight='400'>
-                Architects design houses
+                
               </Text>
             </Flex>
           </CardHeader>
@@ -598,14 +393,14 @@ function Profile() {
             >
               <Flex direction='column'>
                 <Box mb='20px' position='relative' borderRadius='20px'>
-                  <Image src={ProjectImage1} borderRadius='20px' />
+                  <Image src={avatar13} borderRadius='20px' w='100%' h='100%' objectFit='cover' />
                 </Box>
                 <Flex direction='column'>
                   <Text fontSize='10px' color={'gray.400'} mb='10px'>
-                    Project #1
+                    game #1
                   </Text>
                   <Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px'>
-                    Modern
+                  CogniRecall Quest
                   </Text>
                   <Text
                     fontSize='sm'
@@ -613,149 +408,36 @@ function Profile() {
                     fontWeight='400'
                     mb='20px'
                   >
-                    As Uber works through a huge amount of internal management
-                    turmoil.
+                   "Unlock the Power of Your Mind! Help the Smiley Smile by Concentrating and Having Fun! 😄✨"
                   </Text>
                   <Flex justifyContent='space-between' mt='auto'>
-                    <Button
-                      variant='outlineWhite'
-                      minW='110px'
-                      h='36px'
-                      fontSize='10px'
-                      px='1.5rem'
-                    >
-                      VIEW ALL
-                    </Button>
-                    <AvatarGroup size='xs'>
-                      <Avatar
-                        borderColor='#121241'
-                        name='Ryan Florence'
-                        src={avatar6}
-                      />
-                      <Avatar
-                        borderColor='#121241'
-                        name='Segun Adebayo'
-                        src={avatar2}
-                      />
-                      <Avatar
-                        borderColor='#121241'
-                        name='Kent Dodds'
-                        src={avatar3}
-                      />
-                      <Avatar
-                        borderColor='#121241'
-                        name='Prosper Otemuyiwa'
-                        src={avatar4}
-                      />
-                    </AvatarGroup>
+                    
+                    
                   </Flex>
                 </Flex>
               </Flex>
               <Flex direction='column'>
-                <Box mb='20px' position='relative' borderRadius='20px'>
-                  <Image src={ProjectImage2} borderRadius='20px' />
+                <Box mb='40px' position='relative' borderRadius='20px'>
+                  <Image src={game2} borderRadius='20px' w='100%' h='100%' objectFit='cover' />
                 </Box>
                 <Flex direction='column'>
                   <Text fontSize='10px' color={'gray.400'} mb='10px'>
-                    Project #2
+                    game #2
                   </Text>
                   <Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px'>
-                    Scandinavian
+                  Mnemonic Mind Maze
                   </Text>
                   <Text fontSize='sm' color={'gray.400'} mb='20px'>
-                    Music is something that every person has his or her own
-                    specific opinion about.
+                  "Memory Maze Adventure! Sharpen Your Brain by Matching Cards and Mastering the Maze! 🧩🚀"
                   </Text>
                   <Flex justifyContent='space-between' mt='auto'>
-                    <Button
-                      variant='outlineWhite'
-                      minW='110px'
-                      h='36px'
-                      fontSize='10px'
-                      px='1.5rem'
-                    >
-                      VIEW ALL
-                    </Button>
-                    <AvatarGroup size='xs'>
-                      <Avatar
-                        borderColor='#121241'
-                        name='Ryan Florence'
-                        src={avatar6}
-                      />
-                      <Avatar
-                        borderColor='#121241'
-                        name='Segun Adebayo'
-                        src={avatar2}
-                      />
-                      <Avatar
-                        borderColor='#121241'
-                        name='Kent Dodds'
-                        src={avatar3}
-                      />
-                      <Avatar
-                        borderColor='#121241'
-                        name='Prosper Otemuyiwa'
-                        src={avatar4}
-                      />
-                    </AvatarGroup>
+                    
+                    
                   </Flex>
                 </Flex>
               </Flex>
-              <Flex direction='column' h='100%'>
-                <Box mb='20px' position='relative' borderRadius='20px'>
-                  <Image src={ProjectImage3} borderRadius='20px' />
-                </Box>
-                <Flex direction='column'>
-                  <Text fontSize='10px' color={'gray.400'} mb='10px'>
-                    Project #3
-                  </Text>
-                  <Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px'>
-                    Minimalist
-                  </Text>
-                  <Text
-                    fontSize='sm'
-                    color={'gray.400'}
-                    fontWeight='400'
-                    mb='20px'
-                  >
-                    Different people have different taste, especially various
-                    types of music.
-                  </Text>
-                  <Flex justifyContent='space-between' mt='auto'>
-                    <Button
-                      variant='outlineWhite'
-                      minW='110px'
-                      h='36px'
-                      fontSize='10px'
-                      px='1.5rem'
-                    >
-                      VIEW ALL
-                    </Button>
-                    <AvatarGroup size='xs'>
-                      <Avatar
-                        borderColor='#121241'
-                        name='Ryan Florence'
-                        src={avatar6}
-                      />
-                      <Avatar
-                        borderColor='#121241'
-                        name='Segun Adebayo'
-                        src={avatar2}
-                      />
-                      <Avatar
-                        borderColor='#121241'
-                        name='Kent Dodds'
-                        src={avatar3}
-                      />
-                      <Avatar
-                        borderColor='#121241'
-                        name='Prosper Otemuyiwa'
-                        src={avatar4}
-                      />
-                    </AvatarGroup>
-                  </Flex>
-                </Flex>
-              </Flex>
+              
+              
             </Grid>
           </CardBody>
         </Card>

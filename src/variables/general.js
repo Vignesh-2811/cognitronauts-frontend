@@ -352,6 +352,30 @@ export const olderTransactions = [
   },
 ];
 
+export const TaskData = [
+  {
+    name: "Mnemonic Mind Maze",
+    
+    logo: FaArrowUp,
+  },
+  {
+    name: "Mnemonic Mind Maze",
+    
+    logo: FaArrowUp,
+  },
+  {
+    name: "CogniRecall Quest",
+  
+    logo: FaArrowUp,
+  },
+  {
+    name: "CogniRecall Quest",
+   
+    logo: FaArrowDown,
+  },
+];
+
+
 
 
 

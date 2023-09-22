@@ -16,6 +16,9 @@ import SignIn from 'views/Pages/SignIn.js';
 import SignUp from 'views/Pages/SignUp';
 import ClientDashboard from './Screens/Client/Client.js';
 import Billing from 'views/Dashboard/Billing.js';
+import EEGReports from 'views/Dashboard/EEG.js';
+import Task from 'views/Dashboard/Task.js';
+import Assign from 'views/Dashboard/Ass.js';
 
 ReactDOM.render(
   <ChakraProvider theme={themeAuth} resetCss={false} w='100%'>
@@ -23,11 +26,15 @@ ReactDOM.render(
       <Router>
         <Switch>
           <Route path={`/admin/billing`} component={Billing} />
+          <Route path={`/admin/assign`} component={Assign} />
+          <Route path={`/admin/task`} component={Task} />
 
+          <Route path={`/admin/eeg`} component={EEGReports} />
           <Route path={'/auth/signin'} component={SignIn} />
           <Route path={'/auth/signup'} component={SignUp} />
           <Route path={`/auth`} component={AuthLayout} />
           <Route path={`/admin`} component={AdminLayout} />
+
           <Route path={`/client`} component={ClientDashboard} />
 
           {/* <PrivateRoute
