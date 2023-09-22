@@ -10,7 +10,7 @@ function AssRow(props) {
   const [selectedGame, setSelectedGame] = useState(''); // State for selected game name
 
   const handleAssignClick = () => {
-    if (selectedDate && selectedGame) { // Check if both date and game are selected
+    if (selectedDate && selectedGame) {
       setIsAssigned(true);
       alert(`Assigned ${selectedGame} for ${selectedDate.toDateString()}`);
     } else {
@@ -24,13 +24,21 @@ function AssRow(props) {
     setSelectedGame('');
   };
 
+  const gameNameColor = isAssigned ? 'green' : 'gray.400'; // Change color to green after assignment
+  const isDisabled = isAssigned; // Disable inputs after assignment
+
+  const gameNameStyle = {
+    color: gameNameColor,
+    fontWeight: isAssigned ? 'bold' : 'normal', // Make it bold after assignment
+  };
+
   return (
     <Flex mb='24px' justifyContent='space-between'>
       <Flex alignItems='center'>
         <Box
           me='14px'
           borderRadius='50%'
-          color={isAssigned ? '#01B574' : 'gray.400'}
+          color={isAssigned ? 'green' : 'gray.400'} // Change color to green after assignment
           border='1px solid'
           display='flex'
           alignItems='center'
@@ -45,6 +53,9 @@ function AssRow(props) {
             value={selectedGame}
             onChange={(e) => setSelectedGame(e.target.value)}
             placeholder='Choose Game'
+            color={gameNameStyle.color} // Set color based on assignment
+            fontWeight={gameNameStyle.fontWeight} // Set font weight based on assignment
+            isDisabled={isDisabled} // Disable the Select component
           >
             <option value='Mnemonic Mind Maze'>Mnemonic Mind Maze</option>
             <option value='CogniRecall Quest'>CogniRecall Quest</option>
@@ -54,6 +65,7 @@ function AssRow(props) {
             onChange={(date) => setSelectedDate(date)}
             dateFormat='dd/MM/yyyy'
             placeholderText='Select Date'
+            disabled={isDisabled} // Disable the DatePicker component
           />
         </Flex>
       </Flex>
@@ -63,6 +75,7 @@ function AssRow(props) {
           colorScheme='teal'
           size='sm'
           mr='2'
+          isDisabled={isDisabled} // Disable the Assign button after assignment
         >
           Assign
         </Button>
