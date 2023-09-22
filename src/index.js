@@ -23,6 +23,7 @@ ReactDOM.render(
       <Router>
         <Switch>
           <Route path={`/admin/billing`} component={Billing} />
+
           <Route path={'/auth/signin'} component={SignIn} />
           <Route path={'/auth/signup'} component={SignUp} />
           <Route path={`/auth`} component={AuthLayout} />
