@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 
 // Assets
-import signInImage from 'assets/img/signin.jpg';
+import signInImage from 'assets/svg/signinpic.jpeg';
 import AuthBanner from 'components/Auth/AuthBanner';
 import UserInput from 'components/Auth/UserInput';
 import { loginEvent } from 'redux/actions/auth';

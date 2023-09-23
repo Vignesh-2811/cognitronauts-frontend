@@ -17,7 +17,7 @@ import { submitRegisterEvent } from 'redux/actions/auth';
 import AuthFooter from 'components/Footer/AuthFooter';
 import GradientBorder from 'components/GradientBorder/GradientBorder';
 // Assets
-import signUpImage from 'assets/img/signup.png';
+import signUpImage from 'assets/svg/signuppic.jpeg';
 import AuthBanner from 'components/Auth/AuthBanner';
 import UserInput from 'components/Auth/UserInput';
 import { FormProvider, useForm } from 'react-hook-form';
