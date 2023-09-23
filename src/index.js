@@ -29,11 +29,10 @@ ReactDOM.render(
     <Provider store={store}>
       <Router>
         <Switch>
-          
           <Route path={`/admin/billing`} component={Billing} />
           <Route path={`/admin/assign`} component={Assign} />
           <Route path={`/admin/task`} component={Task} />
-         
+
           <Route path={`/admin/eeg`} component={EEGReports} />
           <Route path={'/auth/signin'} component={SignIn} />
           <Route path={'/auth/signup'} component={SignUp} />
@@ -44,8 +43,6 @@ ReactDOM.render(
           <Route path={`/client/eeg`} component={ClientEEG} />
           <Route path={`/client/cogni`} component={ClientCogni} />
           <Route path={`/client`} component={ClientDashboard} />
-          
-          
           
 
           

@@ -39,6 +39,7 @@ import IconBox from 'components/Icons/IconBox';
 import { CarIcon, FulgerWhiteIcon } from 'components/Icons/Icons';
 import { Separator } from 'components/Separator/Separator';
 import { BsArrowRight } from 'react-icons/bs';
+import progress from 'assets/img/progress.jpeg'
 import {
   FaCube,
   FaFacebook,
@@ -92,19 +93,11 @@ function Profile() {
               <Avatar
                 me={{ md: '22px' }}
                 src={avatar12}
-                w='80px'
-                h='80px'
+                w='100px'
+                h='100px'
                 borderRadius='15px'
               >
-                <AvatarBadge
-                  cursor='pointer'
-                  borderRadius='8px'
-                  border='transparent'
-                  bg='linear-gradient(138.78deg, rgba(6, 11, 40, 0.94) 17.44%, rgba(10, 14, 35, 0.49) 93.55%, rgba(10, 14, 35, 0.69) 93.55%)'
-                  boxSize='26px'
-                  backdropFilter='blur(120px)'
-                >
-                  </AvatarBadge>
+                
               </Avatar>
               <Flex direction='column' maxWidth='100%' my={{ sm: '14px' }}>
                 <Text
@@ -167,6 +160,9 @@ function Profile() {
             "Unlocking Brighter Minds: Empowering Children with Disabilities through Home-Based Cognitive Retraining."
 
             </Text>
+            <Box mb='20px' position='relative' borderRadius='20px' w='300px' h='290px'>
+                  <Image src={progress} borderRadius='20px' w='100%' h='100%' objectFit='cover' />
+            </Box>
             <Button
               alignSelf='flex-start'
               variant='no-hover'
@@ -218,10 +214,10 @@ function Profile() {
                         fontWeight='bold'
                         mb='6px'
                       >
-                        68%
+                        YOUR
                       </Text>
-                      <Text color='gray.400' fontSize='sm'>
-                        Progress tracked!
+                      <Text color='gray.400' fontSize='xl'>
+                        Progress!
                       </Text>
                     </Flex>
                   </CircularProgressLabel>
@@ -245,46 +241,19 @@ function Profile() {
                   borderRadius='20px'
                 >
                   <Flex direction='column' me='auto'>
-                    <Text fontSize='xs' color='gray.400' mb='3px'>
-                      step1
+                    <Text fontSize='xl' color='gray.400' mb='3px'>
+                    *🩺 For Doctors*
                     </Text>
-                    <Text color='#fff' fontSize='22px' fontWeight='bold'>
-                      --
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    ◽Create patient profiles and assign tasks.
                     </Text>
-                  </Flex>
-                  
-                </Flex>
-                <Flex
-                  align='center'
-                  p='18px'
-                  pe='0px'
-                  justify='space-between'
-                  bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
-                  borderRadius='20px'
-                >
-                  <Flex direction='column' me='auto'>
-                    <Text fontSize='xs' color='gray.400' mb='3px'>
-                      Step 2
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+
+                    ◽Prescribe personalized cognitive games.
                     </Text>
-                    <Text color='#fff' fontSize='22px' fontWeight='bold'>
-                      --
-                    </Text>
-                  </Flex>
-                  
-                </Flex>
-                <Flex
-                  align='center'
-                  p='18px'
-                  justify='space-between'
-                  bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
-                  borderRadius='20px'
-                >
-                  <Flex direction='column' me='auto'>
-                    <Text fontSize='xs' color='gray.400' mb='3px'>
-                    Step3
-                    </Text>
-                    <Text color='#fff' fontSize='22px' fontWeight='bold'>
-                      --
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+
+                    ◽Monitor and adjust therapy plans.
                     </Text>
                   </Flex>
                   
@@ -298,15 +267,26 @@ function Profile() {
                   borderRadius='20px'
                 >
                   <Flex direction='column' me='auto'>
-                    <Text fontSize='xs' color='gray.400' mb='3px'>
-                      Step4
+                    <Text fontSize='xl' color='gray.400' mb='3px'>
+                      *🧠For Patients*
                     </Text>
-                    <Text color='#fff' fontSize='22px' fontWeight='bold'>
-                      --
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    ◽Access your profile and play prescribed games.
                     </Text>
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    ◽Complete assigned tasks.
+                    </Text>
+                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    ◽Communicate progress with your doctor.
+                    </Text>
+
                   </Flex>
                   
                 </Flex>
+                
+                
+                  
+                
               </Grid>
             </Flex>
           </CardBody>
@@ -328,13 +308,15 @@ function Profile() {
               <Text fontSize='sm' color={'gray.400'} fontWeight='400' mb='15px'>
               Our goal is to create a cutting-edge software solution that combines EEG Neuro-feedback with home-based cognitive retraining, revolutionizing therapy for children with developmental disabilities.
 
-We aim to modernize therapeutic strategies, enhancing cognitive skills like attention, memory, reasoning, and problem-solving in these children.
+                We aim to modernize therapeutic strategies, enhancing cognitive skills like attention, memory, reasoning, and problem-solving in these children.
 
-We're all about making therapy engaging! We plan to incorporate gamified elements to keep young patients motivated and committed.
+                We're all about making therapy engaging! We plan to incorporate gamified elements to keep young patients motivated and committed.
+                </Text>
+              <Text fontSize='m' color={'gray.400'} fontWeight='400' mb='22px'>
 
-Clinicians, get ready! Our platform will offer real-time monitoring, allowing you to track a patient's progress during home-based training and observe changes in their EEG profiles.
+                Clinicians, get ready! Our platform will offer real-time monitoring, allowing you to track a patient's progress during home-based training and observe changes in their EEG profiles.
 
-We're in it for the long run! We'll measure and report on the long-term outcomes of this innovative therapy, ensuring ongoing improvement and high-quality care."
+                We're in it for the long run! We'll measure and report on the long-term outcomes of this innovative therapy, ensuring ongoing improvement and high-quality care."
               </Text>
               
               
@@ -342,8 +324,7 @@ We're in it for the long run! We'll measure and report on the long-term outcomes
               
                   
                   
-                  
-                
+                              
             
             </Flex>
           </CardBody>
@@ -412,7 +393,7 @@ We're in it for the long run! We'll measure and report on the long-term outcomes
             >
               <Flex direction='column'>
                 <Box mb='20px' position='relative' borderRadius='20px'>
-                  <Image src={avatar13} borderRadius='20px' />
+                  <Image src={avatar13} borderRadius='20px' w='100%' h='100%' objectFit='cover' />
                 </Box>
                 <Flex direction='column'>
                   <Text fontSize='10px' color={'gray.400'} mb='10px'>
@@ -436,8 +417,8 @@ We're in it for the long run! We'll measure and report on the long-term outcomes
                 </Flex>
               </Flex>
               <Flex direction='column'>
-                <Box mb='20px' position='relative' borderRadius='20px'>
-                  <Image src={game2} borderRadius='20px' />
+                <Box mb='40px' position='relative' borderRadius='20px'>
+                  <Image src={game2} borderRadius='20px' w='100%' h='100%' objectFit='cover' />
                 </Box>
                 <Flex direction='column'>
                   <Text fontSize='10px' color={'gray.400'} mb='10px'>
@@ -455,18 +436,8 @@ We're in it for the long run! We'll measure and report on the long-term outcomes
                   </Flex>
                 </Flex>
               </Flex>
-              <Flex direction='column' h='100%'>
-                
-                <Flex direction='column'>
-                  
-                  
-                  
-                  <Flex justifyContent='space-between' mt='auto'>
-                    
-                    
-                  </Flex>
-                </Flex>
-              </Flex>
+              
+              
             </Grid>
           </CardBody>
         </Card>
