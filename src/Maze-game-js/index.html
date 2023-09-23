@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Hunger Maze</title>
+</head>
+<body>
+    <div id="container" style="display: flex; height: 100vh;">
+        <!-- Left Half - Game -->
+        <div id="game-container" style="flex: 1; display: flex;">
+            <div id="page" style="margin: auto;">
+                <div id="Message-Container">
+                    <div id="message">
+                        <h1>Congratulations!</h1>
+                        <p>You ease your hunger.</p>
+                        <p id="moves"></p>
+                        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+                    </div>
+                </div>
+                <div id="menu">
+                    <div class="custom-select">
+                        <select id="diffSelect">
+                            <option value="10">Easy</option>
+                            <option value="15">Medium</option>
+                            <option value="25">Hard</option>
+                            <option value="38">Extreme</option>
+                        </select>
+                    </div>
+                    <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+                </div>
+                <div id="view">
+                    <div id="mazeContainer">
+                        <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right Half - EEG Wave Simulation -->
+        <div id="eeg-container" style="flex: 1; background-color: #e0e0e0;">
+            <!-- EEG wave simulation code goes here -->
+            <script>
+            // EEG Wave Simulation Variables
+            let amplitude = 0.5; // Initial amplitude
+            const amplitudeStep = 0.05; // Step for increasing/decreasing amplitude
+
+            // EEG Wave Simulation Canvas
+            const eegCanvas = document.createElement("canvas");
+            eegCanvas.width = 300; // Adjust the width as needed
+            eegCanvas.height = 300; // Adjust the height as needed
+            document.getElementById("eeg-container").appendChild(eegCanvas);
+            const eegContext = eegCanvas.getContext("2d");
+
+            // Function to draw the EEG wave
+            function drawEEGWave() {
+                eegContext.clearRect(0, 0, eegCanvas.width, eegCanvas.height);
+                eegContext.beginPath();
+                eegContext.moveTo(0, eegCanvas.height / 2);
+
+                // Simulate EEG wave (adjust as needed)
+                for (let x = 0; x < eegCanvas.width; x++) {
+                    const y = eegCanvas.height / 2 + amplitude * Math.sin((x / eegCanvas.width) * 4 * Math.PI);
+                    eegContext.lineTo(x, y);
+                }
+
+                eegContext.strokeStyle = "blue";
+                eegContext.lineWidth = 2;
+                eegContext.stroke();
+            }
+
+            // Function to increase amplitude
+            function increaseAmplitude() {
+                amplitude += amplitudeStep;
+                drawEEGWave();
+            }
+
+            // Function to decrease amplitude
+            function decreaseAmplitude() {
+                amplitude -= amplitudeStep;
+                if (amplitude < 0) amplitude = 0;
+                drawEEGWave();
+            }
+
+            // Listen for arrow key presses
+            document.addEventListener("keydown", function (event) {
+                switch (event.key) {
+                    case "ArrowUp":
+                    case "ArrowRight":
+                        increaseAmplitude();
+                        break;
+                    case "ArrowDown":
+                    case "ArrowLeft":
+                        decreaseAmplitude();
+                        break;
+                }
+            });
+
+            // Initial EEG wave drawing
+            drawEEGWave();
+            </script>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

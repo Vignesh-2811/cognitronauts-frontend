@@ -26,7 +26,9 @@ function ClientCogni() {
           
         {/* Transactions List */}
         
-        <Card my='24px' ms={{ lg: '24px' }} mx='auto'>
+        <Card my='24px' ms={{ lg: '24px' }} mx='auto' bg={{
+    base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+  }} >
   <CardHeader mb='12px'>
     <Flex direction='column' w='80%'>
       <Flex
@@ -38,7 +40,7 @@ function ClientCogni() {
       >
         <div style={{ marginLeft: '45px' }}>
         <Text
-          color='#fff'
+          color='black'
           fontSize={{ sm: 'lg', md: 'xl', lg: 'lg' }}
           fontWeight='bold'
         >
@@ -59,7 +61,7 @@ function ClientCogni() {
       </Flex>
     </Flex>
   </CardHeader>
-  <CardBody>
+  <CardBody >
     <Flex direction='column' w='80%'>
     <div style={{ marginLeft: '45px' }}>
       <Text color='gray.400' fontSize='xs' mb='18px'>

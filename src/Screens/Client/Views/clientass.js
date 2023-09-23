@@ -11,7 +11,9 @@ function ClientAssign() {
   
     <Flex direction='column' pt={{ base: '150px', md: '75px' }} mx='auto' flexWrap="wrap">
       {/* Assignment List */}
-      <Card my='24px' ms={{ lg: '24px' }} mx='auto'>
+      <Card my='24px' ms={{ lg: '24px' }} mx='auto' bg={{
+    base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+  }}>
         <CardHeader mb='12px'>
           <Flex direction='column' w='80%'>
             <Flex

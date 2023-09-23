@@ -72,12 +72,14 @@ const handleAssignClick = () => {
           lastName={userdata.lastName}
         />
         {/* Task Details */}
-        <Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }}>
+        <Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }} bg={{
+                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+              }}>
           <CardHeader mb='24px'>
             <Flex direction='column'>
             <Text
         fontSize='lg'
-        color='#fff'
+        color='black'
         fontWeight='bold'
         mb='6px'
         onClick={handleTaskClick}
@@ -92,11 +94,13 @@ const handleAssignClick = () => {
 
                   </Card>
         {/* Future Assignments */}
-        <Card gridArea={{ md: '2 / 2 / 3 / 3', '2xl': 'auto' }}>
+        <Card gridArea={{ md: '2 / 2 / 3 / 3', '2xl': 'auto' }} bg={{
+                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+              }}>
   <Flex direction='column'>
     <Text
       fontSize='lg'
-      color='#fff'
+      color='black'
       fontWeight='bold'
       mb='6px'
       onClick={handleAssignClick}
@@ -133,7 +137,9 @@ const handleAssignClick = () => {
         mb='24px'
       >
         {/* EEG Reports */}
-        <Card p='16px'>
+        <Card p='16px' bg={{
+                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+              }}>
           <CardBody>
             <Flex direction='column' w='100%'>
               <Flex
@@ -144,7 +150,7 @@ const handleAssignClick = () => {
               >
             <Text
         fontSize='lg'
-        color='#fff'
+        color='black'
         fontWeight='bold'
         mb='6px'
         onClick={handleEEGReportsClick}
@@ -154,14 +160,16 @@ const handleAssignClick = () => {
       </Text>
       <Image src={eeg} alt='EEG Report' maxW='100%' mb='24px' style={{ borderRadius: '35px' }} />
 
-                <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
+                <Text fontSize='md' fontWeight='medium' color='black'></Text>
               </Flex>
             </Flex>
           </CardBody>
         </Card>
 
         {/* Cognitive Training Reports */}
-        <Card p='16px'>
+        <Card p='16px' bg={{
+                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+              }}>
           <CardBody>
             <Flex direction='column' w='100%'>
               <Flex
@@ -172,7 +180,7 @@ const handleAssignClick = () => {
               >
             <Text
         fontSize='lg'
-        color='#fff'
+        color='black'
         fontWeight='bold'
         mb='6px'
         onClick={handleCogniClick}
@@ -182,7 +190,7 @@ const handleAssignClick = () => {
       </Text>
       <Image src={cogni} alt='Cognitive Training' maxW='100%' mb='24px' style={{ borderRadius: '35px' }} />
 
-                <Text fontSize='md' fontWeight='medium' color='gray.400'></Text>
+                <Text fontSize='md' fontWeight='medium' color='black'></Text>
               </Flex>
             </Flex>
           </CardBody>
@@ -193,10 +201,12 @@ const handleAssignClick = () => {
         gap='24px'
       >
         {/*Patient Details */}
-        <Card>
+        <Card bg={{
+                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+              }}>
   <CardHeader mb='32px'>
     <Flex direction='row' alignItems='center'>
-      <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
+      <Text fontSize='lg' color='black' fontWeight='bold' mb='6px'>
         Patient Details
       </Text>
       <Image src={patient} alt='Patient Details' maxW='100px' ml='55px' style={{ borderRadius: '35px' }} />
@@ -224,7 +234,9 @@ const handleAssignClick = () => {
 
 
         {/* Contact Form */}
-        <Card p='16px'>
+        <Card p='16px' bg={{
+                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+              }}>
   <CardBody style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
     <Flex direction='column' w='100%'>
       <Flex
@@ -233,7 +245,7 @@ const handleAssignClick = () => {
         mb='36px'
         alignSelf='flex-start'
       >
-        <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
+        <Text fontSize='lg' color='black' fontWeight='bold' mb='6px'>
           Mail Us
         </Text>
         <Image src={mail} alt='Mail Us' maxW='100%' mb='24px' style={{ borderRadius: '35px' }} />
@@ -241,7 +253,7 @@ const handleAssignClick = () => {
         {/* Corrected the email link */}
         <a
           href='mailto:2021ad0414@svce.ac.in'
-          style={{ textDecoration: 'none', color: 'white' }}
+          style={{ textDecoration: 'none', color: 'black' }}
         >
           <Text
             fontSize='18'
