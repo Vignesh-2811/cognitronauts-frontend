@@ -6,17 +6,18 @@ import CardHeader from 'components/Card/CardHeader.js';
 const ClientTask = () => {
   return (
     <div>
-      <h2>Task</h2>
       {/* Your Task details goes here */}
     </div>
   );
 };
 
 const TaskCard = ({ title, children }) => (
-  <Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }}>
+  <Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }} bg={{
+    base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+  }}>
     <CardHeader mb="65px ">
       <Flex direction="column">
-        <Text fontSize="lg" color="#fff" fontWeight="bold" mb="6px">
+        <Text fontSize="lg" color="black" fontWeight="bold" mb="6px">
           {title}
         </Text>
       </Flex>
