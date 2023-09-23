@@ -32,8 +32,9 @@ const WelcomeCard = ({ firstName, lastName }) => {
               mb='auto'
               style={{ fontStyle: 'italic' }}
             >
-              It's great to reconnect with you! <br />
-              Feel free to inquire about anything, anytime and from anywhere :)
+              Hey, awesome to have you back! 🌟<br />
+              We're like your friendly genie, ready to grant your curiosity wishes! 🧞‍♂ <br />
+              So, what's bubbling in your imaginative little mind today?
             </Text>
             <Spacer />
             <Flex align='center'>

@@ -6,7 +6,7 @@ import CardHeader from 'components/Card/CardHeader.js';
 import { TaskData } from 'variables/general'; 
 import AssRow from 'components/Tables/AssRow';// Import TaskData from general.js
 
-function Assign() {
+function ClientAssign() {
   return (
   
     <Flex direction='column' pt={{ base: '150px', md: '75px' }} mx='auto' flexWrap="wrap">
@@ -57,4 +57,4 @@ function Assign() {
   );
 }
 
-export default Assign;
+export default ClientAssign;

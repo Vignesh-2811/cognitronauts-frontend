@@ -25,6 +25,7 @@ import assign from 'assets/img/assign.jpg';
 import task from 'assets/img/task.jpg';
 import mail from 'assets/img/mail.jpg';
 import patient from 'assets/img/patient.jpg';
+import dashboard from 'assets/img/dashboard.jpg';
 
 
 // Icons

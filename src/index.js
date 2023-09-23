@@ -19,6 +19,10 @@ import Billing from 'views/Dashboard/Billing.js';
 import EEGReports from 'views/Dashboard/EEG.js';
 import Task from 'views/Dashboard/Task.js';
 import Assign from 'views/Dashboard/Ass.js';
+import ClientAssign from 'Screens/Client/Views/clientass.js';
+import ClientCogni from 'Screens/Client/Views/clientcogni.js';
+import ClientEEG from 'Screens/Client/Views/clienteeg.js';
+import ClientTask from 'Screens/Client/Views/clienttask.js';
 
 ReactDOM.render(
   <ChakraProvider theme={themeAuth} resetCss={false} w='100%'>
@@ -35,8 +39,13 @@ ReactDOM.render(
           <Route path={'/auth/signup'} component={SignUp} />
           <Route path={`/auth`} component={AuthLayout} />
           <Route path={`/admin`} component={AdminLayout} />
-          
+          <Route path={`/client/assign`} component={ClientAssign} />
+          <Route path={`/client/task`} component={ClientTask} />
+          <Route path={`/client/eeg`} component={ClientEEG} />
+          <Route path={`/client/cogni`} component={ClientCogni} />
           <Route path={`/client`} component={ClientDashboard} />
+          
+          
           
 
           
