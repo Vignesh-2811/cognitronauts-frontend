@@ -32,8 +32,8 @@ function SignUp({ submitRegisterEvent }) {
     setValue,
     formState: { errors },
   } = methods;
-  const titleColor = 'white';
-  const textColor = 'gray.400';
+  const titleColor = 'black';
+  const textColor = 'black';
   const toast = useToast();
   const [selectedDate, setSelectedDate] = useState(null);
   const notify = useNotify();
@@ -126,7 +126,7 @@ function SignUp({ submitRegisterEvent }) {
             <Text
               fontSize='4xl'
               lineHeight='39px'
-              color='white'
+              color='black'
               fontWeight='bold'
             >
               Welcome!
@@ -142,13 +142,14 @@ function SignUp({ submitRegisterEvent }) {
               w='100%'
               mx={{ base: '0px' }}
               bg={{
-                base: 'rgb(19,21,56)',
+                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
               }}
+              
             >
               <FormProvider {...methods}>
                 <FormControl>
                   <FormLabel
-                    color={titleColor}
+                    color='black'
                     ms='4px'
                     fontSize='sm'
                     fontWeight='normal'
@@ -162,9 +163,9 @@ function SignUp({ submitRegisterEvent }) {
                     borderRadius='20px'
                   >
                     <Select
-                      color={titleColor}
+                      color='black'
                       bg={{
-                        base: 'rgb(19,21,54)',
+                        base: 'white',
                       }}
                       border='transparent'
                       borderRadius='20px'
@@ -177,7 +178,7 @@ function SignUp({ submitRegisterEvent }) {
                       {...register('role')}
                       defaultValue=''
                     >
-                      <option value='Patient' style={{ color: 'black' }}>
+                      <option value='Patient' style={{ color: 'black' }} >
                         Patient
                       </option>
                       <option value='Doctor' style={{ color: 'black' }}>
@@ -190,6 +191,7 @@ function SignUp({ submitRegisterEvent }) {
                     label='First Name'
                     placeholder='Your first name'
                     type='text'
+                    
                   />
                   <UserInput
                     name='lastName'
@@ -228,6 +230,7 @@ function SignUp({ submitRegisterEvent }) {
                     placeholder='Confirm Password'
                     type='password'
                   />
+                  {/* </GradientBorder> */}
 
                   <Button
                     variant='brand'

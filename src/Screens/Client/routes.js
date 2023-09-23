@@ -25,20 +25,20 @@ export var ClientRoutes = [
     layout: '/client',
   },
 
-  {
-    path: '/tables',
-    name: 'Tables',
-    icon: <StatsIcon color='inherit' />,
-    component: Tables,
-    layout: '/client',
-  },
-  {
-    path: '/billing',
-    name: 'Cognitive Session Report',
-    icon: <CreditIcon color='inherit' />,
-    component: Billing,
-    layout: '/client',
-  },
+  // {
+  //   path: '/tables',
+  //   name: 'Tables',
+  //   icon: <StatsIcon color='inherit' />,
+  //   component: Tables,
+  //   layout: '/client',
+  // },
+  // {
+  //   path: '/billing',
+  //   name: 'Cognitive Session Report',
+  //   icon: <CreditIcon color='inherit' />,
+  //   component: Billing,
+  //   layout: '/client',
+  // },
 
   {
     name: 'ACCOUNT PAGES',
@@ -55,11 +55,11 @@ export var ClientRoutes = [
       },
     ],
   },
-  {
-    path: '/logout',
-    name: 'Logout',
-    icon: <CreditIcon color='inherit' />,
-    component: Billing,
-    layout: '/logout',
-  },
+  // {
+  //   path: '/logout',
+  //   name: 'Logout',
+  //   icon: <CreditIcon color='inherit' />,
+  //   component: Billing,
+  //   layout: '/logout',
+  // },
 ];
