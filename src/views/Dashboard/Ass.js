@@ -11,7 +11,10 @@ function Assign() {
   
     <Flex direction='column' pt={{ base: '150px', md: '75px' }} mx='auto' flexWrap="wrap">
       {/* Assignment List */}
-      <Card my='24px' ms={{ lg: '24px' }} mx='auto'>
+      <Card my='24px' ms={{ lg: '24px' }} mx='auto'bg={{
+  base: 'linear-gradient(159.02deg, #fddba1 14.0%, #ffc0e0 56.45%, #ffb9c0 86.0%)',
+}}
+>
         <CardHeader mb='12px'>
           <Flex direction='column' w='80%'>
             <Flex
@@ -23,7 +26,7 @@ function Assign() {
             >
               <div style={{ marginLeft: '45px' }}>
                 <Text
-                  color='#fff'
+                  color='black'
                   fontSize={{ sm: 'lg', md: 'xl', lg: 'lg' }}
                   fontWeight='bold'
                 >
@@ -36,7 +39,7 @@ function Assign() {
         <CardBody>
           <Flex direction='column' w='80%'>
             <div style={{ marginLeft: '45px' }}>
-              <Text color='gray.400' fontSize='xs' mb='18px'>
+              <Text color='black' fontSize='xs' mb='18px'>
                 NEWEST
               </Text>
             </div>

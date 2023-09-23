@@ -3,7 +3,7 @@ import React from 'react';
 
 function TimelineRow(props) {
   const { title, date, color, index, arrLength } = props;
-  const textColor = useColorModeValue("gray.700", "white.300");
+  const textColor = useColorModeValue("black", "black");
   const bgIconColor = useColorModeValue("white.300", "gray.700");
 
   return (
@@ -12,10 +12,10 @@ function TimelineRow(props) {
        
       </Flex>
       <Flex direction='column' justifyContent='flex-start' h='100%'>
-        <Text fontSize='sm' color='#fff' fontWeight='normal' mb='3px'>
+        <Text fontSize='sm' color='black' fontWeight='normal' mb='3px'>
           {title}
         </Text>
-        <Text fontSize='sm' color='gray.400' fontWeight='normal'>
+        <Text fontSize='sm' color='black' fontWeight='normal'>
           {date}
         </Text>
       </Flex>

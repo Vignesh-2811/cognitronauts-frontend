@@ -24,7 +24,7 @@ function AssRow(props) {
     setSelectedGame('');
   };
 
-  const gameNameColor = isAssigned ? 'green' : 'gray.400'; // Change color to green after assignment
+  const gameNameColor = isAssigned ? 'green' : 'black'; // Change color to green after assignment
   const isDisabled = isAssigned; // Disable inputs after assignment
 
   const gameNameStyle = {
@@ -38,7 +38,7 @@ function AssRow(props) {
         <Box
           me='14px'
           borderRadius='50%'
-          color={isAssigned ? 'green' : 'gray.400'} // Change color to green after assignment
+          color={isAssigned ? 'green' : 'black'} // Change color to green after assignment
           border='1px solid'
           display='flex'
           alignItems='center'
