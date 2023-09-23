@@ -27,7 +27,7 @@ const AuthBanner = ({ img, text, slogan }) => {
         alignItems='center'
       >
         <Box
-          bg='rgba(255, 255, 255, 0.7)'
+        bg='rgba(255, 255, 255, 0.7)'
           p={8}
           borderRadius='md'
           backdropFilter='blur(0.25px)'
@@ -50,7 +50,9 @@ const AuthBanner = ({ img, text, slogan }) => {
             fontSize='36px'
             fontWeight='bold'
             bgClip='text !important'
-            bg='linear-gradient(94.56deg, #FFFFFF 79.99%, #21242F 102.65%)'
+            // bg='linear-gradient(94.56deg, #FFFFFF 79.99%, #21242F 102.65%)'
+            bg='linear-gradient(94.56deg, #000000)'
+
           >
             {slogan}
             {/* REFORGE, RENEW, REDESIGN! */}

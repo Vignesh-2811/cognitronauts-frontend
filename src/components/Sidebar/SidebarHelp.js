@@ -21,7 +21,7 @@ export function SidebarHelp(props) {
       minW='218px'
     >
       <IconBox width='35px' h='35px' bg='white' mb='auto'>
-        <QuestionIcon color='brand.200' h='18px' w='18px' />
+        <QuestionIcon color='white' h='18px' w='18px' />
       </IconBox>
       <Text fontSize='sm' color='white' fontWeight='bold'>
         Need help?

@@ -38,8 +38,7 @@ export default function AdminNavbar(props) {
     if (scrolled === true) {
       navbarPosition = 'fixed';
       navbarShadow = '0px 7px 23px rgba(0, 0, 0, 0.05)';
-      navbarBg =
-        'linear-gradient(rgba(255, 255, 255, 0) 0% rgba(255, 255, 255, 0.39) @ 100%)';
+      navbarBg ='linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)';
       navbarBorder = 'rgba(226, 232, 240, 0.3)';
       navbarFilter = 'drop-shadow(0px 7px 23px rgba(0, 0, 0, 0.05))';
       navbarBackdrop = 'blur(42px)';

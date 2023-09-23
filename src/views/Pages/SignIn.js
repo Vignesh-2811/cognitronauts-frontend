@@ -58,7 +58,7 @@ function SignIn({ loginEvent }) {
       if (res.status === 200) {
         notify({
           status: 'success',
-          description: 'Login successfull',
+          description: 'Login successful',
         });
         if (res.data.role === 'Doctor') {
           history.push('/admin/dashboard');
@@ -104,10 +104,10 @@ function SignIn({ loginEvent }) {
             mt={{ base: '50px', md: '150px', lg: '160px', xl: '245px' }}
             mb={{ base: '60px', lg: '95px' }}
           >
-            <Heading color={titleColor} fontSize='32px' mb='10px'>
+            <Heading color={'black'} fontSize='32px' mb='10px'>
               Good day!
             </Heading>
-            <Heading color={titleColor} fontSize='32px' mb='10px'>
+            <Heading color={'black'} fontSize='32px' mb='10px'>
               Nice to see you :)
             </Heading>
             <Text

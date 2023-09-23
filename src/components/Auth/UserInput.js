@@ -4,7 +4,7 @@ import React from 'react';
 import { useForm, useFormContext } from 'react-hook-form';
 
 const UserInput = ({ label, placeholder, name, type }) => {
-  const titleColor = 'white';
+  const titleColor = 'black';
   const { register } = useFormContext();
   const errorColor = 'red.500';
 
@@ -22,7 +22,8 @@ const UserInput = ({ label, placeholder, name, type }) => {
         <Input
           color={titleColor}
           bg={{
-            base: 'rgb(19,21,54)',
+            // base: 'rgb(19,21,54)',
+            base: '#ffffff',
           }}
           border='transparent'
           borderRadius='20px'
