@@ -194,6 +194,7 @@ function Sidebar(props) {
   //  Chakra Color Mode
   let sidebarBg =
     'linear-gradient(111.84deg, rgba(6, 11, 38, 0.94) 59.3%, rgba(26, 31, 55, 0) 100%)';
+  // 'white';
   let sidebarRadius = '16px';
   let sidebarMargins = '16px 0px 16px 16px';
   var brand = (
