@@ -27,10 +27,10 @@ function TransactionRow(props) {
           <Icon as={logo} w='12px' h='12px' />
         </Box>
         <Flex direction='column'>
-          <Text fontSize='sm' color='#fff' mb='4px'>
+          <Text fontSize='sm' color='black' mb='4px'>
             {name}
           </Text>
-          <Text fontSize={{ sm: 'xs', md: 'sm' }} color='gray.400'>
+          <Text fontSize={{ sm: 'xs', md: 'sm' }} color='black'>
             {date}
           </Text>
         </Flex>

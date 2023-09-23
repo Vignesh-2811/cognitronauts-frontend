@@ -19,7 +19,7 @@ export default function Footer(props) {
     >
       <Text
         fontSize='sm'
-        color='white'
+        color='black'
         textAlign={{
           base: 'center',
           xl: 'start',

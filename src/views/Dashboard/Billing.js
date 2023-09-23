@@ -26,7 +26,9 @@ function CognitiveTrainingReport() {
           
         {/* Transactions List */}
         
-        <Card my='24px' ms={{ lg: '24px' }} mx='auto'>
+        <Card my='24px' ms={{ lg: '24px' }} mx='auto' bg={{
+  base: 'linear-gradient(159.02deg, #fddba1 14.0%, #ffc0e0 56.45%, #ffb9c0 86.0%)',
+}}>
   <CardHeader mb='12px'>
     <Flex direction='column' w='80%'>
       <Flex
@@ -38,7 +40,7 @@ function CognitiveTrainingReport() {
       >
         <div style={{ marginLeft: '45px' }}>
         <Text
-          color='#fff'
+          color='black'
           fontSize={{ sm: 'lg', md: 'xl', lg: 'lg' }}
           fontWeight='bold'
         >
@@ -47,12 +49,12 @@ function CognitiveTrainingReport() {
         <Flex align='center'>
           <Icon
             as={FaRegCalendarAlt}
-            color='gray.400'
+            color='black'
             w='15px'
             h='15px'
             me='6px'
           />
-          <Text color='gray.400' fontSize='sm'>
+          <Text color='black' fontSize='sm'>
             23 - 30 March 2021
           </Text>
         </Flex>
@@ -62,7 +64,7 @@ function CognitiveTrainingReport() {
   <CardBody>
     <Flex direction='column' w='80%'>
     <div style={{ marginLeft: '45px' }}>
-      <Text color='gray.400' fontSize='xs' mb='18px'>
+      <Text color='black' fontSize='xs' mb='18px'>
         NEWEST
       </Text>
       </div>
@@ -77,7 +79,7 @@ function CognitiveTrainingReport() {
         ))}
       </div>
       <div style={{ marginLeft: '45px' }}>
-      <Text color='gray.400' fontSize='xs' my='18px'>
+      <Text color='black' fontSize='xs' my='18px'>
       
         OLDER
       </Text>
