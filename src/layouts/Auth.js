@@ -8,7 +8,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import theme from 'theme/themeAuth.js';
 
 export default function Pages(props) {
-  const { ...rest } = props;
+  const { routes, ...rest } = props;
   // ref for the wrapper div
   const wrapper = React.createRef();
   React.useEffect(() => {
