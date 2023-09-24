@@ -33,7 +33,25 @@ function Tables({ userData }) {
   const [patients, setPatients] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [assignedPatients, setAssignedPatients] = useState([]);
-  4;
+
+  useEffect(() => {
+    const fetchAssignedPatients = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:5000/api/users/getPatients/${userData._id}`
+        );
+        console.log(userData._id);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setAssignedPatients(data);
+      } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+      }
+    };
+    fetchAssignedPatients();
+  }, [userData._id]);
 
   useEffect(() => {
     const fetchUnassignedPatients = async () => {
@@ -154,13 +172,13 @@ function Tables({ userData }) {
               </Tr>
             </Thead>
             <Tbody>
-              {tablesProjectData.map((row, index, arr) => {
+              {patients.map((patient) => {
                 return (
                   <TablesProjectRow
-                    name={row.name}
-                    logo={row.logo}
-                    profile={row.profile}
-                    contact={row.contact}
+                    name={patient.firstName}
+                    // logo={row.logo}
+                    profile={patient.dateOfBirth}
+                    contact={patient.phoneNumber}
                   />
                 );
               })}
