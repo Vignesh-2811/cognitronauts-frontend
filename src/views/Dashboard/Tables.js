@@ -157,14 +157,14 @@ function Tables({ userData, history }) {
                 >
                   Name
                 </Th>
-                <Th
+                {/* <Th
                   ps='0px'
                   color='gray.400'
                   fontFamily='Plus Jakarta Display'
                   borderBottomColor='#56577A'
                 >
                   Date Of Birth
-                </Th>
+                </Th> */}
                 <Th
                   color='gray.400'
                   fontFamily='Plus Jakarta Display'

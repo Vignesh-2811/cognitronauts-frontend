@@ -2,6 +2,8 @@ import React from 'react';
 import { Flex, Grid, GridItem, Text } from '@chakra-ui/react';
 import Card from 'components/Card/Card.js';
 import CardHeader from 'components/Card/CardHeader.js';
+import mazeimg from '../../../assets/img/mazeimg.jpg';
+import memorygame from '../../../assets/img/memorygame.jpg';
 
 const ClientTask = () => {
   return (
@@ -36,12 +38,13 @@ const ClientApp = () => {
       <Grid templateColumns="1fr 1fr" gap={10} justify="center" align="center">
         <GridItem colSpan={1}>
           <TaskCard title="Task 1">
-            <img src="" />
+            <img src={mazeimg} />
             {/* Add your content for Task 1 here */}
           </TaskCard>
         </GridItem>
         <GridItem colSpan={1}>
           <TaskCard title="Task 2">
+          <img src={memorygame} height= {100}/>
             {/* Add your content for Task 2 here */}
           </TaskCard>
         </GridItem>
