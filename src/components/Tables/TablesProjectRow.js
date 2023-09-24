@@ -12,10 +12,11 @@ import {
 import { FaEllipsisV } from 'react-icons/fa';
 
 function DashboardTableRow(props) {
-  const { ID, name, dateOfBirth, contact } = props;
+  const { ID, name, dateOfBirth, contact, onClick } = props;
   const textColor = useColorModeValue('gray.700', 'white');
+
   return (
-    <Tr>
+    <Tr onClick={onClick}>
       <Td
         minWidth={{ sm: '250px' }}
         ps='0px'
