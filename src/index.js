@@ -23,6 +23,7 @@ import ClientAssign from 'Screens/Client/Views/clientass.js';
 import ClientCogni from 'Screens/Client/Views/clientcogni.js';
 import ClientEEG from 'Screens/Client/Views/clienteeg.js';
 import ClientTask from 'Screens/Client/Views/clienttask.js';
+import HTMLPage from 'components/Game1/Game1.js';
 
 ReactDOM.render(
   <ChakraProvider theme={themeAuth} resetCss={false} w='100%'>
@@ -32,6 +33,7 @@ ReactDOM.render(
           <Route path={`/admin/billing`} component={Billing} />
           <Route path={`/admin/assign`} component={Assign} />
           <Route path={`/admin/task`} component={Task} />
+          <Route path={`/client/games`} component={HTMLPage} />
 
           <Route path={`/admin/eeg`} component={EEGReports} />
           <Route path={'/auth/signin'} component={SignIn} />

@@ -36,6 +36,7 @@ const ClientApp = () => {
       <Grid templateColumns="1fr 1fr" gap={10} justify="center" align="center">
         <GridItem colSpan={1}>
           <TaskCard title="Task 1">
+            <img src="" />
             {/* Add your content for Task 1 here */}
           </TaskCard>
         </GridItem>

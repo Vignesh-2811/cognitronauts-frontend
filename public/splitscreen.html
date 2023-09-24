@@ -1,4 +1,160 @@
-function rand(max) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Maze_Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+        }
+
+        #left-half {
+            width: 50%;
+            
+        }
+
+        #right-half {
+            width: 50%;
+            background-color: white; /* You can set the background color for the empty right half */
+        }
+        #mazeContainer {
+            transition-property: opacity;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+            top: 75px;
+            opacity: 0;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin-left: -50%;
+        }
+
+        /* CSS for mazeCanvas */
+        #mazeContainer #mazeCanvas {
+            margin: 0;
+            display: block;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="left-half">
+        <!-- Your existing code here -->
+        <div id="gradient"></div>
+        <div id="page">
+            <div id="Message-Container">
+                <div id="message">
+                    <h1>Congratulations!</h1>
+                    <p>You ease your hunger.</p>
+                    <p id="moves"></p>
+                    <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+                </div>
+            </div>
+            <div id="menu">
+                <div class="custom-select">
+                    <select id="diffSelect">
+                        <option value="10">Easy</option>
+                        <option value="15">Medium</option>
+                        <option value="25">Hard</option>
+                        <option value="38">Extreme</option>
+                    </select>
+                </div>
+                <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start"/>
+            </div>
+            <div id="view">
+                <div id="mazeContainer">
+                    <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="right-half">
+        <canvas id="eegCanvas"></canvas>
+        <script>
+            const canvas = document.getElementById('eegCanvas');
+            var ctx = canvas.getContext('2d');
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const numWaves = 19;
+            const numPeaks = 100;
+            const waveData = [];
+            const waveSpacing = 60; // Adjust this value for space between waves
+            let xOffset = 0; // Offset for scrolling waves
+            
+            // Initialize wave data with different frequencies and random amplitudes
+            for (let i = 0; i < numWaves; i++) {
+                const wave = {
+                    amplitudes: [],
+                    frequency: 0.05 + i * 0.01, // Different frequencies for each wave
+                };
+                
+                for (let j = 0; j < numPeaks; j++) {
+                    wave.amplitudes.push(Math.random() * 40 + 10); // Random amplitude within a range
+                }
+                
+                waveData.push(wave);
+            }
+            
+            function drawEEGWaves() {
+                canvas.width = window.innerWidth; // Update canvas width
+                canvas.height = window.innerHeight; // Update canvas height
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                waveData.forEach((wave, index) => {
+                    ctx.beginPath();
+                    for (let x = 0; x < canvas.width; x += 5) {
+                        const noise = (Math.random() * 20) - 10; // Random noise
+                        const y = (index + 1) * waveSpacing + wave.amplitudes[Math.floor((x + xOffset) / 5) % numPeaks] * Math.sin(wave.frequency * (x + xOffset)) + noise;
+                        ctx.lineTo(x, y);
+                    }
+                    ctx.stroke();
+                });
+                
+                xOffset += 5; // Scroll the waves to the right
+            }
+            
+            function increaseAmplitude() {
+                waveData.forEach((wave) => {
+                    for (let i = 0; i < numPeaks; i++) {
+                        wave.amplitudes[i] += 2; // Increase amplitude for each peak
+                    }
+                });
+            }
+            
+            function decreaseAmplitude() {
+                waveData.forEach((wave) => {
+                    for (let i = 0; i < numPeaks; i++) {
+                        wave.amplitudes[i] -= 2; // Decrease amplitude for each peak
+                        if (wave.amplitudes[i] < 10) wave.amplitudes[i] = 10; // Ensure a minimum amplitude
+                    }
+                });
+            }
+            
+            window.addEventListener('keydown', function(event) {
+                if (event.key === 'ArrowUp' || event.key === 'ArrowRight') {
+                    increaseAmplitude();
+                } else if (event.key === 'ArrowDown' || event.key === 'ArrowLeft') {
+                    decreaseAmplitude();
+                }
+            });
+            
+            window.addEventListener('resize', function() {
+                canvas.width = window.innerWidth; // Adjust canvas width on window resize
+                canvas.height = window.innerHeight; // Adjust canvas height on window resize
+            });
+            
+            setInterval(drawEEGWaves, 100); // Update the waves every 100ms
+        </script>
+    </div>
+    
+  <script>
+    function rand(max) {
     return Math.floor(Math.random() * max);
 }
 
@@ -550,7 +706,7 @@ window.onresize = function () {
     }
 };
 
-function makeMaze() {zz
+function makeMaze() {
     //document.getElementById("mazeCanvas").classList.add("border");
     if (player != undefined) {
         player.unbindKeyDown();
@@ -566,3 +722,10 @@ function makeMaze() {zz
         document.getElementById("mazeContainer").style.opacity = "100";
     }
 }
+  </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+    
+</body>
+</html>
