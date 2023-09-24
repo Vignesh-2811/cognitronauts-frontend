@@ -45,10 +45,7 @@ ReactDOM.render(
           <Route path={`/client/eeg`} component={ClientEEG} />
           <Route path={`/client/cogni`} component={ClientCogni} />
           <Route path={`/client`} component={ClientDashboard} />
-          
 
-          
-          
           {/* <PrivateRoute
             path='/admin'
             component={AdminLayout}

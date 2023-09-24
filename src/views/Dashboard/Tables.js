@@ -29,11 +29,30 @@ import { tablesProjectData, tablesTableData } from 'variables/general';
 
 // Icons
 import { AiFillCheckCircle } from 'react-icons/ai';
-function Tables({ userData }) {
+
+function Tables({ userData, history }) {
   const [patients, setPatients] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [assignedPatients, setAssignedPatients] = useState([]);
-  4;
+  const [selectedUserId, setSelectedUserId] = useState(null);
+
+  useEffect(() => {
+    const fetchAssignedPatients = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:5000/api/users/getPatients/${userData._id}`
+        );
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setAssignedPatients(data);
+      } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+      }
+    };
+    fetchAssignedPatients();
+  }, [userData._id]);
 
   useEffect(() => {
     const fetchUnassignedPatients = async () => {
@@ -45,7 +64,6 @@ function Tables({ userData }) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log(patients);
         setPatients(data);
       } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
@@ -79,10 +97,15 @@ function Tables({ userData }) {
     }
   };
 
+  const navigateToDashboard = (userId) => {
+    console.log(userId);
+    setSelectedUserId(userId);
+    history.push(`/admin/dashboard`);
+  };
+
   return (
     <Flex direction='column' pt={{ base: '120px', md: '75px' }}>
       <Button onClick={() => setIsOpen(true)}>Add Clients</Button>
-
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <ModalOverlay />
         <ModalContent>
@@ -149,18 +172,18 @@ function Tables({ userData }) {
                 >
                   Contact
                 </Th>
-
                 <Th borderBottomColor='#56577A'></Th>
               </Tr>
             </Thead>
             <Tbody>
-              {tablesProjectData.map((row, index, arr) => {
+              {assignedPatients.map((patient) => {
                 return (
                   <TablesProjectRow
-                    name={row.name}
-                    logo={row.logo}
-                    profile={row.profile}
-                    contact={row.contact}
+                    key={patient._id}
+                    onClick={() => navigateToDashboard(patient._id)}
+                    name={patient.firstName}
+                    profile={patient.dateOfBirth}
+                    contact={patient.phoneNumber}
                   />
                 );
               })}
@@ -171,6 +194,7 @@ function Tables({ userData }) {
     </Flex>
   );
 }
+
 const mapStateToProps = (state) => {
   return {
     userData: state.user.userData,

@@ -15,10 +15,16 @@ const Task = () => {
 };
 
 const TaskCard = ({ title, children }) => (
-  <Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }}>
+  <Card
+    gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }}
+    bg={{
+      base:
+        'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+    }}
+  >
     <CardHeader mb='65px '>
       <Flex direction='column'>
-        <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
+        <Text fontSize='lg' color='#1c1c1c' fontWeight='bold' mb='6px'>
           {title}
         </Text>
       </Flex>
