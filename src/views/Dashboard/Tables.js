@@ -104,7 +104,10 @@ function Tables({ userData, history }) {
   };
 
   return (
-    <Flex direction='column' pt={{ base: '120px', md: '75px' }}>
+    <Flex direction='column' pt={{ base: '120px', md: '75px' }}  bg={{
+      base:
+        'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+    }}>
       <Button onClick={() => setIsOpen(true)}>Add Clients</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <ModalOverlay />

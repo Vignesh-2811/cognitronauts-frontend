@@ -9,6 +9,8 @@ import Card from 'components/Card/Card.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
 import TransactionRow from 'components/Tables/TransactionRow';
+import graph from 'assets/img/graph.jpg';
+import { Image } from '@chakra-ui/react';
 
 // Icons
 import { FaRegCalendarAlt } from 'react-icons/fa';
@@ -96,6 +98,13 @@ function ClientCogni() {
       </div>
       
     </Flex>
+    <Image
+            src={graph}
+            alt='Task Details'
+            maxW='50%'
+            mb='24px'
+            style={{ borderRadius: '35px', marginLeft: '35px' }}
+          />
   </CardBody>
 </Card>
     </Flex>
