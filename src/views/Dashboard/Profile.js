@@ -47,7 +47,7 @@ function Profile() {
           direction={{ sm: 'column', md: 'row' }}
           mx='auto'
           maxH='330px'
-          w={{ sm: '90%', xl: '100%' }}
+          w={{ sm: '100%',md:'100%', xl: '100%' }}
           justifyContent={{ sm: 'center', md: 'space-between' }}
           align='center'
           p='24px'
@@ -120,7 +120,7 @@ function Profile() {
         <Card
           bgImage={bgProfile}
           bgSize='cover'
-          maxW={{ sm: '325px', md: '725px', lg: '980px' }}
+          maxW={{ sm: '325px', md: '725px', lg: '1200px' }}
           h={{ sm: '270px', lg: '350px', xl: '410px' }}
           gridArea={{ xl: '1 / 1 / 2 / 2', '2xl': 'auto' }}
         >
@@ -132,8 +132,8 @@ function Profile() {
             "Unlocking Brighter Minds: Empowering Children with Disabilities through Home-Based Cognitive Retraining."
 
             </Text>
-            <Box mb='20px' position='relative' borderRadius='20px' w='400px' h='300px' display='flex'  alignItems='center' paddingLeft='60px'  marginTop='20px'>
-                  <Image src={progress} borderRadius='30px' w='100%' h='100%' objectFit='cover' />
+            <Box mb='20px' position='relative' borderRadius='20px' w='410px' h='410px' display='flex'  alignItems='center' paddingLeft='60px'  marginTop='20px'>
+                  <Image src={progress} borderRadius='30px' w='80%' h='100%' objectFit='cover' />
             </Box>
             
           </Flex>
@@ -142,7 +142,7 @@ function Profile() {
         <Card
           p='16px'
           maxH={{ lg: '410px' }}
-          maxW={{ sm: '325px', md: '725px', lg: '980px', xl: '100%' }}
+          maxW={{ sm: '325px', md: '725px', lg: '1200px', xl: '100%' }}
           gridArea={{ xl: '2 / 1 / 3 / 3', '2xl': 'auto' }}
         >
           <CardHeader p='12px 5px' mb='12px'>
@@ -200,17 +200,17 @@ function Profile() {
                   borderRadius='20px'
                 >
                   <Flex direction='column' me='auto'>
-                    <Text fontSize='xl' color='gray.400' mb='3px'>
+                    <Text fontSize='xl' color='gray.400' mb='5px'>
                     *🩺 For Doctors*
                     </Text>
-                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    <Text color='black' fontSize='20px' fontWeight='bold'>
                     ◽Create patient profiles and assign tasks.
                     </Text>
-                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    <Text color='black' fontSize='20px' fontWeight='bold'>
 
                     ◽Prescribe personalized cognitive games.
                     </Text>
-                    <Text color='#fff' fontSize='20px' fontWeight='bold'>
+                    <Text color='black' fontSize='20px' fontWeight='bold'>
 
                     ◽Monitor and adjust therapy plans.
                     </Text>
@@ -247,7 +247,7 @@ function Profile() {
           bgSize='cover'
           p='16px'
           maxH={{ md: '410px' }}
-          maxW={{ sm: '325px', md: '725px', lg: '980px' }}
+          maxW={{ sm: '325px', md: '725px', lg: '1200px' }}
           gridArea={{ xl: '1 / 2 / 2 / 3', '2xl': 'auto' }}
         >
           <CardHeader p='12px 5px' mb='12px'>
@@ -322,76 +322,66 @@ function Profile() {
             </Flex>
           </CardHeader>
           <CardBody px='5px'>
-            <Grid
-              templateColumns={{
-                sm: '1fr',
-                md: '1fr 1fr',
-                xl: 'repeat(3, 1fr)',
-              }}
-              templateRows={{
-                sm: '1fr 1fr 1fr auto',
-                md: '1fr 1fr',
-                xl: '1fr',
-              }}
-              gap='20px'
-            >
-              <Flex direction='column' alignItems='center' justify='center' maxWidth='300px'>
-              <Box mb='20px' /* Add some margin between the first and second Flex components */>
-                <Box mb='20px' position='relative' borderRadius='20px'>
-                  <Image src={avatar13} borderRadius='20px' w='100%' h='100%' objectFit='cover' paddingLeft='50px' />
-                </Box>
-                </Box>
-                <Flex direction='column'>
-                  <Text fontSize='10px' color={'gray.400'} mb='10px' paddingLeft='70px'>
-                    game #1
-                  </Text>
-                  <Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px' paddingLeft='70px'>
-                  CogniRecall Quest
-                  </Text>
-                  <Text
-                    fontSize='m'
-                    color={'gray.400'}
-                    fontWeight='400'
-                    mb='20px'
-                    paddingLeft='70px'
-                  >
-                   "Unlock the Power of Your Mind! Help the Smiley Smile by Concentrating and Having Fun! 😄✨"
-                  </Text>
-                  <Flex justifyContent='space-between' mt='auto'>
-                    
-                    
-                  </Flex>
-                </Flex>
-              </Flex>
-              <Flex direction='column' alignItems='center' justify='center' maxWidth='300px'>
-                <Box mb='40px' position='relative' borderRadius='20px'>
-                  <Image src={game2} borderRadius='20px' w='350px' h='250px' objectFit='cover' paddingLeft='50px' />
-                </Box>
-                <Flex direction='column'>
-                  <Text fontSize='10px' color={'gray.400'} mb='10px' paddingLeft='50px'>
-                    game #2
-                  </Text>
-                  <Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px' paddingLeft='50px'>
-                  Mnemonic Mind Maze
-                  </Text>
-                  <Text fontSize='m' color={'gray.400'} mb='20px' paddingLeft='50px'>
-                  "Memory Maze Adventure! Sharpen Your Brain by Matching Cards and Mastering the Maze! 🧩🚀"
-                  </Text>
-                  
-                    
-                    
-                  </Flex>
-                
-              </Flex>
-              <Flex direction='column' alignItems='center' justify='center' maxWidth='300px'>
-                <Box mb='40px' position='relative' borderRadius='20px'>
-                  <Image src={hii} borderRadius='20px' w='350px' h='250px' objectFit='cover' paddingLeft='50px' />
-                </Box>
-              </Flex>
-              
-              
-            </Grid>
-          </CardBody>
+  <Grid
+    templateColumns={{
+      sm: '1fr 1fr',
+      md: '1fr 1fr',
+      xl: 'repeat(2, 1fr)', // Added another column
+    }}
+    templateRows={{
+      sm: '1fr auto',
+      xl: '1fr',
+    }}
+    gap='20px'
+  >
+    <Flex direction='column' alignItems='center' justify='center' maxWidth='300px'>
+      <Box mb='20px'>
+        <Box mb='20px' position='relative' borderRadius='20px'>
+          <Image src={avatar13} borderRadius='20px' w='100%' h='100%' objectFit='cover' paddingLeft='50px' />
+        </Box>
+      </Box>
+      <Flex direction='column'>
+        <Text fontSize='10px' color={'gray.400'} mb='10px' paddingLeft='70px'>
+          game #1
+        </Text>
+        <Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px' paddingLeft='70px'>
+          CogniRecall Quest
+        </Text>
+        <Text
+          fontSize='m'
+          color={'gray.400'}
+          fontWeight='400'
+          mb='20px'
+          paddingLeft='70px'
+        >
+          "Unlock the Power of Your Mind! Help the Smiley Smile by Concentrating and Having Fun! 😄✨"
+        </Text>
+      </Flex>
+    </Flex>
+    <Flex direction='column' alignItems='center' justify='center' maxWidth='300px'>
+      <Box mb='40px' position='relative' borderRadius='20px'>
+        <Image src={game2} borderRadius='20px' w='350px' h='200px' objectFit='cover' paddingLeft='50px' />
+      </Box>
+      <Flex direction='column'>
+        <Text fontSize='10px' color={'gray.400'} mb='10px' paddingLeft='50px'>
+          game #2
+        </Text>
+        <Text fontSize='xl' color='#fff' fontWeight='bold' mb='10px' paddingLeft='50px'>
+          Mnemonic Mind Maze
+        </Text>
+        <Text fontSize='m' color={'gray.400'} mb='20px' paddingLeft='50px'>
+          "Memory Maze Adventure! Sharpen Your Brain by Matching Cards and Mastering the Maze! 🧩🚀"
+        </Text>
+      </Flex>
+    </Flex>
+    <Flex direction='column' alignItems='center' justify='center' maxWidth='300px'>
+      <Box mb='40px' position='relative' borderRadius='20px'>
+        <Image src={hii} borderRadius='20px' w='350px' h='200px' objectFit='cover' paddingLeft='50px' />
+      </Box>
+    </Flex>
+  </Grid>
+</CardBody>
+
         </Card>
       </Grid>
     </Flex>
