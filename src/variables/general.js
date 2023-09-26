@@ -298,66 +298,16 @@ export const billingData = [
 ];
 
 export const newestTransactions = [
-  {
-    name: 'CogniRecall Quest',
-    date: '27 March 2021, at 12:30 PM',
-    price: '- pending',
-    logo: FaArrowDown,
-  },
-  {
-    name: 'CogniRecall Quest',
-    date: '27 March 2021, at 12:30 PM',
-    price: '+ 40 min',
-    logo: FaArrowUp,
-  },
+  
+  
 ];
 
 export const olderTransactions = [
-  {
-    name: 'Mnemonic Mind Maze',
-    date: '26 March 2021, at 13:45 PM',
-    price: '35 min',
-    logo: FaArrowUp,
-  },
-  {
-    name: 'Mnemonic Mind Maze',
-    date: '26 March 2021, at 12:30 PM',
-    price: '20 min',
-    logo: FaArrowUp,
-  },
-  {
-    name: 'Mnemonic Mind Maze',
-    date: '26 March 2021, at 05:00 PM',
-    price: '5 min',
-    logo: FaArrowUp,
-  },
-  {
-    name: 'Mnemonic Mind Maze',
-    date: '25 March 2021, at 16:30 PM',
-    price: '1 min 30 seconds',
-    logo: FaArrowDown,
-  },
+  
+ 
+  
 ];
 
 export const TaskData = [
-  {
-    name: 'Mnemonic Mind Maze',
-
-    logo: FaArrowUp,
-  },
-  {
-    name: 'Mnemonic Mind Maze',
-
-    logo: FaArrowUp,
-  },
-  {
-    name: 'CogniRecall Quest',
-
-    logo: FaArrowUp,
-  },
-  {
-    name: 'CogniRecall Quest',
-
-    logo: FaArrowDown,
-  },
+  
 ];
