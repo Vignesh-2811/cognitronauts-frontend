@@ -7,23 +7,23 @@ import {
 } from 'react-router-dom';
 
 import { ChakraProvider } from '@chakra-ui/react';
-import AdminLayout from 'layouts/Admin.js';
-import AuthLayout from 'layouts/Auth.js';
-import { Provider } from 'react-redux';
-import store from 'redux/store';
-import themeAuth from 'theme/themeAuth.js';
-import SignIn from 'views/Pages/SignIn.js';
-import SignUp from 'views/Pages/SignUp';
-import ClientDashboard from './Screens/Client/Client.js';
-import Billing from 'views/Dashboard/Billing.js';
-import EEGReports from 'views/Dashboard/EEG.js';
-import Task from 'views/Dashboard/Task.js';
-import Assign from 'views/Dashboard/Ass.js';
 import ClientAssign from 'Screens/Client/Views/clientass.js';
 import ClientCogni from 'Screens/Client/Views/clientcogni.js';
 import ClientEEG from 'Screens/Client/Views/clienteeg.js';
 import ClientTask from 'Screens/Client/Views/clienttask.js';
 import HTMLPage from 'components/Game1/Game1.js';
+import AdminLayout from 'layouts/Admin.js';
+import AuthLayout from 'layouts/Auth.js';
+import { Provider } from 'react-redux';
+import store from 'redux/store';
+import themeAuth from 'theme/themeAuth.js';
+import Assign from 'views/Dashboard/Ass.js';
+import Billing from 'views/Dashboard/Billing.js';
+import EEGReports from 'views/Dashboard/EEG.js';
+import Task from 'views/Dashboard/Task.js';
+import SignIn from 'views/Pages/SignIn.js';
+import SignUp from 'views/Pages/SignUp';
+import ClientDashboard from './Screens/Client/Client.js';
 
 ReactDOM.render(
   <ChakraProvider theme={themeAuth} resetCss={false} w='100%'>
