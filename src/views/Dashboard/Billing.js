@@ -23,15 +23,8 @@ import {
 function CognitiveTrainingReport() {
   return (
     <Flex direction='column' pt={{ base: '150px', md: '75px' }} mx='auto' flexWrap="wrap">
-     
-          
-        {/* Transactions List */}
-        
-        <Card my='24px' ms={{ lg: '24px' }} mx='auto' bg={{
-  base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
-}}>
-  <CardHeader mb='12px'>
-    <Flex direction='column' w='80%'>
+      <CardHeader mb='12px'>
+    <Flex direction='column' w='100%'>
       <Flex
         direction={{ sm: 'column', lg: 'row' }}
         justify={{ sm: 'center', lg: 'space-between' }}
@@ -41,73 +34,79 @@ function CognitiveTrainingReport() {
       >
         <div style={{ marginLeft: '45px' }}>
         <Text
-          color='black'
+          color='white'
           fontSize={{ sm: 'lg', md: 'xl', lg: 'lg' }}
           fontWeight='bold'
         >
           Your progress is a testament to your dedication, keep going!
         </Text></div>
         <Flex align='center'>
-          <Icon
-            as={FaRegCalendarAlt}
-            color='black'
-            w='15px'
-            h='15px'
-            me='6px'
-          />
-          <Text color='black' fontSize='sm'>
-            23 - 30 March 2021
-          </Text>
-        </Flex>
+      </Flex>
       </Flex>
     </Flex>
+
   </CardHeader>
-  <CardBody>
-    <Flex direction='column' w='80%'>
-    <div style={{ marginLeft: '45px' }}>
-      <Text color='black' fontSize='xs' mb='18px'>
-        NEWEST
-      </Text>
-      </div>
-      <div style={{ marginLeft: '45px' }}> {/* Add margin to the left-most content */}
-        {newestTransactions.map((row) => (
-          <TransactionRow
-            name={row.name}
-            logo={row.logo}
-            date={row.date}
-            price={row.price}
-          />
-        ))}
-      </div>
-      <div style={{ marginLeft: '45px' }}>
-      <Text color='black' fontSize='xs' my='18px'>
-      
-        OLDER
-      </Text>
-      </div>
-      <div style={{ marginLeft: '45px' }}> {/* Add margin to the left-most content */}
-        {olderTransactions.map((row) => (
-          <TransactionRow
-            name={row.name}
-            logo={row.logo}
-            date={row.date}
-            price={row.price}
-          />
-        ))}
-      </div>
-      
-    </Flex>
-    <Image
-            src={graph}
-            alt='Task Details'
-            maxW='50%'
-            mb='24px'
-            style={{ borderRadius: '35px', marginLeft: '35px' }}
-          />
-  </CardBody>
-</Card>
-    </Flex>
+  // ... (previous imports)
+  <Flex direction='column' pt={{ base: '150px', md: '75px' }} mx='auto' flexWrap="wrap">
+      <Flex
+        direction={{ base: 'column', md: 'row' }}
+        justify='space-between'
+        w='100%'
+      >
+        {/* Card 1 */}
+        <Card my='24px' ms={{ lg: '24px' }} mx='auto' bg={{
+          base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`,
+        }}
+        w='500px'
+        p='50px'
+        >
+          {/* Card 1 content */}
+        </Card>
+
+        {/* Card 2 */}
+        <Card my='24px' ms={{ lg: '24px' }} mx='auto' bg={{
+          base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`,
+        }}
+        w='500px'
+        p='50px'
+        
+        >
+          {/* Card 2 content */}
+        </Card>
+      </Flex>
+
+      <Flex
+        direction={{ base: 'column', md: 'row' }}
+        justify='space-between'
+        w='100%'
+      >
+        {/* Card 3 */}
+        <Card my='24px' ms={{ lg: '24px' }} mx='auto' bg={{
+          base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`,
+        }}
+        w='500px'
+        p='50px'>
+          {/* Card 3 content */}
+        </Card>
+
+        {/* Card 4 */}
+        <Card my='24px' ms={{ lg: '24px' }} mx='auto' bg={{
+          base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`,
+        }}
+        w='500px'
+        p='50px'
+        >
+          {/* Card 4 content */}
+        </Card>
+      </Flex>
+      </Flex>
+</Flex>
+ 
+  
     
+      
+      
+
   );
 }
 

@@ -18,6 +18,7 @@ import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
 import WelcomeCard from 'components/Dashboard/WelcomeCard';
 import { useHistory } from 'react-router-dom';
+import mail12 from 'assets/svg/mail12.gif'
 
 // Icons
 import TimelineRow from 'components/Tables/TimelineRow';
@@ -164,72 +165,34 @@ function Dashboard({ userdata, userId }) {
         </Card>
       </Grid>
       <Grid
-        templateColumns={{ sm: '1fr', lg: '1.7fr 1.3fr' }}
+        templateColumns={{ sm: '1fr', lg: '1fr' }}
         maxW={{ sm: '100%', md: '100%' }}
         gap='24px'
         mb='24px'
-      >
-        {/* EEG Reports */}
-        <Card
-          p='16px'
-          bg={{
-            base:
-            `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
-          }}
-        >
-          <CardBody>
-            <Flex direction='column' w='100%'>
-              <Flex
-                direction='column'
-                mt='24px'
-                mb='36px'
-                alignSelf='flex-start'
-              >
-                <Text
-                  fontSize='lg'
-                  color='black'
-                  fontWeight='bold'
-                  mb='6px'
-                  onClick={handleEEGReportsClick}
-                  style={{ cursor: 'pointer' }}
-                >
-                  EEG Report
-                </Text>
-                <Image
-                  src={eeg}
-                  alt='EEG Report'
-                  maxW='100%'
-                  mb='24px'
-                  style={{ borderRadius: '35px' }}
-                />
-
-                <Text fontSize='md' fontWeight='medium' color='black'></Text>
-              </Flex>
-            </Flex>
-          </CardBody>
-        </Card>
+      >      
 
         {/* Cognitive Training Reports */}
         <Card
-          p='16px'
+          p='10px'
           bg={{
             base:
             `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
           }}
+          w='100%'
         >
           <CardBody>
-            <Flex direction='column' w='100%'>
+            <Flex direction='column' w='90%'>
               <Flex
                 direction='column'
-                mt='24px'
-                mb='36px'
+                mt='20px'
+                mb='20px'
                 alignSelf='flex-start'
               >
                 <Text
                   fontSize='lg'
                   color='black'
                   fontWeight='bold'
-                  mb='6px'
+                  mb='4px'
                   onClick={handleLinkClick}
                   style={{ cursor: 'pointer' }}
                 >
@@ -239,8 +202,8 @@ function Dashboard({ userdata, userId }) {
                   src={cogni}
                   alt='Cognitive Training'
                   maxW='100%'
-                  mb='24px'
-                  style={{ borderRadius: '35px' }}
+                  mb='20px'
+                  style={{ borderRadius: '25px' }}
                 />
 
                 <Text fontSize='md' fontWeight='medium' color='black'></Text>
@@ -321,7 +284,7 @@ function Dashboard({ userdata, userId }) {
                   Mail Us
                 </Text>
                 <Image
-                  src={mail}
+                  src={mail12}
                   alt='Mail Us'
                   maxW='100%'
                   mb='24px'
