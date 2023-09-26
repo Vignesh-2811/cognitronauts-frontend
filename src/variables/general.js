@@ -1,5 +1,6 @@
 // Assets
 import avatar1 from 'assets/img/avatars/avatar1.png';
+import avatar10 from 'assets/img/avatars/avatar10.png';
 import avatar2 from 'assets/img/avatars/avatar2.png';
 import avatar3 from 'assets/img/avatars/avatar3.png';
 import avatar4 from 'assets/img/avatars/avatar4.png';
@@ -7,7 +8,6 @@ import avatar5 from 'assets/img/avatars/avatar5.png';
 import avatar7 from 'assets/img/avatars/avatar7.png';
 import avatar8 from 'assets/img/avatars/avatar8.png';
 import avatar9 from 'assets/img/avatars/avatar9.png';
-import avatar10 from 'assets/img/avatars/avatar10.png';
 // Custom icons
 import {
   AdobexdLogo,
@@ -17,7 +17,6 @@ import {
   SlackLogo,
   SpotifyLogo,
 } from 'components/Icons/Icons.js';
-import { AiOutlineExclamation } from 'react-icons/ai';
 import {
   FaArrowDown,
   FaArrowUp,
@@ -298,66 +297,38 @@ export const billingData = [
 ];
 
 export const newestTransactions = [
-  {
-    name: 'CogniRecall Quest',
-    date: '27 March 2021, at 12:30 PM',
-    price: '- pending',
-    logo: FaArrowDown,
-  },
-  {
-    name: 'CogniRecall Quest',
-    date: '27 March 2021, at 12:30 PM',
-    price: '+ 40 min',
-    logo: FaArrowUp,
-  },
+  
+  
 ];
 
 export const olderTransactions = [
-  {
-    name: 'Mnemonic Mind Maze',
-    date: '26 March 2021, at 13:45 PM',
-    price: '35 min',
-    logo: FaArrowUp,
-  },
-  {
-    name: 'Mnemonic Mind Maze',
-    date: '26 March 2021, at 12:30 PM',
-    price: '20 min',
-    logo: FaArrowUp,
-  },
-  {
-    name: 'Mnemonic Mind Maze',
-    date: '26 March 2021, at 05:00 PM',
-    price: '5 min',
-    logo: FaArrowUp,
-  },
-  {
-    name: 'Mnemonic Mind Maze',
-    date: '25 March 2021, at 16:30 PM',
-    price: '1 min 30 seconds',
-    logo: FaArrowDown,
-  },
+  
+ 
+  
 ];
 
 export const TaskData = [
+  //general.js
+
   {
-    name: 'Mnemonic Mind Maze',
+    name: "Mnemonic Mind Maze",
 
     logo: FaArrowUp,
   },
   {
-    name: 'Mnemonic Mind Maze',
+    name: "Mnemonic Mind Maze",
 
     logo: FaArrowUp,
   },
   {
-    name: 'CogniRecall Quest',
+    name: "CogniRecall Quest",
 
     logo: FaArrowUp,
   },
   {
-    name: 'CogniRecall Quest',
+    name: "CogniRecall Quest",
 
     logo: FaArrowDown,
   },
 ];
+  

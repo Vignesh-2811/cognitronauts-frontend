@@ -1,5 +1,6 @@
-import { Box, Button, Flex, Icon, Text, Select } from '@chakra-ui/react';
-import React, { useState } from 'react';
+//AssRow.js
+import { Box, Button, Flex, Icon, Select } from '@chakra-ui/react';
+import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -10,26 +11,19 @@ function AssRow(props) {
   const [selectedGame, setSelectedGame] = useState(''); // State for selected game name
 
   const handleAssignClick = () => {
-    if (selectedDate && selectedGame) {
+    if (selectedDate && selectedGame) { // Check if both date and game are selected
       setIsAssigned(true);
       alert(`Assigned ${selectedGame} for ${selectedDate.toDateString()}`);
     } else {
       alert('Please select a date and a game before assigning.');
     }
   };
+  
 
   const handleDeleteClick = () => {
     setIsAssigned(false);
     setSelectedDate(null);
     setSelectedGame('');
-  };
-
-  const gameNameColor = isAssigned ? 'green' : 'black'; // Change color to green after assignment
-  const isDisabled = isAssigned; // Disable inputs after assignment
-
-  const gameNameStyle = {
-    color: gameNameColor,
-    fontWeight: isAssigned ? 'bold' : 'normal', // Make it bold after assignment
   };
 
   return (
@@ -38,7 +32,7 @@ function AssRow(props) {
         <Box
           me='14px'
           borderRadius='50%'
-          color={isAssigned ? 'green' : 'black'} // Change color to green after assignment
+          color={isAssigned ? '#01B574' : 'black'}
           border='1px solid'
           display='flex'
           alignItems='center'
@@ -53,19 +47,18 @@ function AssRow(props) {
             value={selectedGame}
             onChange={(e) => setSelectedGame(e.target.value)}
             placeholder='Choose Game'
-            color={gameNameStyle.color} // Set color based on assignment
-            fontWeight={gameNameStyle.fontWeight} // Set font weight based on assignment
-            isDisabled={isDisabled} // Disable the Select component
           >
             <option value='Mnemonic Mind Maze'>Mnemonic Mind Maze</option>
             <option value='CogniRecall Quest'>CogniRecall Quest</option>
+            <option value='Pull the string'>CogniRecall Quest</option>
+            <option value='Concentrate to be happy'>CogniRecall Quest</option>
+
           </Select>
           <DatePicker
             selected={selectedDate}
             onChange={(date) => setSelectedDate(date)}
             dateFormat='dd/MM/yyyy'
             placeholderText='Select Date'
-            disabled={isDisabled} // Disable the DatePicker component
           />
         </Flex>
       </Flex>
@@ -75,7 +68,6 @@ function AssRow(props) {
           colorScheme='teal'
           size='sm'
           mr='2'
-          isDisabled={isDisabled} // Disable the Assign button after assignment
         >
           Assign
         </Button>

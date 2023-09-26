@@ -1,65 +1,34 @@
 // Chakra imports
 import {
   Avatar,
-  AvatarBadge,
-  AvatarGroup,
   Box,
   Button,
-  CircularProgress,
-  CircularProgressLabel,
   DarkMode,
   Flex,
   Grid,
   Icon,
   Image,
-  Link,
-  Switch,
-  Text,
+  Text
 } from '@chakra-ui/react';
-import avatar11 from 'assets/img/avatars/avatar11.png';
 import avatar12 from 'assets/img/avatars/avatar12.jpeg';
 
 // Images
-import avatar2 from 'assets/img/avatars/avatar2.png';
-import avatar3 from 'assets/img/avatars/avatar3.png';
-import avatar4 from 'assets/img/avatars/avatar4.png';
-import avatar6 from 'assets/img/avatars/avatar6.png';
+import avatar13 from 'assets/img/avatar13.jpeg';
 import bgProfile from 'assets/img/bgProfile.png';
-import ProjectImage1 from 'assets/img/ProjectImage1.png';
-import ProjectImage2 from 'assets/img/ProjectImage2.png';
-import ProjectImage3 from 'assets/img/ProjectImage3.png';
-import avatar13 from 'assets/img/avatar13.jpeg'
-import game2 from 'assets/img/game2.jpeg'
-import book1 from 'assets/svg/book1.gif'
-import hii from 'assets/svg/hii.gif'
+import game2 from 'assets/img/game2.jpeg';
+import book1 from 'assets/svg/book1.gif';
+import hii from 'assets/svg/hii.gif';
 // Custom components
+import progress from 'assets/img/progress.jpeg';
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';
 import CardHeader from 'components/Card/CardHeader';
-import LineChart from 'components/Charts/LineChart';
-import IconBox from 'components/Icons/IconBox';
-import { CarIcon, FulgerWhiteIcon } from 'components/Icons/Icons';
-import { Separator } from 'components/Separator/Separator';
-import { BsArrowRight } from 'react-icons/bs';
-import progress from 'assets/img/progress.jpeg'
 import {
-  FaCube,
-  FaFacebook,
-  FaInstagram,
-  FaPencilAlt,
-  FaPenFancy,
-  FaTwitter,
+  FaCube
 } from 'react-icons/fa';
 // Icons
-import { IoDocumentsSharp } from 'react-icons/io5';
 import doc1 from 'assets/svg/doc1.gif';
 // Data
-import {
-  lineChartDataProfile1,
-  lineChartDataProfile2,
-  lineChartOptionsProfile1,
-  lineChartOptionsProfile2,
-} from 'variables/charts';
 
 function Profile() {
   return (
@@ -227,7 +196,7 @@ function Profile() {
                   align='center'
                   p='18px'
                   justify='space-between'
-                  bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
+                  bg='linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)' // Mild blue gradient
                   borderRadius='20px'
                 >
                   <Flex direction='column' me='auto'>
@@ -253,7 +222,7 @@ function Profile() {
                   p='10px'
                   pe='0px'
                   justify='space-between'
-                  bg='linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%)'
+                  bg='linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)' // Mild blue gradient
                   borderRadius='20px'
                   w='80%'
                   h='230px'

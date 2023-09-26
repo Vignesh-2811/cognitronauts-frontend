@@ -1,36 +1,27 @@
 import {
-	Box,
-	CircularProgress,
-	CircularProgressLabel,
-	Flex,
-	Grid,
-	Icon,
-	Stack,
-	Text
+  Flex,
+  Grid,
+  Text
 } from '@chakra-ui/react';
 // Styles for the circular progressbar
 //import medusa from 'assets/img/cardimgfree.png';
 // Custom components
+import { Image } from '@chakra-ui/react';
+import assign from 'assets/img/ass.jpg';
+import cogni from 'assets/img/cogni.jpg';
+import eeg from 'assets/img/eeg.jpg';
+import mail from 'assets/img/mail.jpg';
+import patient from 'assets/img/patient.jpg';
+import task from 'assets/img/tasks.png';
 import Card from 'components/Card/Card.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
 import WelcomeCard from 'components/Dashboard/WelcomeCard';
-import IconBox from 'components/Icons/IconBox';
-import { Link, useHistory } from 'react-router-dom';
-import eeg from 'assets/img/eeg.jpg';
-import AuthBanner from 'components/Auth/AuthBanner';
-import { Image } from '@chakra-ui/react';
-import cogni from 'assets/img/cogni.jpg';
-import assign from 'assets/img/assign.jpg';
-import task from 'assets/img/task.jpg';
-import mail from 'assets/img/mail.jpg';
-import patient from 'assets/img/patient.jpg';
-import dashboard from 'assets/img/dashboard.jpg';
+import { useHistory } from 'react-router-dom';
 
 
 // Icons
 import TimelineRow from 'components/Tables/TimelineRow';
-import { BiHappy } from 'react-icons/bi';
 import { connect } from 'react-redux';
 
 import { timelineData } from 'variables/general';
@@ -73,7 +64,7 @@ const handleAssignClick = () => {
         />
         {/* Task Details */}
         <Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }} bg={{
-                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+                base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
               }}>
           <CardHeader mb='24px'>
             <Flex direction='column'>
@@ -95,7 +86,7 @@ const handleAssignClick = () => {
                   </Card>
         {/* Future Assignments */}
         <Card gridArea={{ md: '2 / 2 / 3 / 3', '2xl': 'auto' }} bg={{
-                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+                base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
               }}>
   <Flex direction='column'>
     <Text
@@ -138,7 +129,7 @@ const handleAssignClick = () => {
       >
         {/* EEG Reports */}
         <Card p='16px' bg={{
-                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+                base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
               }}>
           <CardBody>
             <Flex direction='column' w='100%'>
@@ -168,7 +159,7 @@ const handleAssignClick = () => {
 
         {/* Cognitive Training Reports */}
         <Card p='16px' bg={{
-                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+                base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
               }}>
           <CardBody>
             <Flex direction='column' w='100%'>
@@ -202,7 +193,7 @@ const handleAssignClick = () => {
       >
         {/*Patient Details */}
         <Card bg={{
-                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+                base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
               }}>
   <CardHeader mb='32px'>
     <Flex direction='row' alignItems='center'>
@@ -235,7 +226,7 @@ const handleAssignClick = () => {
 
         {/* Contact Form */}
         <Card p='16px' bg={{
-                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+                base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
               }}>
   <CardBody style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
     <Flex direction='column' w='100%'>
