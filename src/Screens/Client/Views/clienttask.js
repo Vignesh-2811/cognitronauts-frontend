@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Grid, GridItem, Text } from '@chakra-ui/react';
 import Card from 'components/Card/Card.js';
 import CardHeader from 'components/Card/CardHeader.js';
@@ -15,7 +14,7 @@ const ClientTask = () => {
 
 const TaskCard = ({ title, children }) => (
   <Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }} bg={{
-    base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+    base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
   }}>
     <CardHeader mb="65px ">
       <Flex direction="column">

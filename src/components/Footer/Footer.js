@@ -1,6 +1,5 @@
 /*eslint-disable*/
-import React from 'react';
-import { Flex, Link, List, ListItem, Text } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 
 export default function Footer(props) {
   return (
@@ -19,7 +18,7 @@ export default function Footer(props) {
     >
       <Text
         fontSize='sm'
-        color='black'
+        color='white'
         textAlign={{
           base: 'center',
           xl: 'start',
@@ -28,7 +27,7 @@ export default function Footer(props) {
       >
         &copy; {1900 + new Date().getYear()},{' '}
         <Text as='span'>
-          {'Made with ❤️ by Cognitronauts for a better web'}
+          {'Made with ❤️ by Cognitronauts'}
         </Text>
       </Text>
     </Flex>

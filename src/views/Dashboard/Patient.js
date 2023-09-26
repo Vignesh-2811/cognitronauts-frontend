@@ -42,7 +42,6 @@ import {
 } from 'components/Icons/Icons.js';
 import DashboardTableRow from 'components/Tables/DashboardTableRow';
 import TimelineRow from 'components/Tables/TimelineRow';
-import React from 'react';
 import { AiFillCheckCircle } from 'react-icons/ai';
 import { BiHappy } from 'react-icons/bi';
 import { BsArrowRight } from 'react-icons/bs';
@@ -57,7 +56,7 @@ import {
   lineChartDataDashboard,
   lineChartOptionsDashboard,
 } from 'variables/charts';
-import { dashboardTableData, timelineData } from 'variables/general';
+import { timelineData } from 'variables/general';
 
 export default function Dashboard() {
   const personalInfo = [
@@ -333,7 +332,7 @@ export default function Dashboard() {
               maxW={{ sm: '270px', md: '300px', lg: '100%' }}
               mx={{ sm: 'auto', md: '0px' }}
               p='18px 22px'
-              bg='linear-gradient(126.97deg, rgb(6, 11, 40) 28.26%, rgba(10, 14, 35) 91.2%)'
+              bg='linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)'// Mild blue gradient
               borderRadius='20px'
               position='absolute'
               bottom='5%'

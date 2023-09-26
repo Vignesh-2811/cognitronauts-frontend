@@ -2,31 +2,24 @@
 import {
   Box,
   Button,
-  DarkMode,
   Flex,
   FormControl,
-  FormLabel,
   Heading,
-  Input,
-  Switch,
-  Text,
-  useToast,
+  Text
 } from '@chakra-ui/react';
 
 // Assets
-import signInImage from 'assets/svg/signinpic.jpeg';
+import signInImage from 'assets/img/signin.jpg';
 import AuthBanner from 'components/Auth/AuthBanner';
 import UserInput from 'components/Auth/UserInput';
 import { loginEvent } from 'redux/actions/auth';
 
 // Custom Components
 import AuthFooter from 'components/Footer/AuthFooter';
-import GradientBorder from 'components/GradientBorder/GradientBorder';
-import { useForm, FormProvider } from 'react-hook-form';
-import useNotify from 'utils/notify';
+import { FormProvider, useForm } from 'react-hook-form';
 import { connect, useDispatch } from 'react-redux';
-import { ADD_JWT_TOKEN } from 'redux/reducers/auth.js';
 import { useHistory } from 'react-router-dom';
+import useNotify from 'utils/notify';
 
 function SignIn({ loginEvent }) {
   const titleColor = 'white';
@@ -104,10 +97,10 @@ function SignIn({ loginEvent }) {
             mt={{ base: '50px', md: '150px', lg: '160px', xl: '245px' }}
             mb={{ base: '60px', lg: '95px' }}
           >
-            <Heading color={'black'} fontSize='32px' mb='10px'>
+            <Heading color={'White'} fontSize='32px' mb='10px'>
               Good day!
             </Heading>
-            <Heading color={'black'} fontSize='32px' mb='10px'>
+            <Heading color={'White'} fontSize='32px' mb='10px'>
               Nice to see you :)
             </Heading>
             <Text

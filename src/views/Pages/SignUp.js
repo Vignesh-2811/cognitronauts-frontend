@@ -17,7 +17,7 @@ import { submitRegisterEvent } from 'redux/actions/auth';
 import AuthFooter from 'components/Footer/AuthFooter';
 import GradientBorder from 'components/GradientBorder/GradientBorder';
 // Assets
-import signUpImage from 'assets/svg/signuppic.jpeg';
+import signUpImage from 'assets/img/signup.png';
 import AuthBanner from 'components/Auth/AuthBanner';
 import UserInput from 'components/Auth/UserInput';
 import { FormProvider, useForm } from 'react-hook-form';
@@ -126,7 +126,7 @@ function SignUp({ submitRegisterEvent }) {
             <Text
               fontSize='4xl'
               lineHeight='39px'
-              color='black'
+              color='white'
               fontWeight='bold'
             >
               Welcome!
@@ -142,14 +142,14 @@ function SignUp({ submitRegisterEvent }) {
               w='100%'
               mx={{ base: '0px' }}
               bg={{
-                base: 'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+                base: "rgb(19,21,56)",
               }}
               
             >
               <FormProvider {...methods}>
                 <FormControl>
                   <FormLabel
-                    color='black'
+                    color='white'
                     ms='4px'
                     fontSize='sm'
                     fontWeight='normal'
@@ -178,7 +178,7 @@ function SignUp({ submitRegisterEvent }) {
                       {...register('role')}
                       defaultValue=''
                     >
-                      <option value='Patient' style={{ color: 'black' }} >
+                      <option value='Patient' style={{ color: 'white' }} >
                         Patient
                       </option>
                       <option value='Doctor' style={{ color: 'black' }}>

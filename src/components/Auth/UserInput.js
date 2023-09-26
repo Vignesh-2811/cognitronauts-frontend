@@ -1,10 +1,9 @@
 import { FormLabel, Input } from '@chakra-ui/react';
 import GradientBorder from 'components/GradientBorder/GradientBorder';
-import React from 'react';
-import { useForm, useFormContext } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form';
 
 const UserInput = ({ label, placeholder, name, type }) => {
-  const titleColor = 'black';
+  const titleColor = 'white';
   const { register } = useFormContext();
   const errorColor = 'red.500';
 

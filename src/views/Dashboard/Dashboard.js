@@ -1,40 +1,30 @@
 import {
-  Box,
-  CircularProgress,
-  CircularProgressLabel,
   Flex,
   Grid,
-  Icon,
-  Stack,
-  Text,
+  Text
 } from '@chakra-ui/react';
 // Styles for the circular progressbar
 //import medusa from 'assets/img/cardimgfree.png';
 // Custom components
+import { Image } from '@chakra-ui/react';
+import assign from 'assets/img/ass.jpg';
+import cogni from 'assets/img/cogni.jpg';
+import eeg from 'assets/img/eeg.jpg';
+import mail from 'assets/img/mail.jpg';
+import patient from 'assets/img/patient.jpg';
+import task from 'assets/img/tasks.png';
 import Card from 'components/Card/Card.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
 import WelcomeCard from 'components/Dashboard/WelcomeCard';
-import IconBox from 'components/Icons/IconBox';
-import { Link, useHistory } from 'react-router-dom';
-import eeg from 'assets/img/eeg.jpg';
-import AuthBanner from 'components/Auth/AuthBanner';
-import { Image } from '@chakra-ui/react';
-import cogni from 'assets/img/cogni.jpg';
-import assign from 'assets/img/assign.jpg';
-import task from 'assets/img/task.jpg';
-import mail from 'assets/img/mail.jpg';
-import patient from 'assets/img/patient.jpg';
-import dashboard from 'assets/img/dashboard.jpg';
+import { useHistory } from 'react-router-dom';
 
 // Icons
 import TimelineRow from 'components/Tables/TimelineRow';
-import { BiHappy } from 'react-icons/bi';
 import { connect } from 'react-redux';
 
+import { useEffect, useState } from 'react';
 import { timelineData } from 'variables/general';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
 function Dashboard({ userdata, userId }) {
   const history = useHistory();
@@ -89,7 +79,7 @@ function Dashboard({ userdata, userId }) {
     <Flex
       flexDirection='column'
       pt={{ base: '120px', md: '75px' }}
-      bg='pink.100'
+      bg='dark blue.100'
     >
       <Grid
         templateColumns={{ sm: '1fr', md: '1fr 1fr', '2xl': '2fr 1.2fr 1.5fr' }}
@@ -106,7 +96,7 @@ function Dashboard({ userdata, userId }) {
           gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }}
           bg={{
             base:
-              'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+            `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
           }}
         >
           <CardHeader mb='24px'>
@@ -136,7 +126,7 @@ function Dashboard({ userdata, userId }) {
           gridArea={{ md: '2 / 2 / 3 / 3', '2xl': 'auto' }}
           bg={{
             base:
-              'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+            `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
           }}
         >
           <Flex direction='column'>
@@ -146,7 +136,7 @@ function Dashboard({ userdata, userId }) {
               fontWeight='bold'
               mb='6px'
               onClick={handleAssignClick}
-              style={{ cursor: 'pointer', alignSelf: 'flex-start' }} // Align text to the top left
+              style={{ cursor: 'pointer'}} // Align text to the top left
             >
               Future Assignment
             </Text>
@@ -158,7 +148,7 @@ function Dashboard({ userdata, userId }) {
                 alt='Future Assignment'
                 maxW='70%'
                 mb='24px'
-                style={{ borderRadius: '35px' }}
+                style={{ borderRadius: '40px' }}
               />
             </Flex>
             <Flex direction={{ sm: 'column', md: 'row' }}>
@@ -184,7 +174,7 @@ function Dashboard({ userdata, userId }) {
           p='16px'
           bg={{
             base:
-              'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+            `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
           }}
         >
           <CardBody>
@@ -224,7 +214,7 @@ function Dashboard({ userdata, userId }) {
           p='16px'
           bg={{
             base:
-              'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+            `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
           }}
         >
           <CardBody>
@@ -267,7 +257,7 @@ function Dashboard({ userdata, userId }) {
         <Card
           bg={{
             base:
-              'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+            `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
           }}
         >
           <CardHeader mb='32px'>
@@ -309,7 +299,7 @@ function Dashboard({ userdata, userId }) {
           p='16px'
           bg={{
             base:
-              'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+            `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
           }}
         >
           <CardBody

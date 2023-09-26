@@ -1,8 +1,6 @@
 import { Button, Flex, Spacer, Text } from '@chakra-ui/react';
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';
-import React from 'react';
-import patient from 'assets/img/patient.jpg';
 
 const WelcomeCard = ({ firstName, lastName }) => {
   return (
@@ -12,7 +10,7 @@ const WelcomeCard = ({ firstName, lastName }) => {
       bgSize='cover'
       bgPosition='50%'
       bg={{
-        base: 'linear-gradient(159.02deg, #fddba1 14.0%, #ffc0e0 56.45%, #ffb9c0 86.0%)',
+        base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
       }}
     >
       <CardBody w='100%' h='100%' >

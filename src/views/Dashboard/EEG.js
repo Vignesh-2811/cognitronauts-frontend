@@ -1,4 +1,3 @@
-import React from 'react';
 import PlayVideo from '../../components/Video/PlayVideo.js';
 const EEGReports = () => {
   return (

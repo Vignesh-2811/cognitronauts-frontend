@@ -1,10 +1,9 @@
-import { Box, Flex, Icon, Text } from '@chakra-ui/react';
-import React from 'react';
+import { Flex, Text } from '@chakra-ui/react';
 import Card from 'components/Card/Card.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
-import { TaskData } from 'variables/general'; 
-import AssRow from 'components/Tables/AssRow';// Import TaskData from general.js
+import AssRow from 'components/Tables/AssRow'; // Import TaskData from general.js
+import { TaskData } from 'variables/general';
 
 function Assign() {
   return (
@@ -12,7 +11,7 @@ function Assign() {
     <Flex direction='column' pt={{ base: '150px', md: '75px' }} mx='auto' flexWrap="wrap">
       {/* Assignment List */}
       <Card my='24px' ms={{ lg: '24px' }} mx='auto'bg={{
-  base: 'linear-gradient(159.02deg, #fddba1 14.0%, #ffc0e0 56.45%, #ffb9c0 86.0%)',
+  base: `linear-gradient(159.02deg, #a9d3f2 14.25%, #c7e9f7 56.45%, #d2ecf9 86.14%)`, // Mild blue gradient,
 }}
 >
         <CardHeader mb='12px'>
