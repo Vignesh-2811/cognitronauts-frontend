@@ -2,6 +2,10 @@ import { Flex, Text } from '@chakra-ui/react';
 import Card from 'components/Card/Card.js';
 import CardHeader from 'components/Card/CardHeader.js';
 import { useEffect, useState } from 'react';
+import mazeimg from 'assets/img/mazeimg.jpg';
+import memorygame from 'assets/img/memorygame.jpg';
+import avatar13 from 'assets/img/avatar13.jpeg';
+import string from 'assets/img/string.png';
 
 const Task = () => {
   return (
@@ -94,6 +98,7 @@ const App = () => {
         w='500px'
         p='50px'
         >
+          <img src={mazeimg} />
           {/* Card 1 content */}
         </Card>
 
@@ -105,6 +110,7 @@ const App = () => {
         p='50px'
         
         >
+          <img src={memorygame} />
           {/* Card 2 content */}
         </Card>
       </Flex>
@@ -121,6 +127,7 @@ const App = () => {
         w='500px'
         p='50px'>
           {/* Card 3 content */}
+          <img src={avatar13} />
         </Card>
 
         {/* Card 4 */}
@@ -130,6 +137,7 @@ const App = () => {
         w='500px'
         p='50px'
         >
+          <img src={string} />
           {/* Card 4 content */}
         </Card>
       </Flex>
