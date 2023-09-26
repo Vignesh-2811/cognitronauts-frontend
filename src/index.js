@@ -33,6 +33,7 @@ ReactDOM.render(
           <Route path={`/admin/billing`} component={Billing} />
           <Route path={`/admin/assign`} component={Assign} />
           <Route path={`/admin/task`} component={Task} />
+          <Route path={`/admin/dashboard/:id`} component={ClientDashboard} />
           <Route path={`/client/games`} component={HTMLPage} />
 
           <Route path={`/admin/eeg`} component={EEGReports} />

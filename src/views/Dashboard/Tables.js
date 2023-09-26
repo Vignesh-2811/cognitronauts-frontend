@@ -98,16 +98,20 @@ function Tables({ userData, history }) {
   };
 
   const navigateToDashboard = (userId) => {
-    console.log(userId);
+    console.log('id: ', userId);
     setSelectedUserId(userId);
     history.push(`/admin/dashboard`);
   };
 
   return (
-    <Flex direction='column' pt={{ base: '120px', md: '75px' }}  bg={{
-      base:
-        'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
-    }}>
+    <Flex
+      direction='column'
+      pt={{ base: '120px', md: '75px' }}
+      bg={{
+        base:
+          'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+      }}
+    >
       <Button onClick={() => setIsOpen(true)}>Add Clients</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <ModalOverlay />
