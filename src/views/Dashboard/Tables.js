@@ -1,34 +1,31 @@
-import React, { useState, useEffect } from 'react';
 import {
+  Button,
   Flex,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Table,
   Tbody,
   Text,
   Th,
   Thead,
   Tr,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  Button,
 } from '@chakra-ui/react';
-import { connect } from 'react-redux';
 import Card from 'components/Card/Card.js';
-import CardHeader from 'components/Card/CardHeader.js';
 import CardBody from 'components/Card/CardBody.js';
+import CardHeader from 'components/Card/CardHeader.js';
+import { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 
 import TablesProjectRow from 'components/Tables/TablesProjectRow';
-import TablesTableRow from 'components/Tables/TablesTableRow';
 
 // Data
-import { tablesProjectData, tablesTableData } from 'variables/general';
 
 // Icons
-import { AiFillCheckCircle } from 'react-icons/ai';
 
 function Tables({ userData, history }) {
   const [patients, setPatients] = useState([]);
@@ -106,7 +103,7 @@ function Tables({ userData, history }) {
   return (
     <Flex direction='column' pt={{ base: '120px', md: '75px' }}  bg={{
       base:
-        'linear-gradient(159.02deg, #ffdb58 14.25%, #f9d5e5 56.45%, #fde2e4 86.14%)',
+        'dark blue',
     }}>
       <Button onClick={() => setIsOpen(true)}>Add Clients</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>

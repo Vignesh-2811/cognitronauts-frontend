@@ -3,10 +3,10 @@ import { ChakraProvider, Portal, useDisclosure } from '@chakra-ui/react';
 import Configurator from 'components/Configurator/Configurator';
 import Footer from 'components/Footer/Footer.js';
 // Layout components
-import Navbar from './LayoutComponents/Navbar.js';
-import Sidebar from './LayoutComponents/Sidebar.js';
 import React, { useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import Navbar from './LayoutComponents/Navbar.js';
+import Sidebar from './LayoutComponents/Sidebar.js';
 
 // Custom Chakra theme
 import theme from 'theme/themeAdmin.js';
