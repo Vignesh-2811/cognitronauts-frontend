@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEG Wave Simulator</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: flex-end; /* Position the content to the right */
+            align-items: center;
+        }
+        
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%; /* Adjust the width as needed */
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container">
+        <canvas id="eegCanvas"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById('eegCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const numWaves = 19;
+        const numPeaks = 100;
+        const waveData = [];
+        const waveSpacing = 60; // Adjust this value for space between waves
+        let xOffset = 0; // Offset for scrolling waves
+        let clickCount = 0; // Keep track of mouse clicks
+        
+        // Initialize wave data with different frequencies and random amplitudes
+        for (let i = 0; i < numWaves; i++) {
+            const wave = {
+                amplitudes: [],
+                frequency: 0.05 + i * 0.01, // Different frequencies for each wave
+            };
+            
+            for (let j = 0; j < numPeaks; j++) {
+                wave.amplitudes.push(Math.random() * 40 + 10); // Random amplitude within a range
+            }
+            
+            waveData.push(wave);
+        }
+        
+        function drawEEGWaves() {
+            canvas.width = window.innerWidth; // Update canvas width
+            canvas.height = window.innerHeight; // Update canvas height
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            waveData.forEach((wave, index) => {
+                ctx.beginPath();
+                for (let x = 0; x < canvas.width; x += 5) {
+                    const noise = (Math.random() * 20) - 10; // Random noise
+                    const y = (index + 1) * waveSpacing + wave.amplitudes[Math.floor((x + xOffset) / 5) % numPeaks] * Math.sin(wave.frequency * (x + xOffset)) + noise;
+                    ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+            });
+            
+            xOffset += 5; // Scroll the waves to the right
+        }
+        
+        function increaseAmplitude() {
+            waveData.forEach((wave) => {
+                for (let i = 0; i < numPeaks; i++) {
+                    wave.amplitudes[i] += 3; // Increase amplitude for each peak
+                }
+            });
+        }
+        
+        function decreaseAmplitude() {
+            waveData.forEach((wave) => {
+                for (let i = 0; i < numPeaks; i++) {
+                    wave.amplitudes[i] -= 4; // Decrease amplitude for each peak
+                    if (wave.amplitudes[i] < 10) wave.amplitudes[i] = 10; // Ensure a minimum amplitude
+                }
+            });
+        }
+        
+        // Add click event listener to the canvas
+        canvas.addEventListener('click', function() {
+            if (clickCount < 7) {
+                decreaseAmplitude();
+            } else if (clickCount < 14) {
+                increaseAmplitude();
+            } else {
+                clickCount = 0; // Reset the click count
+            }
+            clickCount++;
+        });
+        
+        window.addEventListener('resize', function() {
+            canvas.width = window.innerWidth; // Adjust canvas width on window resize
+            canvas.height = window.innerHeight; // Adjust canvas height on window resize
+        });
+        
+        setInterval(drawEEGWaves, 100); // Update the waves every 100ms
+    </script>
+</body>
+</html>

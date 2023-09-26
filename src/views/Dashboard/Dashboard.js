@@ -9,16 +9,19 @@ import {
 import { Image } from '@chakra-ui/react';
 import assign from 'assets/img/ass.jpg';
 import cogni from 'assets/img/cogni.jpg';
+<<<<<<< HEAD
 import eeg from 'assets/img/eeg.jpg';
 
+=======
+>>>>>>> 1300e63a421673b494d080f9300181bc68170a13
 import patient from 'assets/img/patient.jpg';
 import task from 'assets/img/tasks.png';
+import mail12 from 'assets/svg/mail12.gif';
 import Card from 'components/Card/Card.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
 import WelcomeCard from 'components/Dashboard/WelcomeCard';
 import { useHistory } from 'react-router-dom';
-import mail12 from 'assets/svg/mail12.gif'
 
 // Icons
 import TimelineRow from 'components/Tables/TimelineRow';
@@ -180,36 +183,44 @@ function Dashboard({ userdata, userId }) {
           }}
           w='100%'
         >
-          <CardBody>
-            <Flex direction='column' w='90%'>
-              <Flex
-                direction='column'
-                mt='20px'
-                mb='20px'
-                alignSelf='flex-start'
-              >
-                <Text
-                  fontSize='lg'
-                  color='black'
-                  fontWeight='bold'
-                  mb='4px'
-                  onClick={handleLinkClick}
-                  style={{ cursor: 'pointer' }}
-                >
-                  Cognitive Training Report
-                </Text>
-                <Image
-                  src={cogni}
-                  alt='Cognitive Training'
-                  maxW='100%'
-                  mb='20px'
-                  style={{ borderRadius: '25px' }}
-                />
+        <CardBody>
+  <Flex
+    direction='column'
+    w='100%'
+    alignItems='center' // Center-align content horizontally
+  >
+    <Flex
+      direction='column'
+      mt='20px'
+      mb='20px'
+      alignSelf='center'
+      justifyContent='center' // Center-align content horizontally within this container
+    >
+      <Text
+        fontSize='lg'
+        color='black'
+        fontWeight='bold'
+        mb='4px'
+        onClick={handleLinkClick}
+        style={{ cursor: 'pointer' }}
+      >
+        Cognitive Training Report
+      </Text>
+      <Flex justify='center' align='center' mb='40px'>
+      <Image
+        src={cogni}
+        align='center'
+        alt='Cognitive Training'
+        maxW='100%'
+        mb='20px'
+        style={{ borderRadius: '25px' }}
+      />
+</Flex>
+      <Text fontSize='md' fontWeight='medium' color='black'></Text>
+    </Flex>
+  </Flex>
+</CardBody>
 
-                <Text fontSize='md' fontWeight='medium' color='black'></Text>
-              </Flex>
-            </Flex>
-          </CardBody>
         </Card>
       </Grid>
       <Grid
