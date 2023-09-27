@@ -5,7 +5,7 @@ import {
   Flex,
   FormControl,
   Heading,
-  Text
+  Text,
 } from '@chakra-ui/react';
 
 // Assets
@@ -17,22 +17,18 @@ import { loginEvent } from 'redux/actions/auth';
 // Custom Components
 import AuthFooter from 'components/Footer/AuthFooter';
 import { FormProvider, useForm } from 'react-hook-form';
-import { connect, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import useNotify from 'utils/notify';
 
 function SignIn({ loginEvent }) {
-  const titleColor = 'white';
   const textColor = 'gray.400';
   const methods = useForm();
   const notify = useNotify();
-  const dispatch = useDispatch();
   const history = useHistory();
 
   const {
     handleSubmit,
-    register,
-    setValue,
     formState: { errors },
   } = methods;
 
