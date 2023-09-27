@@ -13,8 +13,10 @@ import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useForm, Controller } from 'react-hook-form';
+import useNotify from 'utils/notify';
 
 function AssRow(props) {
+  const notify = useNotify();
   const { logo } = props;
   const {
     control,
@@ -28,6 +30,8 @@ function AssRow(props) {
 
   const selectedGame = watch('selectedGame');
   const selectedDate = watch('selectedDate');
+
+  const currentDate = new Date();
 
   const onSubmit = async (data) => {
     if (data.selectedDate && data.selectedGame) {
@@ -46,19 +50,29 @@ function AssRow(props) {
         );
 
         if (response.status === 201) {
-          alert(
-            `Assigned ${
+          notify({
+            status: 'success',
+            description: `Assigned ${
               data.selectedGame
-            } for ${data.selectedDate.toDateString()}`
-          );
+            } for ${data.selectedDate.toDateString()}`,
+          });
         } else {
-          alert('Failed to create the task on the server 1.');
+          notify({
+            status: 'error',
+            description: 'Something went wrong, Try again later',
+          });
         }
       } catch (error) {
-        alert('Failed to create the task on the server2');
+        notify({
+          status: 'error',
+          description: 'Something went wrong, Try again later',
+        });
       }
     } else {
-      alert('Please select a date and a game before assigning.');
+      notify({
+        status: 'error',
+        description: 'Please select the task and date before assigning',
+      });
     }
   };
 
@@ -103,6 +117,7 @@ function AssRow(props) {
                   onChange={(date) => field.onChange(date)}
                   dateFormat='dd/MM/yyyy'
                   placeholderText='Select Date'
+                  minDate={currentDate}
                 />
               )}
             />
