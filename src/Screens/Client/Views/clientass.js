@@ -1,8 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react';
 import Card from 'components/Card/Card.js';
-import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
-import AssRow from 'components/Tables/AssRow'; // Import AssRow from the correct path
 import { TaskData } from 'variables/general';
 
 const Assign = () => {
@@ -40,24 +38,22 @@ const Assign = () => {
               </Flex>
             </Flex>
           </CardHeader>
-          <CardBody>
-            <Flex direction='column' w='80%'>
-              <div style={{ marginLeft: '45px' }}>
-                <Text color='white' fontSize='xs' mb='18px'>
-                  NEWEST
-                </Text>
-              </div>
-              <div style={{ marginLeft: '45px' }}>
-                {/* Add margin to the left-most content */}
-                {TaskData.map((row) => (
-                  <AssRow
-                    key={row.name}
-                    logo={row.logo}
-                  />
-                ))}
-              </div>
-            </Flex>
-          </CardBody>
+          <table>
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {TaskData.map((row) => (
+        <tr key={row.name}>
+          <td>{row.task}</td>
+          <td>{row.date}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
         </Card>
       </Flex>
     </div>

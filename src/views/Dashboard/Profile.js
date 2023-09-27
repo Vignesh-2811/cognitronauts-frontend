@@ -118,12 +118,12 @@ function Profile() {
       >
         {/* Welcome Card */}
         <Card
-          bgImage={bgProfile}
-          bgSize='cover'
-          maxW={{ sm: '325px', md: '725px', lg: '1200px' }}
-          h={{ sm: '270px', lg: '350px', xl: '410px' }}
-          gridArea={{ xl: '1 / 1 / 2 / 2', '2xl': 'auto' }}
-        >
+  bgImage={bgProfile}
+  bgSize='cover'
+  w="100%" // Set the width to 100%
+  h={{ sm: '270px', lg: '350px', xl: '410px' }}
+  gridArea={{ xl: '1 / 1 / 2 / 2', '2xl': 'auto' }}
+>
           <Flex direction='column' h='100%'>
             <Text color='#fff' fontSize='30px' fontWeight='bold' mb='3px'>
             "Chart Your Journey!"
@@ -132,9 +132,22 @@ function Profile() {
             "Unlocking Brighter Minds: Empowering Children with Disabilities through Home-Based Cognitive Retraining."
 
             </Text>
-            <Box mb='20px' position='relative' borderRadius='20px' w='410px' h='410px' display='flex'  alignItems='center' paddingLeft='60px'  marginTop='20px'>
-                  <Image src={progress} borderRadius='30px' w='80%' h='100%' objectFit='cover' />
-            </Box>
+            <Box
+  mb='20px'
+  position='center'
+  borderRadius='20px'
+  w='430px'
+  h='430px'
+  display='flex'
+  alignItems='center'
+  justifyContent='center' // Center horizontally
+  paddingLeft='60px'
+  marginTop='20px'
+>
+
+  <Image src={progress} borderRadius='30px' w='80%' h='100%' objectFit='cover' />
+</Box>
+
             
           </Flex>
         </Card>
@@ -142,9 +155,12 @@ function Profile() {
         <Card
           p='16px'
           maxH={{ lg: '410px' }}
-          maxW={{ sm: '325px', md: '725px', lg: '1200px', xl: '100%' }}
+          w='100% !important'
+          
           gridArea={{ xl: '2 / 1 / 3 / 3', '2xl': 'auto' }}
+          
         >
+        
           <CardHeader p='12px 5px' mb='12px'>
             <Flex direction='column'>
               <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
@@ -247,7 +263,7 @@ function Profile() {
           bgSize='cover'
           p='16px'
           maxH={{ md: '410px' }}
-          maxW={{ sm: '325px', md: '725px', lg: '1200px' }}
+          w='100% !important'
           gridArea={{ xl: '1 / 2 / 2 / 3', '2xl': 'auto' }}
         >
           <CardHeader p='12px 5px' mb='12px'>
@@ -307,9 +323,11 @@ function Profile() {
              fontWeight='bold'
              fontFamily='Comic Sans MS, sans-serif'
              color='white'
-             bgGradient='linear(to-l, #7928CA, #FF0080)'
+             bgGradient='linear(to-l, #ADD8E6, #87CEEB)'
+
              bgClip='text'
-             textShadow='2px 2px 4px rgba(0, 0, 0, 0.5)'
+            
+
              fontStyle='italic'
              transform='skewX(-10deg)'
             >               
@@ -323,11 +341,12 @@ function Profile() {
           </CardHeader>
           <CardBody px='5px'>
   <Grid
-    templateColumns={{
-      sm: '1fr 1fr',
-      md: '1fr 1fr',
-      xl: 'repeat(2, 1fr)', // Added another column
-    }}
+   templateColumns={{
+    sm: '1fr 1fr 1fr', // Three columns on small screens
+    md: '1fr 1fr 1fr', // Three columns on medium screens
+    xl: 'repeat(3, 1fr)', // Three columns on extra-large screens
+  }}
+  
     templateRows={{
       sm: '1fr auto',
       xl: '1fr',

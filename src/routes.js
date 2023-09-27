@@ -1,15 +1,12 @@
-import Billing from 'views/Dashboard/Billing.js';
 import Dashboard from 'views/Dashboard/Dashboard.js';
 import Profile from 'views/Dashboard/Profile.js';
 import Tables from 'views/Dashboard/Tables.js';
 
 import {
-  CreditIcon,
   HomeIcon,
   PersonIcon,
   StatsIcon
 } from 'components/Icons/Icons';
-import { BsEyeglasses } from 'react-icons/bs';
 
 export var routes = [
   {
@@ -42,13 +39,13 @@ export var routes = [
   //   layout: '/admin',
   // },
   {
-    name: 'ACCOUNT PAGES',
+  
     category: 'account',
     state: 'pageCollapse',
     views: [
       {
         path: '/profile',
-        name: 'Profile',
+        name: 'About',
         icon: <PersonIcon color='inherit' />,
         secondaryNavbar: true,
         component: Profile,

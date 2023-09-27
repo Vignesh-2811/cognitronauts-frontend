@@ -139,7 +139,7 @@ function Dashboard({ userdata, userId }) {
               onClick={handleAssignClick}
               style={{ cursor: 'pointer'}} // Align text to the top left
             >
-              Future Assignment
+              Future Assignments
             </Text>
             <Flex justify='center' align='center' mb='40px'>
               {' '}

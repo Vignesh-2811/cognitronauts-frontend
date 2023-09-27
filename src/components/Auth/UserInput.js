@@ -19,7 +19,7 @@ const UserInput = ({ label, placeholder, name, type }) => {
         borderRadius='20px'
       >
         <Input
-          color={titleColor}
+          color={'black'}
           bg={{
             // base: 'rgb(19,21,54)',
             base: '#ffffff',

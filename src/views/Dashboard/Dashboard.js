@@ -10,7 +10,6 @@ import { Image } from '@chakra-ui/react';
 import assign from 'assets/img/ass.jpg';
 import cogni from 'assets/img/cogni.jpg';
 
-import eeg from 'assets/img/eeg.jpg';
 import patient from 'assets/img/patient.jpg';
 import task from 'assets/img/tasks.png';
 import mail12 from 'assets/svg/mail12.gif';
@@ -139,7 +138,7 @@ function Dashboard({ userdata, userId }) {
               onClick={handleAssignClick}
               style={{ cursor: 'pointer'}} // Align text to the top left
             >
-              Future Assignment
+              Future Assignments
             </Text>
             <Flex justify='center' align='center' mb='40px'>
               {' '}
