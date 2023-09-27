@@ -9,6 +9,8 @@ import {
 import { Image } from '@chakra-ui/react';
 import assign from 'assets/img/ass.jpg';
 import cogni from 'assets/img/cogni.jpg';
+
+import eeg from 'assets/img/eeg.jpg';
 import patient from 'assets/img/patient.jpg';
 import task from 'assets/img/tasks.png';
 import mail12 from 'assets/svg/mail12.gif';
